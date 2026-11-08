@@ -1,0 +1,228 @@
+{
+  "common": {
+    "skipToContent": "Skip to main content",
+    "toHome": "INCLUDE – home",
+    "skipToNav": "Skip to main navigation",
+    "lastUpdated": "Last updated {date, date, long}",
+    "loading": "Loading…",
+    "close": "Close",
+    "readMore": "Read more",
+    "talkPlaceholder": "[…]"
+  },
+  "header": {
+    "nav": "Main navigation",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "navItems": {
+      "home": "Home",
+      "the-project": "The Project",
+      "the-pathway": "The Pathway",
+      "results-and-tools": "Results & Tools",
+      "partners": "Partners",
+      "news": "News",
+      "contact": "Contact"
+    },
+    "pill": "Ready for Inclusion",
+    "languageSwitcher": "Language: {label}"
+  },
+  "home": {
+    "eyebrow": "Erasmus+ European project",
+    "ctaPrimary": "Discover the project",
+    "ctaCompany": "I am a company",
+    "facts": {
+      "programme": "Erasmus+ KA220-VET",
+      "duration": "24 months",
+      "countries": "4 European countries",
+      "partners": "6 organisations"
+    },
+    "whyTitle": "Why companies?",
+    "whyCta": "Discover the INCLUDE network",
+    "ambitionsTitle": "What do we plan to achieve?",
+    "ambitions": {
+      "research": { "title": "A research" },
+      "pathway": { "title": "An inclusive pathway to employment" },
+      "network": { "title": "A network of companies ready for inclusion" }
+    },
+    "pathwayTeaserTitle": "The pathway in three phases",
+    "manifesto": "Preparing people for work while preparing workplaces for inclusion.",
+    "audienceTitle": "Where do you want to start?",
+    "producesTitle": "What the project produces",
+    "storiesTitle": "Stories of passage",
+    "networkTitle": "A network of companies ready for inclusion",
+    "stayTitle": "Stay connected",
+    "ctaContact": "Want to know more? Get in touch",
+    "phaseLabels": {
+      "protected": "Protected",
+      "preCorporate": "Pre-corporate",
+      "openMarket": "Open market"
+    }
+  },
+  "pages": {
+    "the-project": {
+      "h1": "From training to employment: closing the gap"
+    },
+    "the-pathway": {
+      "h1": "A gradual pathway towards the workplace"
+    },
+    "results-and-tools": {
+      "h1": "Tools for people, companies and inclusive VET systems"
+    },
+    "ready-for-inclusion": {
+      "h1": "Companies can learn inclusion too"
+    },
+    "partners": { "h1": "A European partnership connecting research, inclusion and companies" },
+    "news": { "h1": "Stories from the INCLUDE journey" },
+    "contact": { "h1": "Want to know more? Get in touch" }
+  },
+  "footer": {
+    "sectionNav": "Site",
+    "sectionLegal": "Legal",
+    "sectionFacts": "Project facts",
+    "facts": {
+      "project": "Project",
+      "programme": "Programme",
+      "number": "Project number",
+      "duration": "Duration",
+      "period": "Project period",
+      "coordinator": "Coordinator"
+    },
+    "legalLinks": {
+      "privacy-policy": "Privacy Policy",
+      "cookie-policy": "Cookie Policy",
+      "accessibility": "Accessibility",
+      "legal-notice": "Legal notice"
+    },
+    "cookieSettings": "Cookie settings",
+    "euDisclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the competent granting authority. Neither the European Union nor the granting authority can be held responsible for them."
+  },
+  "breadcrumbs": { "youAreHere": "You are here", "home": "Home" },
+  "statusLabels": {
+    "planned": "Coming soon",
+    "in-progress": "In progress",
+    "published": "Available",
+    "draft": "Draft"
+  },
+  "news": {
+    "empty": "No stories yet. Project news will be published here as INCLUDE moves forward.",
+    "backToNews": "All stories",
+    "ethicalNotice": "Stories involving participants are published only with documented informed consent, and focus on agency, competences, learning and participation.",
+    "categories": {
+      "project-news": "Project news",
+      "from-the-territories": "From the territories",
+      "voices-from-companies": "Voices from companies",
+      "pilot-stories": "Pilot stories",
+      "events": "Events",
+      "tools-resources": "Tools & resources",
+      "policy-advocacy": "Policy & advocacy"
+    }
+  },
+  "results": {
+    "downloadCta": "Download resources",
+    "audiences": {
+      "companies": "Companies",
+      "vet-providers": "VET providers",
+      "researchers": "Researchers",
+      "policymakers": "Policymakers",
+      "people": "People and families"
+    }
+  },
+  "contact": {
+    "intro": "Are you a company interested in inclusive work-based learning? A VET organisation, researcher, policymaker or community actor working on inclusive employment? We would be happy to connect.",
+    "ctaTeam": "Contact the INCLUDE team",
+    "ctaNewsletter": "Subscribe to the newsletter",
+    "form": {
+      "name": "Name",
+      "email": "Email address",
+      "organisation": "Organisation (optional)",
+      "country": "Country (optional)",
+      "audience": "I am…",
+      "audienceOptions": {
+        "company": "A company or SME",
+        "vet": "A VET organisation",
+        "researcher": "A researcher",
+        "policymaker": "A policymaker",
+        "community": "A community or disability organisation",
+        "other": "Other"
+      },
+      "message": "Message",
+      "privacy": "I have read the Privacy Policy and I agree that my message will be used to reply to this request.",
+      "newsletter": "Optional: I would like to receive the INCLUDE newsletter.",
+      "sensitive": "Please do not include health or disability information about yourself or others.",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "success": "Thanks — your message has been sent. We will reply as soon as we can.",
+      "error": "The message could not be sent. Please try again in a few minutes.",
+      "rateLimit": "Too many attempts. Please try again in a few minutes.",
+      "notOperational": "The contact form is not yet active. It will be available as soon as the project mailbox is configured.",
+      "errors": {
+        "name": "Please enter your name.",
+        "email": "Please enter a valid email address.",
+        "message": "Please write your message.",
+        "privacy": "Please confirm that you have read the Privacy Policy.",
+        "maxLength": "The text is too long."
+      }
+    }
+  },
+  "consent": {
+    "settingsTitle": "Cookie settings",
+    "settingsIntro": "This website stores only strictly necessary cookies. If third-party services are enabled in the future, your choices will appear here.",
+    "necessary": "Strictly necessary",
+    "necessaryDesc": "Required for the website to function. Always on.",
+    "statistics": "Statistics",
+    "embedded": "Embedded media",
+    "save": "Save choices",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject non-essential",
+    "bannerTitle": "Privacy choices",
+    "bannerText": "We use only necessary cookies. Third-party services would load only with your consent."
+  },
+  "errors": {
+    "404title": "Page not found",
+    "404text": "The page you are looking for does not exist or has moved.",
+    "500title": "Something went wrong",
+    "500text": "An unexpected error occurred. Please try again later.",
+    "backHome": "Back to the homepage",
+    "goToContact": "Contact us"
+  },
+  "designSystem": {
+    "title": "INCLUDE design system",
+    "note": "Internal reference page — the brand kit applied in one place."
+  },
+  "metadata": {
+    "home": {
+      "title": "Home",
+      "description": "A European Erasmus+ project creating inclusive pathways from vocational training to real employment for young adults with cognitive disabilities."
+    },
+    "the-project": {
+      "title": "The Project",
+      "description": "Why the transition from protected learning to real work stays difficult, and how INCLUDE works on both sides with a corporate-led model."
+    },
+    "the-pathway": {
+      "title": "The Pathway",
+      "description": "A three-phase vocational continuum: Protected Gym, pre-corporate preparation and work-based learning in SMEs, supported by mentoring and competence tools."
+    },
+    "results-and-tools": {
+      "title": "Results & Tools",
+      "description": "The public repository of INCLUDE outputs: research, the Readiness Index, ESCO-mapped profiles, mentoring framework, Technical Passport, Toolkit and White Paper."
+    },
+    "ready-for-inclusion": {
+      "title": "Ready for Inclusion",
+      "description": "Practical guidance for SMEs that want to start inclusive work-based learning: readiness, tutoring, peer learning and the Ambassador Network."
+    },
+    "partners": {
+      "title": "Partners",
+      "description": "Six organisations from four European countries: coordination, research, facilitation, assessment and SME engagement behind INCLUDE."
+    },
+    "news": { "title": "News", "description": "Stories from the INCLUDE journey: project milestones, territories, company voices, pilots, events and new resources." },
+    "contact": {
+      "title": "Contact",
+      "description": "Get in touch with the INCLUDE partnership about inclusive work-based learning, research and company engagement."
+    },
+    "privacy-policy": { "title": "Privacy Policy", "description": "How the INCLUDE website handles personal data compliantly (draft — legal review pending)." },
+    "cookie-policy": { "title": "Cookie Policy", "description": "What this website stores, categories of storage and how to change your choices (draft — legal review pending)." },
+    "accessibility": { "title": "Accessibility", "description": "The INCLUDE accessibility statement: WCAG 2.2 AA status, known limitations and a feedback route (draft)." },
+    "legal-notice": { "title": "Legal notice", "description": "Site credits, project identity and the EU funding disclaimer (draft — legal review pending)." },
+    "notFound": { "title": "Page not found", "description": "This page does not exist." }
+  }
+}

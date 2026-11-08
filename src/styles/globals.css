@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@import "./tokens.css";
+@import "./prose.css";
+
+/* Base ------------------------------------------------------------------ */
+@layer base {
+  html {
+    scroll-padding-top: 6rem; /* sticky header must not obscure anchors */
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+
+    @media (prefers-reduced-motion: reduce) {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    font-family: var(--font-sans);
+    @apply bg-white text-slate;
+    font-size: var(--text-body);
+    line-height: var(--leading-body);
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Visible focus (WCAG 2.2: ≥3:1, ≥2px, offset) */
+  :focus-visible {
+    outline: var(--ring-width) solid var(--ring-color);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--color-sky);
+    color: var(--color-slate);
+  }
+
+  /* Brand label style: 14px uppercase bold, 0.08em */
+  .u-label {
+    @apply text-[0.875rem] font-extrabold uppercase;
+    letter-spacing: var(--tracking-label);
+  }
+}
+
+/* Motion guardrails (§8) ------------------------------------------------- */
+@layer utilities {
+  .motion-safe {
+    @media (prefers-reduced-motion: reduce) {
+      animation: none !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Supergraphic parallax — CSS scroll-driven, progressive enhancement */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .super-e-parallax {
+      animation: super-e-drift linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 60vh;
+    }
+    @keyframes super-e-drift {
+      from {
+        transform: translateY(-12px);
+      }
+      to {
+        transform: translateY(12px);
+      }
+    }
+  }
+}
+
+/* Hidden-initial patterns only allowed inside scripting: enabled (§8) */
+@media not (scripting: enabled) {
+  .js-only-initial {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

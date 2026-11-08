@@ -1,0 +1,50 @@
+/* INCLUDE design tokens — Brand 01 hex values only (§5.1).
+ * Reset Tailwind's default palette so off-brand colours cannot leak. */
+@theme {
+  --color-*: initial;
+
+  /* Ardesia – text, logo, dark grounds */
+  --color-slate: #465056;
+  /* Cielo – icon structure, fills */
+  --color-sky: #9fbbc9;
+  /* Ruggine – the person, accent, primary CTA */
+  --color-rust: #c14723;
+  /* Petrolio – second colour, events */
+  --color-petrol: #068a92;
+  /* Petrolio scuro – bands carrying white text */
+  --color-petrol-deep: #08767c;
+  /* Bordeaux – warm titles */
+  --color-burgundy: #671317;
+  /* Rosso – polychrome logo */
+  --color-red: #b2252f;
+  /* Ocra – graphics only, NEVER text */
+  --color-ochre: #d3851d;
+  /* Nebbia – supergraphic on white */
+  --color-mist: #e2e9ed;
+  /* Carta – derived from mockups, owner confirm */
+  --color-paper: #f3f3f1;
+  --color-white: #ffffff;
+
+  /* Typography */
+  --font-sans: var(--font-manrope), Manrope, system-ui, sans-serif;
+
+  --text-body: 1.125rem; /* 18px */
+  --leading-body: 1.65;
+  --text-caption: 0.875rem; /* 14px brand labels */
+  --tracking-label: 0.08em;
+
+  /* Fluid display scale */
+  --text-h1: clamp(2.5rem, 1.4rem + 3.2vw, 4rem);
+  --text-h2: clamp(1.75rem, 1.3rem + 2vw, 2.5rem);
+  --text-h3: clamp(1.25rem, 1.1rem + 1vw, 1.5rem);
+
+  /* Radii (per element class — never one radius everywhere, §5.3) */
+  --radius-card: 20px;
+  --radius-card-lg: 24px;
+  --radius-input: 12px;
+  --radius-pill: 999px;
+
+  /* Focus ring ≥ 3:1, ≥ 2px, offset (WCAG 2.2) */
+  --ring-width: 2px;
+  --ring-color: var(--color-petrol-deep);
+}

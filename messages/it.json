@@ -1,0 +1,220 @@
+{
+  "common": {
+    "skipToContent": "Salta al contenuto principale",
+    "toHome": "INCLUDE – home",
+    "skipToNav": "Salta al menu",
+    "lastUpdated": "Ultimo aggiornamento {date, date, long}",
+    "loading": "Caricamento…",
+    "close": "Chiudi",
+    "readMore": "Leggi di più",
+    "talkPlaceholder": "[…]"
+  },
+  "header": {
+    "nav": "Menu principale",
+    "menu": "Menu",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "navItems": {
+      "home": "Home",
+      "the-project": "Il progetto",
+      "the-pathway": "Il modello",
+      "results-and-tools": "Risorse",
+      "partners": "Partner",
+      "news": "News",
+      "contact": "Contatti"
+    },
+    "pill": "Ready for Inclusion",
+    "languageSwitcher": "Lingua: {label}"
+  },
+  "home": {
+    "eyebrow": "Progetto europeo Erasmus+",
+    "ctaPrimary": "Scopri il modello",
+    "ctaCompany": "Sono un'impresa",
+    "facts": {
+      "programme": "Erasmus+ KA220-VET",
+      "duration": "24 mesi",
+      "countries": "4 Paesi europei",
+      "partners": "6 organizzazioni"
+    },
+    "whyTitle": "Perché le imprese?",
+    "whyCta": "Scopri la rete INCLUDE",
+    "ambitionsTitle": "Cosa pianifichiamo di ottenere?",
+    "ambitions": {
+      "research": { "title": "Una ricerca" },
+      "pathway": { "title": "Un percorso inclusivo verso il lavoro" },
+      "network": { "title": "Una rete di imprese Ready for Inclusion" }
+    },
+    "pathwayTeaserTitle": "Il modello in tre fasi",
+    "manifesto": "Preparare le persone al lavoro, preparare le imprese all'inclusione.",
+    "audienceTitle": "Da dove vuoi iniziare?",
+    "producesTitle": "Cosa produce il progetto",
+    "storiesTitle": "Storie di passaggi",
+    "networkTitle": "La rete delle imprese che includono",
+    "stayTitle": "Rimani in contatto",
+    "ctaContact": "Vuoi saperne di più? Contattaci",
+    "phaseLabels": {
+      "protected": "Protected",
+      "preCorporate": "Pre-corporate",
+      "openMarket": "Open market"
+    }
+  },
+  "pages": {
+    "the-project": { "h1": "Dalla formazione al lavoro: chiudere il divario" },
+    "the-pathway": { "h1": "Un percorso, non un tirocinio" },
+    "results-and-tools": { "h1": "Strumenti per persone, imprese e sistemi di IFT inclusivi" },
+    "ready-for-inclusion": { "h1": "Anche le imprese possono imparare l'inclusione" },
+    "partners": { "h1": "Una collaborazione europea tra ricerca, inclusione e imprese" },
+    "news": { "h1": "Storie dal viaggio di INCLUDE" },
+    "contact": { "h1": "Vuoi saperne di più? Contattaci" }
+  },
+  "footer": {
+    "sectionNav": "Sito",
+    "sectionLegal": "Note legali",
+    "sectionFacts": "Dati del progetto",
+    "facts": {
+      "project": "Progetto",
+      "programme": "Programma",
+      "number": "Numero di progetto",
+      "duration": "Durata",
+      "period": "Periodo",
+      "coordinator": "Coordinatore"
+    },
+    "legalLinks": {
+      "privacy-policy": "Privacy",
+      "cookie-policy": "Cookie",
+      "accessibility": "Accessibilità",
+      "legal-notice": "Note legali"
+    },
+    "cookieSettings": "Impostazioni cookie",
+    "euDisclaimer": "Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the competent granting authority. Neither the European Union nor the granting authority can be held responsible for them."
+  },
+  "breadcrumbs": { "youAreHere": "Ti trovi qui", "home": "Home" },
+  "statusLabels": {
+    "planned": "In arrivo",
+    "in-progress": "In corso",
+    "published": "Disponibile",
+    "draft": "Bozza"
+  },
+  "news": {
+    "empty": "Ancora nessuna storia. Le novità del progetto saranno pubblicate qui.",
+    "backToNews": "Tutte le storie",
+    "ethicalNotice": "Le storie delle persone partecipanti sono pubblicate solo con consenso informato documentato, e colgono le competenze, l'apprendimento e la partecipazione.",
+    "categories": {
+      "project-news": "Notizie dal progetto",
+      "from-the-territories": "Dai territori",
+      "voices-from-companies": "Voci dalle imprese",
+      "pilot-stories": "Storie pilota",
+      "events": "Eventi",
+      "tools-resources": "Strumenti e risorse",
+      "policy-advocacy": "Politiche e advocacy"
+    }
+  },
+  "results": {
+    "downloadCta": "Scarica le risorse",
+    "audiences": {
+      "companies": "Imprese",
+      "vet-providers": "Operatori di IFT",
+      "researchers": "Ricercatori",
+      "policymakers": "Poli-maker",
+      "people": "Persone e famiglie"
+    }
+  },
+  "contact": {
+    "intro": "Lei è un'impresa interessata ai percorsi inclusivi di apprendimento sul lavoro? Un'organizzazione di IFT, un ricercatore, un poli-maker o un attore del territorio che lavora all'inclusione lavorativa? Saremo lieti di entrare in contatto.",
+    "ctaTeam": "Contatta il team INCLUDE",
+    "ctaNewsletter": "Iscriviti alla newsletter",
+    "form": {
+      "name": "Nome e cognome",
+      "email": "Indirizzo email",
+      "organisation": "Organizzazione (facoltativo)",
+      "country": "Paese (facoltativo)",
+      "audience": "Io sono…",
+      "audienceOptions": {
+        "company": "Un'impresa o PMI",
+        "vet": "Un'organizzazione di IFT",
+        "researcher": "Un ricercatore/una ricercatrice",
+        "policymaker": "Un poli-maker",
+        "community": "Un'organizzazione di comunità o disabilità",
+        "other": "Altro"
+      },
+      "message": "Messaggio",
+      "privacy": "Ho letto l'informativa sulla privacy e accetto che il mio messaggio sia usato per rispondere a questa richiesta.",
+      "newsletter": "Facoltativo: vorrei ricevere la newsletter di INCLUDE.",
+      "sensitive": "Per favore non inserire informazioni su salute o disabilità proprie o di altre persone.",
+      "submit": "Invia il messaggio",
+      "submitting": "Invio…",
+      "success": "Grazie — il messaggio è stato inviato. Risponderemo appena possibile.",
+      "error": "Il messaggio non è stato inviato. Riprova tra qualche minuto.",
+      "rateLimit": "Troppi tentativi. Riprova tra qualche minuto.",
+      "notOperational": "Il modulo di contatto non è ancora attivo. Sarà disponibile appena configurata la casella di progetto.",
+      "errors": {
+        "name": "Inserisci il tuo nome.",
+        "email": "Inserisci un indirizzo email valido.",
+        "message": "Scrivi il tuo messaggio.",
+        "privacy": "Conferma di aver letto l'informativa sulla privacy.",
+        "maxLength": "Il testo è troppo lungo."
+      }
+    }
+  },
+  "consent": {
+    "settingsTitle": "Impostazioni cookie",
+    "settingsIntro": "Questo sito memorizza solo cookie strettamente necessari. Se in futuro verranno attivati servizi di terze parti, qui troverai le tue scelte.",
+    "necessary": "Strettamente necessari",
+    "necessaryDesc": "Necessari al funzionamento del sito. Sempre attivi.",
+    "statistics": "Statistiche",
+    "embedded": "Contenuti esterni",
+    "save": "Salva le scelte",
+    "acceptAll": "Accetta tutti",
+    "rejectAll": "Rifiuta i non necessari",
+    "bannerTitle": "Scelte di privacy",
+    "bannerText": "Usiamo solo cookie necessari. I servizi di terze parti si attivano solo con il tuo consenso."
+  },
+  "errors": {
+    "404title": "Pagina non trovata",
+    "404text": "La pagina che cerchi non esiste o è stata spostata.",
+    "500title": "Qualcosa non ha funzionato",
+    "500text": "Si è verificato un errore inatteso. Riprova più tardi.",
+    "backHome": "Torna alla home",
+    "goToContact": "Contattaci"
+  },
+  "designSystem": {
+    "title": "Design system INCLUDE",
+    "note": "Pagina di riferimento interna — la brand kit applicata."
+  },
+  "metadata": {
+    "home": {
+      "title": "Home",
+      "description": "Un progetto europeo Erasmus+ che crea percorsi inclusivi dalla formazione professionale al lavoro reale per persone giovani con disabilità cognitive."
+    },
+    "the-project": {
+      "title": "Il progetto",
+      "description": "Perché il passaggio dal contesto protetto al lavoro reale resta difficile, e come INCLUDE lavora su entrambi i versanti con un modello corporate-led."
+    },
+    "the-pathway": {
+      "title": "Il modello",
+      "description": "Un continuum formativo in tre fasi: Protected Gym, preparazione pre-corporate e apprendimento in PMI, con mentoring e riconoscimento delle competenze."
+    },
+    "results-and-tools": {
+      "title": "Risorse",
+      "description": "L'archivio pubblico dell'output di INCLUDE: ricerca, Readiness Index, profili ESCO, mentoring, Technical Passport, Toolkit e White Paper."
+    },
+    "ready-for-inclusion": {
+      "title": "Ready for Inclusion",
+      "description": "Guida pratica per le PMI che vogliono avviare percorsi inclusivi di tirocinio: readiness, tutorship, apprendimento tra pari e rete di Ambassador SMEs."
+    },
+    "partners": {
+      "title": "Partner",
+      "description": "Sei organizzazioni di quattro Paesi europei: coordinamento, ricerca, facilitazione, valutazione e coinvolgimento delle PMI."
+    },
+    "news": { "title": "News e storie", "description": "Le storie dal viaggio di INCLUDE: tappe del progetto, territori, voci dalle imprese, pilot, eventi e nuove risorse." },
+    "contact": {
+      "title": "Contatti",
+      "description": "Contatta la partnership INCLUDE su percorsi inclusivi di apprendimento, ricerca e coinvolgimento delle imprese."
+    },
+    "privacy-policy": { "title": "Informativa sulla privacy", "description": "Come il sito INCLUDE tratta i dati personali in conformità al GDPR (bozza — revisione legale in corso)." },
+    "cookie-policy": { "title": "Cookie Policy", "description": "Cosa memorizza questo sito, categorie di memorizzazione e come cambiare le scelte (bozza — revisione legale in corso)." },
+    "accessibility": { "title": "Accessibilità", "description": "La dichiarazione di accessibilità di INCLUDE: stato WCAG 2.2 AA, limitazioni note e canale di feedback (bozza)." },
+    "legal-notice": { "title": "Note legali", "description": "Crediti del sito, identità del progetto e disclaimer di finanziamento UE (bozza — revisione legale in corso)." },
+    "notFound": { "title": "Pagina non trovata", "description": "Questa pagina non esiste." }
+  }
+}

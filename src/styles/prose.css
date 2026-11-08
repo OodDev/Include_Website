@@ -1,0 +1,40 @@
+/* Prose styles for MDX content bodies — brand-aligned, generous. */
+.prose-include {
+  max-width: 65ch; /* brand line length, cognitive accessibility */
+}
+.prose-include > * + * {
+  margin-block-start: 1.25em;
+}
+.prose-include h2 {
+  @apply text-h2 font-bold;
+  margin-block-start: 2em;
+}
+.prose-include h3 {
+  @apply text-h3 font-bold;
+  margin-block-start: 1.6em;
+}
+.prose-include ul {
+  @apply list-disc pl-6;
+  margin-block-start: 1em;
+}
+.prose-include li + li {
+  margin-block-start: 0.5em;
+}
+.prose-include a {
+  @apply text-petrol-deep underline underline-offset-4;
+}
+.prose-include a:hover {
+  @apply text-burgundy;
+}
+.prose-include strong {
+  @apply font-bold;
+}
+.prose-include blockquote {
+  @apply border-l-4 border-sky pl-6 italic;
+}
+.prose-include dl {
+  @apply grid grid-cols-[auto_1fr] gap-x-6 gap-y-2;
+}
+.prose-include dt {
+  @apply font-bold;
+}
