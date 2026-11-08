@@ -65,7 +65,9 @@
       "protected": "Protected",
       "preCorporate": "Pre-corporate",
       "openMarket": "Open market"
-    }
+    },
+    "cardCta": "Conoce más",
+    "networkTargetLabel": "El proyecto pretende implicar hasta {companiesPerCountry} empresas por país socio y llegar a al menos {smesReached} PYMEs. Son objetivos del proyecto."
   },
   "pages": {
     "the-project": {
@@ -200,7 +202,8 @@
     "acceptAll": "Accept all",
     "rejectAll": "Reject non-essential",
     "bannerTitle": "Privacy choices",
-    "bannerText": "We use only necessary cookies. Third-party services would load only with your consent."
+    "bannerText": "We use only necessary cookies. Third-party services would load only with your consent.",
+    "close": "Cerrar y continuar sin aceptar"
   },
   "errors": {
     "404title": "Page not found",

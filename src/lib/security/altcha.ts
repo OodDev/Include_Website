@@ -92,7 +92,9 @@ export function verifyAltchaPayload(encoded: string): { ok: true } | { ok: false
   const queryParams = new URLSearchParams(params ?? "");
   const expires = Number(queryParams.get("expires") ?? 0);
   if (!expires || Date.now() > expires) return { ok: false, reason: "expired" };
-  if (!verifySignature(salt ?? "", payload.signature)) return { ok: false, reason: "tampered" };
+  // Sign the FULL salt exactly as createAltchaChallenge signed it (including
+  // the ?expires param) — otherwise every genuine widget payload would fail.
+  if (!verifySignature(payload.salt, payload.signature)) return { ok: false, reason: "tampered" };
 
   const signedSalt = `${salt}?${params ?? ""}`;
   const hash = crypto.createHash("sha256").update(`${signedSalt}${String(payload.number)}`).digest("hex");

@@ -25,25 +25,14 @@ export function organizationSchema() {
     "@id": `${SITE_URL}/#organization`,
     name: siteOrgName(),
     url: SITE_URL,
-    // logo + sameAs: only when owner-supplied verified assets exist (no invention)
-    // funder reflecting the Erasmus+ programme
-    funding: {
-      "@type": "Grant",
-      identifier: siteProjectNumber(),
-      name: "Erasmus+ KA220-VET",
-      grantedBy: {
-        "@type": "Organization",
-        name: "European Commission – Erasmus+ (European Education and Culture Executive Agency, EACEA)",
-      },
-    },
+    // logo + sameAs: only when owner-supplied verified assets exist (no invention).
+    // No "Grant" @type — forbidden by §9; Erasmus+ funding visibility is carried
+    // by the rendered content instead.
   } as const;
 }
 
 function siteOrgName(): string {
   return siteConfig.fullName;
-}
-function siteProjectNumber(): string {
-  return siteConfig.projectNumber;
 }
 
 export function websiteSchema(locale: string) {

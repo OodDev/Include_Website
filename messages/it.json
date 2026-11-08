@@ -202,7 +202,8 @@
     "acceptAll": "Accetta tutti",
     "rejectAll": "Rifiuta i non necessari",
     "bannerTitle": "Scelte di privacy",
-    "bannerText": "Usiamo solo cookie necessari. I servizi di terze parti si attivano solo con il tuo consenso."
+    "bannerText": "Usiamo solo cookie necessari. I servizi di terze parti si attivano solo con il tuo consenso.",
+    "close": "Chiudi e continua senza accettare"
   },
   "errors": {
     "404title": "Pagina non trovata",

@@ -65,7 +65,9 @@
       "protected": "Protected",
       "preCorporate": "Pre-corporate",
       "openMarket": "Open market"
-    }
+    },
+    "cardCta": "Μάθετε περισσότερα",
+    "networkTargetLabel": "Το έργο στοχεύει στη συμμετοχή έως {companiesPerCountry} εταιρειών ανά χώρα εταίρο και στην προσέγγιση τουλάχιστον {smesReached} ΜΜΕ. Αυτοί είναι στόχοι του έργου."
   },
   "pages": {
     "the-project": {
@@ -200,7 +202,8 @@
     "acceptAll": "Accept all",
     "rejectAll": "Reject non-essential",
     "bannerTitle": "Privacy choices",
-    "bannerText": "We use only necessary cookies. Third-party services would load only with your consent."
+    "bannerText": "We use only necessary cookies. Third-party services would load only with your consent.",
+    "close": "Κλείσιμο και συνέχεια χωρίς αποδοχή"
   },
   "errors": {
     "404title": "Page not found",

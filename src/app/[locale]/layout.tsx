@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/lib/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { ConsentBanner } from "@/features/consent/ConsentBanner";
 import { SkipLink } from "@/components/layout/SkipLink";
 import { organizationSchema, websiteSchema, JsonLd } from "@/lib/seo/schemaorg";
 import "@/styles/globals.css";
@@ -44,6 +45,7 @@ export default async function LocaleLayout({
           <Header />
           <main id="main">{children}</main>
           <Footer />
+          <ConsentBanner />
         </NextIntlClientProvider>
       </body>
     </html>

@@ -22,7 +22,15 @@ export const contactSchema = z.object({
   message: z.string().trim().min(10).max(4000),
   privacy: z.literal("on"),
   newsletter: z.boolean().optional().default(false),
-  website: z.string().max(0).optional().or(z.literal("")), // honeypot — must stay empty
+  // Honeypot — must stay empty; any content marks the submit as bot traffic.
+  // Accepted by the schema so the honeypot short-circuit returns the SAME
+  // generic ok:true that real submissions get (silent bot drop, §5).
+  website: z
+    .string()
+    .trim()
+    .max(200)
+    .optional()
+    .or(z.literal("")),
   altcha: z.string().min(20),
 });
 
