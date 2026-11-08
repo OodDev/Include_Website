@@ -44,8 +44,8 @@ export function ConsentBanner() {
         aria-label={t("bannerTitle")}
         className="fixed inset-x-0 bottom-0 z-30 border-t border-slate/15 bg-white p-4 shadow-[0_-8px_24px_rgba(0,0,0,0.08)] sm:p-6"
       >
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center">
-          <div className="min-w-0 flex-1 pr-8 sm:pr-0">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:pr-10">
+          <div className="min-w-0 flex-1">
             <p className="font-bold text-slate">{t("bannerTitle")}</p>
             <p className="mt-1 text-[0.9375rem] text-slate/80">{t("bannerText")}</p>
           </div>
@@ -73,20 +73,20 @@ export function ConsentBanner() {
               {t("settingsTitle")}
             </button>
           </div>
-          <button
-            type="button"
-            onClick={() => {
-              dismissWithoutConsent();
-              setVisible(false);
-            }}
-            aria-label={t("close")}
-            className="absolute right-0 top-0 flex h-9 w-9 items-center justify-center rounded-full text-slate hover:bg-slate/10 sm:right-0"
-          >
-            <span aria-hidden="true" className="text-xl leading-none">
-              ×
-            </span>
-          </button>
         </div>
+        <button
+          type="button"
+          onClick={() => {
+            dismissWithoutConsent();
+            setVisible(false);
+          }}
+          aria-label={t("close")}
+          className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full text-slate hover:bg-slate/10"
+        >
+          <span aria-hidden="true" className="text-xl leading-none">
+            ×
+          </span>
+        </button>
       </section>
       <ConsentDialog
         open={dialogOpen}

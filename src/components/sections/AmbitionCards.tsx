@@ -8,18 +8,18 @@ import { ButtonLink } from "@/components/ui/Button";
 export async function AmbitionCards({
   ambitions,
 }: {
-  ambitions: { title: string; body: string; icon: IconId }[];
+  ambitions: { title?: string; titleKey?: string; body: string; icon: IconId }[];
 }) {
-  const t = await getTranslations("home");
+  const t = await getTranslations(); // root namespace — frontmatter carries full-path keys
   return (
     <Section tone="paper">
       <Container>
-        <h2 className="text-h2 font-bold">{t("ambitionsTitle")}</h2>
+        <h2 className="text-h2 font-bold">{t("home.ambitionsTitle")}</h2>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {ambitions.map((a) => (
-            <Card key={a.title} className="bg-white">
+            <Card key={a.titleKey ?? a.title ?? a.icon} className="bg-white">
               <Icon name={a.icon} size={48} />
-              <h3 className="mt-5 text-[1.25rem] font-bold">{a.title}</h3>
+              <h3 className="mt-5 text-[1.25rem] font-bold">{a.title ?? (a.titleKey ? t(a.titleKey) : "")}</h3>
               <p className="mt-3 opacity-80">{a.body}</p>
             </Card>
           ))}
