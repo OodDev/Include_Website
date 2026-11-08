@@ -1,0 +1,69 @@
+# Six full partners — exact names and source descriptions from the approved
+# architecture text (no invention). Logos and verified URLs are owner inputs;
+# until supplied, links are NOT rendered (no-fabrication).
+- slug: bene-futuro
+  type: full
+  country: Italy
+  name: Bene Futuro srl
+  approvedLogo: null
+  verifiedUrl: null
+  i18n:
+    en:
+      description: Project coordinator. Brings expertise in participatory facilitation, stakeholder engagement, career development, educational innovation and European project coordination.
+    it:
+      description: Coordinatore del progetto. Porta competenze in facilitazione partecipativa, coinvolgimento degli stakeholder, sviluppo di carriera, innovazione educativa e coordinamento di progetti europei.
+- slug: univ-g-dannunzio
+  type: full
+  country: Italy
+  name: University "G. d'Annunzio" of Chieti–Pescara
+  approvedLogo: null
+  verifiedUrl: null
+  i18n:
+    en:
+      description: Provides scientific leadership and methodological rigour, contributing to research design, data interpretation, evaluation and policy dialogue.
+    it:
+      description: Garantisce leadership scientifica e rigore metodologico, contribuendo alla ricerca, all'interpretazione dei dati, alla valutazione e al dialogo sulle politiche.
+- slug: desincoop
+  type: full
+  country: Portugal
+  name: DESINCOOP
+  approvedLogo: null
+  verifiedUrl: null
+  i18n:
+    en:
+      description: Brings field-based expertise in social inclusion, disability and work integration, supporting the operational testing of the vocational pathway and its practical transfer.
+    it:
+      description: Porta competenze sul campo nell'inclusione sociale, la disabilità e l'integrazione lavorativa, supportando la sperimentazione pratica del percorso e il suo trasferimento.
+- slug: qualificalia-analytics
+  type: full
+  country: Spain
+  name: Qualificalia Analytics
+  approvedLogo: null
+  verifiedUrl: null
+  i18n:
+    en:
+      description: Contributes expertise in qualification frameworks, ESCO alignment, competence validation and micro-credential design.
+    it:
+      description: Contribuisce con competenze su quadri di qualificazione, allineamento ESCO, validazione delle competenze e progettazione di micro-credentials.
+- slug: ison-psychometrica
+  type: full
+  country: Greece
+  name: ISON Psychometrica
+  approvedLogo: null
+  verifiedUrl: null
+  i18n:
+    en:
+      description: Contributes expertise in psychometric measurement, assessment design and career assessment, including the development of the Corporate Inclusion Readiness Index.
+    it:
+      description: Contribuisce con competenze in misurazione psicometrica, progettazione della valutazione e career assessment, incluso lo sviluppo del Corporate Inclusion Readiness Index.
+- slug: confartigianato-imprese-chieti
+  type: full
+  country: Italy
+  name: Confartigianato Imprese Chieti
+  approvedLogo: null
+  verifiedUrl: null
+  i18n:
+    en:
+      description: Connects the project directly with SMEs and business ecosystems, supporting company mobilisation, corporate engagement and the Ready for Inclusion Ambassador Network.
+    it:
+      description: Connette il progetto direttamente con PMI ed ecosistemi imprenditoriali, sostenendo la mobilitazione delle imprese, il coinvolgimento e la rete di Ready for Inclusion Ambassador.

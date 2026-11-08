@@ -1,10 +1,7 @@
 packages:
   - "."
 
-onlyBuiltDependencies:
-  - esbuild
-  - "@swc/core"
-  - "@parcel/watcher"
-  - sharp
-  - "@tailwindcss/oxide"
-  - unrs-resolver
+allowBuilds:
+  '@parcel/watcher': true
+  '@swc/core': true
+  esbuild: true

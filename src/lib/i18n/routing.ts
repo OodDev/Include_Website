@@ -1,4 +1,5 @@
 import { defineRouting } from "next-intl/routing";
+import { locales, defaultLocale, pathnames } from "@/config/locales";
 
 /**
  * Runtime routing for next-intl. All supported locales are routable so drafts
@@ -14,3 +15,6 @@ export const routing = defineRouting({
   localeDetection: false,
   pathnames: { ...pathnames },
 });
+
+/** Everything next-intl RequestConfig asks for, typed. */
+export const i18nConfig = { locales, defaultLocale } as const;

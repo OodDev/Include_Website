@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
 
+  // Repo content (MDX/YAML) is read at runtime by the loaders; include it in
+  // the standalone trace or every loadPage/listNews call 404s silently.
+  outputFileTracingIncludes: { "/**": ["./content/**/*"] },
+
   // Security headers (§12). CSP starts Report-Only; enforced after a soak period (ADR pending).
   headers: async () => [
     {
@@ -39,11 +43,7 @@ const nextConfig: NextConfig = {
       ],
     },
   ],
-
-  eslint: {
-    // Run via `pnpm lint` in CI, not on every build (build stays fast and deterministic)
-    ignoreDuringBuilds: true,
-  },
+  // Lint runs via `pnpm lint` in CI, not on every build (build stays fast, deterministic).
 };
 
 export default withNextIntl(nextConfig);

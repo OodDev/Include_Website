@@ -1,0 +1,205 @@
+# The nine architecture outputs (§6.5). The unconfirmed "European Protocol for
+# Work Inclusion" sits below with needsClientApproval: true — hidden from UI
+# while src/config/site.ts features.protocolResource === false.
+# No fabricated downloads: file/publishedAt stay null until the owner supplies
+# real approved material.
+
+- slug: territorial-labour-market-intelligence
+  icon: data-impact
+  status: planned
+  featured: false
+  audience: [researchers, policymakers, companies]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Territorial and Labour Market Intelligence
+      summary: Evidence on labour-market conditions, SME needs, opportunities and barriers affecting inclusive employment.
+    it:
+      title: Ricerca territoriale e sul mercato del lavoro
+      summary: Prove sulle condizioni del mercato del lavoro, sui bisogni delle PMI, sulle opportunità e sulle barriere che condizionano l'inclusione lavorativa.
+
+- slug: corporate-inclusion-readiness-index
+  icon: company
+  status: planned
+  featured: false
+  audience: [companies, vet-providers]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Corporate Inclusion Readiness Index
+      summary: A diagnostic framework to explore company culture, workflow adaptability, mentoring capacity and perceived risks related to inclusive work-based learning.
+    it:
+      title: Corporate Inclusion Readiness Index
+      summary: Un quadro diagnostico per esplorare la cultura aziendale, l'adattabilità dei processi, la capacità di mentoring e i rischi percepiti legati ai percorsi inclusivi.
+
+- slug: esco-mapped-vocational-profiles
+  icon: skills
+  status: planned
+  featured: false
+  audience: [companies, vet-providers, researchers]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: ESCO-mapped vocational profiles
+      summary: Vocational profiles translating real workplace activities into structured tasks and competences aligned with European labour-market frameworks.
+    it:
+      title: Profili professionali mappati su ESCO
+      summary: Profili professionali che traducono attività lavorative reali in mansioni e competenze strutturate, allineate ai quadri europei del mercato del lavoro.
+
+- slug: three-phase-vocational-continuum
+  icon: pathway
+  status: planned
+  featured: false
+  audience: [companies, vet-providers, people]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Three-phase vocational continuum
+      summary: The operational model connecting Protected Gyms, pre-corporate preparation and work-based learning in SMEs.
+    it:
+      title: Continuum formativo in tre fasi
+      summary: Il modello operativo che connette Protected Gym, preparazione pre-corporate e apprendimento in PMI.
+
+- slug: corporate-educational-mentoring-framework
+  icon: reciprocity
+  status: planned
+  featured: false
+  audience: [companies, vet-providers]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Corporate and educational mentoring framework
+      summary: Protocols, practical tools and training modules for the people accompanying participants throughout the pathway.
+    it:
+      title: Framework di mentoring aziendale ed educativo
+      summary: Protocolli, strumenti pratici e moduli di formazione per le persone che accompagnano i partecipanti lungo tutto il percorso.
+
+- slug: technical-passport
+  icon: technical-passport
+  status: planned
+  featured: true
+  audience: [people, companies, vet-providers]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Technical Passport and micro-credentials
+      summary: Tools for documenting and recognising the competences acquired during the vocational pathway and making them understandable to employers.
+    it:
+      title: Technical Passport e micro-credentials
+      summary: Strumenti per documentare e riconoscere le competenze acquisite lungo il percorso e renderle comprensibili alle imprese.
+
+- slug: corporate-inclusion-starter-toolkit
+  icon: toolkit
+  status: planned
+  featured: false
+  audience: [companies]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Corporate Inclusion Starter Toolkit
+      summary: Step-by-step guidance, readiness checks, onboarding templates and practical resources for SMEs approaching inclusive work-based learning.
+    it:
+      title: Corporate Inclusion Starter Toolkit
+      summary: Indicazioni passo a passo, readiness check, template di onboarding e risorse pratiche per le PMI che si avvicinano ai percorsi inclusivi.
+
+- slug: ready-for-inclusion-framework-label
+  icon: ready-for-inclusion
+  status: planned
+  featured: true
+  audience: [companies]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: Ready for Inclusion framework and label
+      summary: A structured recognition framework for companies committed to developing inclusive employment pathways.
+    it:
+      title: Framework e label Ready for Inclusion
+      summary: Un quadro strutturato di riconoscimento per le imprese impegnate nei percorsi di inclusione lavorativa.
+
+- slug: european-white-paper
+  icon: white-paper
+  status: planned
+  featured: true
+  audience: [policymakers, vet-providers, researchers]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: false
+  i18n:
+    en:
+      title: European White Paper
+      summary: Evidence-based recommendations for policymakers, VET institutions and employer organisations on integrating corporate-led inclusive vocational pathways into wider systems.
+    it:
+      title: Libro bianco europeo
+      summary: Raccomandazioni basate su evidenze per poli-maker, istituzioni di IFT e organizzazioni datoriali, sull'integrazione dei percorsi inclusivi corporate-led nei sistemi più ampi.
+
+- slug: european-protocol-work-inclusion
+  icon: european-protocol
+  status: planned
+  featured: false
+  audience: [policymakers, vet-providers]
+  publishedAt: null
+  language: [en]
+  file: null
+  fileType: null
+  fileSizeBytes: null
+  related: []
+  needsClientApproval: true   # appears in mockups but not in the architecture's outputs (§2.3 #8)
+  i18n:
+    en:
+      title: European Protocol for Work Inclusion
+      summary: A shared European roadmap for the inclusion of people with cognitive disabilities in work environments. Not yet confirmed as an official output.
+    it:
+      title: Protocollo europeo per l'inclusione lavorativa
+      summary: Una roadmap europea condivisa per l'inclusione delle persone con disabilità cognitive negli ambienti di lavoro. Da confermare come output ufficiale.

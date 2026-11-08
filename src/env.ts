@@ -42,20 +42,21 @@ if (!parsed.success) {
   throw new Error("Invalid environment variables — see server log");
 }
 
+const config = parsed.data; // narrow: safeParse failure throws above
 export const env = {
   ...process.env,
-  ...parsed.data,
+  ...config,
 };
-export type Env = typeof parsed.data;
+export type Env = typeof config;
 
 /** True when email delivery is configured (§6.9 availability gate). */
 export function mailConfigured(): boolean {
-  if (!parsed.data.MAIL_PROVIDER) return false;
-  return parsed.data.MAIL_PROVIDER === "brevo"
-    ? Boolean(parsed.data.BREVO_API_KEY)
-    : Boolean(parsed.data.SMTP_URL);
+  if (!config.MAIL_PROVIDER) return false;
+  return config.MAIL_PROVIDER === "brevo"
+    ? Boolean(config.BREVO_API_KEY)
+    : Boolean(config.SMTP_URL);
 }
 
 export function isProductionSite(): boolean {
-  return parsed.data.SITE_ENV === "production";
+  return config.SITE_ENV === "production";
 }
