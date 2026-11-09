@@ -40,7 +40,7 @@ export async function Header() {
       className="sticky top-0 z-30 border-b border-transparent bg-white/95 backdrop-blur-sm
         [html[data-scrolled='true']_&]:border-slate/10 motion-safe"
     >
-      <Container className="flex items-center justify-between gap-4 py-4 flex-wrap">
+      <Container className="flex items-center justify-between gap-4 pt-7 pb-4 flex-wrap">
         <Logo href="/" />
         <nav aria-label={t("nav")} className="hidden md:block">
           <ul className="flex items-center gap-5">
