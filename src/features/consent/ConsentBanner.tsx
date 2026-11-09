@@ -42,25 +42,25 @@ export function ConsentBanner() {
     <>
       <section
         aria-label={t("bannerTitle")}
-        className="fixed inset-x-0 bottom-0 z-30 border-t border-slate/15 bg-white p-4 shadow-[0_-8px_24px_rgba(0,0,0,0.08)] sm:p-6"
+        className="fixed inset-x-0 bottom-0 z-30 border-t border-slate/15 bg-white p-3 shadow-[0_-6px_18px_rgba(0,0,0,0.07)] sm:p-4"
       >
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-4 sm:flex-row sm:items-center sm:pr-10">
+        <div className="relative mx-auto flex max-w-6xl flex-col gap-3 sm:flex-row sm:items-center sm:pr-10">
           <div className="min-w-0 flex-1">
-            <p className="font-bold text-slate">{t("bannerTitle")}</p>
-            <p className="mt-1 text-[0.9375rem] text-slate/80">{t("bannerText")}</p>
+            <p className="text-[0.9375rem] font-bold text-slate">{t("bannerTitle")}</p>
+            <p className="mt-0.5 text-[0.8125rem] text-slate/80">{t("bannerText")}</p>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="flex flex-wrap gap-1.5">
             <button
               type="button"
               onClick={() => decide(false)}
-              className="min-h-11 rounded-pill border border-slate bg-white px-4 font-bold text-slate hover:bg-slate hover:text-white"
+              className="min-h-9 rounded-pill border border-slate bg-white px-3.5 text-[0.8125rem] font-bold text-slate hover:bg-slate hover:text-white"
             >
               {t("rejectAll")}
             </button>
             <button
               type="button"
               onClick={() => decide(true)}
-              className="min-h-11 rounded-pill border border-slate bg-white px-4 font-bold text-slate hover:bg-slate hover:text-white"
+              className="min-h-9 rounded-pill border border-slate bg-white px-3.5 text-[0.8125rem] font-bold text-slate hover:bg-slate hover:text-white"
             >
               {t("acceptAll")}
             </button>
@@ -68,7 +68,7 @@ export function ConsentBanner() {
               type="button"
               onClick={() => setDialogOpen(true)}
               aria-haspopup="dialog"
-              className="min-h-11 rounded-pill border border-slate bg-white px-4 font-bold text-slate hover:bg-slate hover:text-white"
+              className="min-h-9 rounded-pill border border-slate bg-white px-3.5 text-[0.8125rem] font-bold text-slate hover:bg-slate hover:text-white"
             >
               {t("settingsTitle")}
             </button>
