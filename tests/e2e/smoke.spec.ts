@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/test";
 
+import { publishedLocales } from "@/config/locales";
+
 /**
  * Core e2e smoke (§18): routes, navigation, language switch, consent banner,
  * 404 and the no-third-party guarantee (§11.1).
@@ -17,11 +19,14 @@ const EN_ROUTES = [
 ];
 
 for (const route of EN_ROUTES) {
-  test(`renders ${route} without third-party requests`, async ({ page }) => {
+  test(`renders ${route} without third-party requests`, async ({ page, baseURL }) => {
+    // Classify against the configured baseURL origin: during the initial
+    // navigation page.url() is still "about:blank", so page.url() cannot be
+    // used to decide "third-party" for the document request itself.
+    const siteOrigin = new URL(baseURL ?? "http://localhost:3000").origin;
     const thirdParty: string[] = [];
     page.on("request", (req) => {
-      const url = new URL(req.url());
-      if (url.origin !== new URL(page.url()).origin) thirdParty.push(req.url());
+      if (new URL(req.url()).origin !== siteOrigin) thirdParty.push(req.url());
     });
     const res = await page.goto(route);
     expect(res?.status()).toBe(200);
@@ -35,6 +40,8 @@ test("HTML lang attribute matches the locale", async ({ page }) => {
 });
 
 test("language switch keeps the page and messages change", async ({ page }) => {
+  // The switcher is hidden by design until >1 locale is fully humanReviewed (§2.3 #2).
+  test.skip(publishedLocales.length < 2, "No second locale published yet — switcher intentionally hidden");
   await page.goto("/en/the-project");
   await page.getByRole("link", { name: /Italiano/ }).first().click();
   await expect(page).toHaveURL(/\/it\/the-project/);
@@ -86,5 +93,5 @@ test("404 page renders for unknown routes", async ({ page }) => {
 
 test("contact form shows the not-operational notice without env config", async ({ page }) => {
   await page.goto("/en/contact");
-  await expect(page.locator("body")).toContainText(/not operational|notOperational|temporarily/i);
+  await expect(page.locator("body")).toContainText(/not yet active|not operational|temporarily/i);
 });
