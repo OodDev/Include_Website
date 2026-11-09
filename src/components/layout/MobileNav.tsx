@@ -5,6 +5,7 @@ import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { useEffect, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/lib/i18n";
+import { Icon } from "@/components/brand/Icon";
 import { cn } from "@/lib/utils/cn";
 
 export type NavItem = { route: string; label: string; ariaCurrent?: boolean };
@@ -49,6 +50,20 @@ export function MobileNav({ items, pill }: { items: NavItem[]; pill: NavItem }) 
           </VisuallyHidden>
           <nav aria-label={t("nav")}>
             <ul className="flex flex-col gap-1">
+              <li>
+                <Link
+                  href="/"
+                  onClick={() => setOpen(false)}
+                  aria-current={pathname === "/" ? "page" : undefined}
+                  className={cn(
+                    "flex items-center gap-3 rounded-input px-4 py-3 text-[1.0625rem] font-bold hover:bg-paper motion-safe",
+                    pathname === "/" && "text-rust",
+                  )}
+                >
+                  <Icon name="home" size={22} />
+                  {t("home")}
+                </Link>
+              </li>
               {items.map((it) => (
                 <li key={it.route}>
                   <Link

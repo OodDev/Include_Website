@@ -8,6 +8,7 @@
  * On slate grounds the structure stays sky. Legible at 24 px.
  */
 export const iconIds = [
+  "home", // wayfinding (navbar); not in the owner sheet — drawn in the set's own system style, flagged below
   // Pathway
   "protected-context",
   "pre-corporate",
@@ -45,6 +46,23 @@ const RUST = "var(--color-rust)";
 
 /** Each icon draws in a 48×48 viewBox. `sky` = structure, `rust` = the person. */
 const paths: Record<IconId, React.ReactNode> = {
+  /* Wayfinding — done in set style (sky structure, rust dot, 48-unit grid) but
+     NOT part of the owner's exploration sheet. TODO(brand-asset): confirm
+     with the owner; replace with an official glyph if one is supplied. */
+  home: (
+    <>
+      <path
+        d="M10 21.5V35a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4V21.5M6 25 24 9l18 16"
+        fill="none"
+        stroke={SKY}
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="24" cy="30" r="4.5" fill={RUST} />
+    </>
+  ),
+
   /* ── Pathway ─────────────────────────────────────────────────────────── */
   "protected-context": (
     <>

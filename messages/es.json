@@ -13,6 +13,7 @@
   },
   "header": {
     "nav": "Main navigation",
+    "home": "Inicio",
     "menu": "Menu",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",

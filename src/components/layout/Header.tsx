@@ -3,16 +3,21 @@ import { Link } from "@/lib/i18n";
 import { Logo } from "@/components/brand/Logo";
 import { MobileNav, type NavItem } from "@/components/layout/MobileNav";
 import { Container } from "@/components/ui/LayoutPrimitives";
+import { Icon } from "@/components/brand/Icon";
 import { publishedLocales } from "@/config/locales";
 
 /**
- * Desktop header per mockups (§2.3 #3): logo · The Project · The Pathway ·
+ * Desktop header per mockups (§2.3 #3): logo · [home icon] · The Project · The Pathway ·
  * Results & Tools · Partners · News · Contact · "Ready for Inclusion" pill —
  * pill LAST in DOM → focus order = visual order = mockup reading order.
  * Sticky with hairline after 8px scroll. aria-current marks the current page.
  */
 export async function Header() {
-  const [t, locale] = await Promise.all([getTranslations("header"), getLocale()]);
+  const [t, tCommon, locale] = await Promise.all([
+    getTranslations("header"),
+    getTranslations("common"),
+    getLocale(),
+  ]);
   const current = locale;
 
   const routes = [
@@ -39,6 +44,19 @@ export async function Header() {
         <Logo href="/" />
         <nav aria-label={t("nav")} className="hidden md:block">
           <ul className="flex items-center gap-5">
+            {/* Home via icon link although the logo links home too: §2.3 keeps
+                the logo as brand, users read the burger row better when a way
+                home is explicit; icon drawn in set style (TODO(brand-asset)). */}
+            <li>
+              <Link
+                href="/"
+                aria-label={t("home")}
+                title={tCommon("toHome")}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-input hover:bg-paper motion-safe"
+              >
+                <Icon name="home" size={22} />
+              </Link>
+            </li>
             {items.map((it) => (
               <li key={it.route}>
                 <Link
