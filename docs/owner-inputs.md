@@ -5,8 +5,14 @@ Visible working checklist. Nothing below is invented; the site runs without them
 ## Blockers for launch
 
 - [ ] **Production domain** and canonical URL (`NEXT_PUBLIC_SITE_URL`); hosting preference + EU region.
-- [ ] **Official vector brand assets** (the supplied PDFs contain no vectors):
-  - [ ] polychrome logo + monochrome/negative variants (SVG)
+- [ ] **Official vector brand assets** (the supplied PDFs contain no vectors —
+  *except* "Include 2 GRAFICA.pdf", whose logo page carries real paths):
+  - [x] polychrome logo (SVG) — extracted as original vector paths from
+    "Include 2 GRAFICA.pdf" p. 1 (multicolour "PROVE COLORE" variant) into
+    `public/brand/include-logo-multicolour.svg`; used by `Logo.tsx` on light
+    backgrounds. 2026-11-09.
+  - [ ] monochrome/negative logo variants (SVG) — **still awaited**; negative
+    contexts (footer) keep the authorised text placeholder.
   - [ ] "e" short mark (SVG) → favicon/app icon set
   - [ ] 24 official icons (exploration 03)
   - [ ] Ready for Inclusion label (variants)
