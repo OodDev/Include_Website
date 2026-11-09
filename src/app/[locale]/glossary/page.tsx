@@ -41,7 +41,7 @@ export default async function GlossaryPage({ params }: { params: Promise<{ local
       <JsonLd data={webPageSchema({ locale, route: "/glossary", name: tGloss("title") })} />
       <JsonLd data={breadcrumbSchema([{ name: tGloss("title"), route: "/glossary" }], locale)} />
       <BreadcrumbSection items={[{ label: tGloss("title") }]} />
-      <Container className="max-w-[75ch]">
+      <Container className="max-w-[75ch] pb-12 md:pb-16">
         <h1 className="text-h1 font-extrabold tracking-tight">{tGloss("title")}</h1>
         <p className="mt-6 text-[1.0625rem]">{tGloss("intro")}</p>
       </Container>

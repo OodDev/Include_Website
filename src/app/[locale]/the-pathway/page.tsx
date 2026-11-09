@@ -58,13 +58,13 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
         </div>
         <p className="max-w-[58ch] pt-2">{fm.hero.lead}</p>
       </Container>
-      <Container>
+      <Container className="pb-12 md:pb-16">
         <div className="grid gap-3 sm:grid-cols-3">
           {fm.phases.map((p, i) => (
             <a
               key={p.key}
               href={`#${p.key}`}
-              className="flex items-center gap-3 rounded-input bg-paper px-4 py-4 font-bold hover:bg-mist motion-safe"
+              className="flex items-center gap-3 rounded-input border border-slate/10 bg-white px-4 py-4 font-bold hover:bg-paper motion-safe"
             >
               <Icon name={p.icon as IconId} size={28} />
               <span>

@@ -84,7 +84,7 @@ export default async function NewsCategoryPage({
           { label: title },
         ]}
       />
-      <Container>
+      <Container className="pb-12 md:pb-16">
         <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{title}</h1>
       </Container>
       <Section>

@@ -57,7 +57,7 @@ export default async function TheProjectPage({ params }: { params: Promise<{ loc
         )}
       />
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
-      <Container>
+      <Container className="pb-12 md:pb-16">
         <h1 className="text-h1 font-extrabold tracking-tight max-w-[18ch]">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />

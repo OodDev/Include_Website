@@ -40,7 +40,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ locale
       <JsonLd data={webPageSchema({ locale, route: "/results-and-tools", name: tMeta("title"), description: tMeta("description") })} />
       <JsonLd data={breadcrumbSchema([{ name: tMeta("title"), route: "/" }, { name: fm.hero.title, route: "/results-and-tools" }], locale)} />
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
-      <Container>
+      <Container className="pb-12 md:pb-16">
         <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
