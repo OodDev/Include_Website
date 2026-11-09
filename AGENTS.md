@@ -38,8 +38,11 @@ Never run `pnpm start` against a standalone build.
 ## Where everything comes from (source of truth)
 
 All design, structure and graphic decisions trace back to the owner-provided
-PDFs at the repo root (copies saved in `docs/source/`). They are the only
-authorities; never invent design, structure or copy beyond them.
+PDFs — held **locally only** (repo root + `docs/source/` copies), deliberately
+**never committed or pushed** (see `.gitignore` `*.pdf` rule, `.githooks/pre-push`,
+and the CI guard in `.github/workflows/ci.yml`). After a fresh clone, restore
+them manually if needed and activate the hook with `git config core.hooksPath .githooks`.
+They are the only authorities; never invent design, structure or copy beyond them.
 
 | Asset | PDF | Used for |
 | --- | --- | --- |

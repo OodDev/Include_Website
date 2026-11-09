@@ -17,6 +17,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Guard — client PDFs never enter the repository
+        run: |
+          if [ -n "$(git ls-files '*.pdf')" ]; then
+            echo "Found client PDFs tracked in the repo (AGENTS.md forbids this):"
+            git ls-files '*.pdf'
+            exit 1
+          fi
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:

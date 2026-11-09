@@ -37,3 +37,11 @@ Thumbs.db
 *.log
 npm-debug.log*
 pnpm-debug.log*
+
+# Client-provided PDFs — local-only source material, NEVER committed or pushed
+# (blanket rule + folder pins; enforced also by .githooks/pre-push and CI)
+*.pdf
+!/tests/**/*.pdf
+/Brand kit, graphics, layout, styles, typography, logo, colur palette, mockup/
+/Website Architecture, Structure, Wireframe/
+docs/source/

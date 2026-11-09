@@ -1,0 +1,26 @@
+#!/bin/sh
+# Client-provided PDFs never leave this repository (AGENTS.md provenance rule).
+# Blocks ANY push whose objects contain a .pdf — even one force-added with
+# `git add -f`, which bypasses .gitignore.
+# Note: applies to this clone only (Git hooks are not versioned globally);
+# the CI guard in .github/workflows/ci.yml enforces the same rule on the remote.
+
+zero=0000000000000000000000000000000000000000
+
+while read -r local_ref local_sha remote_ref remote_sha; do
+  # Branch deletion — nothing to inspect.
+  [ "$local_sha" = "$zero" ] && continue
+  [ "$remote_sha" = "$zero" ] && range="$local_sha" || range="$remote_sha..$local_sha"
+
+  if git rev-list --objects "$range" -- \
+       | awk '{print $2}' \
+       | grep -qiE '\.pdf$'
+  then
+    echo >&2 "_push refused_: a commit about to be pushed contains PDF file(s):"
+    git rev-list --objects "$range" -- | awk '{print $2}' | grep -iE '\.pdf$' >&2
+    echo >&2 "Client PDFs are local-only source material — see AGENTS.md."
+    exit 1
+  fi
+done
+
+exit 0
