@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QA Audit Report — INCLUDE website vs. approved architecture PDF</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="QA audit of the INCLUDE Erasmus+ website against WEBSITE_ARCHITECTURE_WIRFRAME_Website_Pages_Navbar_Texts.pdf: fixes applied, open placeholders, decisions to confirm.">
+<style>
+  :root{
+    --petrol:#068a92;
+    --petrol-deep:#08767c;
+    --slate:#465056;
+    --sky:#9fbbc9;
+    --rust:#c14723;
+    --burgundy:#671317;
+    --mist:#e2e9ed;
+    --paper:#f3f3f1;
+    --ink:#22333b;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font:16px/1.65 "Manrope", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    -webkit-text-size-adjust:100%;
+  }
+  .wrap{max-width:56rem;margin:0 auto;padding:0 1.25rem}
+
+  /* ── Masthead ── */
+  header.site{
+    background:linear-gradient(135deg, var(--petrol) 0%, var(--petrol-deep) 100%);
+    color:#fff;
+    padding:3.5rem 0 3rem;
+  }
+  header.site .eyebrow{
+    display:flex;align-items:center;gap:.9rem;
+    text-transform:uppercase;letter-spacing:.12em;
+    font-size:.72rem;font-weight:800;color:rgba(255,255,255,.85);
+  }
+  header.site .eyebrow::before{content:"";width:2.75rem;height:2px;background:rgba(255,255,255,.7)}
+  header.site h1{
+    margin:.7rem 0 0;
+    font-size:clamp(1.7rem, 1.2rem + 2vw, 2.6rem);
+    line-height:1.12;letter-spacing:-.01em;max-width:22ch;font-weight:700;
+  }
+  header.site .sub{margin-top:.9rem;max-width:60ch;color:rgba(255,255,255,.88);font-size:1.02rem}
+  .meta{
+    margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.5rem;
+  }
+  .meta span{
+    display:inline-block;padding:.4rem .95rem;border:1px solid rgba(255,255,255,.45);
+    border-radius:999px;font-size:.8rem;font-weight:700;letter-spacing:.02em;
+  }
+
+  /* ── TOC ── */
+  nav.toc{
+    background:#fff;border-bottom:1px solid rgba(70,80,86,.12);
+    padding:.8rem 0;position:sticky;top:0;z-index:10;
+  }
+  nav.toc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem .25rem}
+  nav.toc a{
+    display:inline-block;padding:.3rem .75rem;border-radius:999px;
+    font-size:.82rem;font-weight:700;color:var(--petrol-deep);text-decoration:none;
+  }
+  nav.toc a:hover{background:var(--mist)}
+
+  /* ── Sections ── */
+  section{padding:2.8rem 0 1rem}
+  section:last-of-type{padding-bottom:4rem}
+  h2{
+    font-size:1.45rem;font-weight:800;letter-spacing:-.01em;color:var(--ink);
+    margin:0 0 1rem;display:flex;align-items:baseline;gap:.6rem;
+  }
+  h2 .num{
+    color:var(--petrol-deep);font-size:.95rem;font-weight:800;
+    font-variant-numeric:tabular-nums;flex:none;
+  }
+  h3{font-size:1.02rem;font-weight:800;color:var(--petrol-deep);margin:1.6rem 0 .5rem}
+  p{margin:.65rem 0;max-width:72ch}
+  ul,ol{margin:.65rem 0;padding-left:1.3rem;max-width:74ch}
+  li{margin:.35rem 0}
+  li::marker{color:var(--petrol-deep);font-weight:800}
+  strong{color:var(--ink)}
+  code{
+    font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size:.82em;background:var(--mist);color:var(--burgundy);
+    padding:.1em .4em;border-radius:.35em;word-break:break-word;
+  }
+  a{color:var(--petrol-deep);text-underline-offset:.2em}
+
+  .card{
+    background:#fff;border:1px solid rgba(70,80,86,.14);border-radius:1rem;
+    padding:1.4rem 1.5rem;margin:1rem 0;
+  }
+  .card h3{margin-top:0}
+
+  table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.92rem}
+  th,td{border:1px solid rgba(70,80,86,.18);padding:.55rem .7rem;text-align:left;vertical-align:top}
+  th{background:var(--mist);font-weight:800;color:var(--ink)}
+  td code{white-space:nowrap}
+  caption{caption-side:bottom;font-size:.78rem;color:var(--slate);text-align:left;padding-top:.5rem}
+
+  .callout{
+    border-left:4px solid var(--rust);background:#fff;
+    border-radius:0 .75rem .75rem 0;padding:1rem 1.25rem;margin:1.2rem 0;
+  }
+  .callout.warn{border-left-color:#b78900}
+  .callout p{margin:.4rem 0}
+  .callout p:first-child{margin-top:0}
+  .callout p:last-child{margin-bottom:0}
+  .callout .tag{
+    font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--rust);display:block;margin-bottom:.35rem;
+  }
+  .callout.warn .tag{color:#8a6800}
+
+  .pill{
+    display:inline-block;background:var(--petrol-deep);color:#fff;
+    font-size:.72rem;font-weight:800;letter-spacing:.05em;
+    padding:.25rem .7rem;border-radius:999px;margin-right:.4rem;
+  }
+  .pill.pass{background:#2c7a3f}
+  .pill.pend{background:#b78900}
+  .pill.fix{background:var(--petrol-deep)}
+
+  footer.page{
+    background:var(--slate);color:rgba(255,255,255,.85);
+    padding:2.2rem 0;font-size:.85rem;
+  }
+  footer.page p{margin:.35rem 0;max-width:none}
+  footer.page strong{color:#fff}
+  .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  @media print{
+    body{background:#fff;font-size:10.5pt}
+    nav.toc{position:static}
+    section{padding:1.4rem 0 .6rem;break-inside:avoid-page}
+    header.site{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    a{color:inherit;text-decoration:none}
+    .card,.callout{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <p class="eyebrow">INCLUDE — From protected paths to real jobs · Erasmus+ KA220-VET</p>
+    <h1>QA audit report: website vs. approved architecture PDF</h1>
+    <p class="sub">Full audit of the INCLUDE website against the client specification
+    <em>“Website architecture, structure, wireframe — Website pages, navbar &amp; texts”</em> (12 pages).
+    Every page was compared section by section and word by word; all discrepancies were fixed directly and re-verified with an automated production build, link crawl and end-to-end test suite.</p>
+    <p class="meta">
+      <span>Audit date: 11 November 2026</span>
+      <span>All 12 PDF pages reviewed</span>
+      <span>8 core routes + legal pages</span>
+      <span>Build, links &amp; e2e re-verified ✓</span>
+    </p>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Report contents">
+  <div class="wrap">
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#fixes">Fixes applied</a></li>
+      <li><a href="#verified">Verified correct</a></li>
+      <li><a href="#design">Design notes</a></li>
+      <li><a href="#placeholders">Open placeholders</a></li>
+      <li><a href="#confirm">Confirm with client</a></li>
+      <li><a href="#limits">Could not verify</a></li>
+      <li><a href="#checks">Quality gates</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <!-- ─────────────────────────── SUMMARY ─────────────────────────── -->
+  <section id="summary">
+    <h2><span class="num">01</span>Summary</h2>
+    <p>The specification PDF remains the single source of truth for site architecture, navigation and copy.
+    The audit found the website already closely aligned with it; the review surfaced <strong>ten real
+    discrepancies</strong>, all of which have been fixed and committed (commit <code>0a0251c</code>):</p>
+    <div class="card">
+      <ul style="margin:.2rem 0">
+        <li><strong>1 broken navigation behaviour</strong> — mobile menu links silently produced wrong URLs from nested pages;</li>
+        <li><strong>3 dead links</strong> — CTAs pointing at an anchor (<code>#ambassador-network</code>) that did not exist on the target page;</li>
+        <li><strong>2 missing sentences</strong> of approved PDF copy that were silently not rendered (Ready for Inclusion lead paragraph; Home link in the footer menu);</li>
+        <li><strong>4 copy/wording mismatches</strong> — truncated phase headings, a mislabelled card CTA, a misleading button label and non-PDF quotation marks in a partner name.</li>
+      </ul>
+    </div>
+    <p>Nothing was invented to fill gaps: every fix either restores the exact PDF wording or reuses wording already approved elsewhere on the site.</p>
+  </section>
+
+  <!-- ─────────────────────────── FIXES ─────────────────────────── -->
+  <section id="fixes">
+    <h2><span class="num">02</span>Fixes applied, by category</h2>
+
+    <h3>Links &amp; navigation</h3>
+    <div class="card">
+      <ul style="margin:.2rem 0">
+        <li><strong>Mobile menu — broken relative links.</strong> Menu items used relative URLs (<code>href="the-project"</code>), which the browser resolves against the current page. From any nested page (e.g. a news category page) tapping “The Project” produced a wrong URL and a 404. Links are now absolute and locale-aware, verified at runtime from the home page, inner pages and a dynamic route, on both mobile and desktop viewports.
+        <br><code>src/components/layout/MobileNav.tsx</code></li>
+        <li><strong>Footer menu — “Home” restored.</strong> The PDF’s site-wide recommended menu begins with HOME; the footer omitted it (only the logo linked home). The footer now reads exactly: Home · The Project · The Pathway · Results &amp; Tools · Ready for Inclusion · Partners · News · Contact. A dead “glossary” code branch was also removed.
+        <br><code>src/components/layout/Footer.tsx</code></li>
+        <li><strong>Missing anchor <code>#ambassador-network</code>.</strong> Three calls-to-action pointed to <code>/ready-for-inclusion#ambassador-network</code> (the “Why companies?” CTA and the network band on the home page — in both English and Italian content) but the target section carried no anchor, so the links scrolled nowhere. The section now has the matching anchor with correct scroll offset.
+        <br><code>src/app/[locale]/ready-for-inclusion/page.tsx</code></li>
+        <li><strong>News cards — locale-aware links.</strong> Story cards used raw anchors (<code>&lt;a href="/news/…"&gt;</code>) without the language prefix, causing an extra redirect for every click. Now the standard locale-aware link component is used.
+        <br><code>src/app/[locale]/news/page.tsx</code></li>
+      </ul>
+    </div>
+
+    <h3>Copy — word-by-word vs. the PDF</h3>
+    <div class="card">
+      <ul style="margin:.2rem 0">
+        <li><strong>Missing approved sentence restored.</strong> “<em>The Ready for Inclusion initiative will provide companies with a structured pathway to understand their readiness, strengthen inclusive practices and make their commitment visible.</em>” was present in the approved content file but never rendered: the page read a non-existent field (<code>hero.sub</code>) while the text is stored one level up. The paragraph now appears under the page heading, exactly as in the PDF.
+        <br><code>src/app/[locale]/ready-for-inclusion/page.tsx</code></li>
+        <li><strong>Pathway phase headings — full PDF names.</strong> A formatting rule truncated the headings to “Protected”, “Pre-corporate” and “Work-based learning”, dropping the PDF’s key terms. They now read verbatim: “Protected Gym”, “Pre-corporate preparation”, “Work-based learning in SMEs”.
+        <br><code>src/app/[locale]/the-pathway/page.tsx</code></li>
+        <li><strong>Partner name typography.</strong> “G.&nbsp;d’Annunzio” now uses the typographic quotation marks shown in the PDF.
+        <br><code>content/data/partners.yaml</code></li>
+        <li><strong>News card labels.</strong> Every story card’s link read “All stories” — the label of the back-link at the end of an article, repeated on every card. Cards now say “Read more”; “All stories” remains where it belongs (article back-link).
+        <br><code>src/app/[locale]/news/page.tsx</code>, <code>src/app/[locale]/news/category/[category]/page.tsx</code></li>
+        <li><strong>Home “What the project produces” button.</strong> It said “Discover the project” (the hero CTA label, which correctly links to The Project) but pointed at Results &amp; Tools. Relabelled “Download resources” — the PDF’s suggested CTA for the outputs repository — reusing the already-approved translation key.
+        <br><code>src/components/sections/HomeSections.tsx</code></li>
+      </ul>
+    </div>
+
+    <h3>Consistency</h3>
+    <div class="card">
+      <ul style="margin:.2rem 0">
+        <li><strong>Project targets rendered verbatim.</strong> The Ready for Inclusion page paraphrased the targets (“400 SMEs reached”, which read like an achievement). Both sentences are now rendered word for word from the approved text — “<em>The project aims to involve up to 20 companies per partner country…</em>” and “<em>…to reach at least 400 SMEs…</em>” — keeping the project aims clearly labelled as aims.
+        <br><code>src/app/[locale]/ready-for-inclusion/page.tsx</code></li>
+        <li><strong>Dead content reference removed.</strong> The Project page carried a reference to a translation key (<code>pages.paragraphs.gapTitle</code>) that exists in no language and is never rendered; removed to keep the content clean.
+        <br><code>content/pages/en/the-project.mdx</code></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── VERIFIED ─────────────────────────── -->
+  <section id="verified">
+    <h2><span class="num">03</span>Checked against the PDF and confirmed correct</h2>
+    <p>The following were verified verbatim — via an automated check that compares every approved sentence with the rendered HTML — and required no changes:</p>
+    <table>
+      <tr><th style="width:14rem">Area</th><th>Result</th></tr>
+      <tr><td>All page headings (H1)</td><td>All eight match the PDF exactly, including punctuation and dashes.</td></tr>
+      <tr><td>Home</td><td>Hero title, lead and intro; “Why companies?” title and full body; the three ambitions (titles + full bodies); manifesto line; Stay Connected heading.</td></tr>
+      <tr><td>Key facts strip</td><td>Erasmus+ KA220-VET · 24 months · 4 European countries · 6 organisations.</td></tr>
+      <tr><td>The Project</td><td>Challenge paragraphs, “A corporate-led approach” body, all six “Who is INCLUDE for?” entries, closing line.</td></tr>
+      <tr><td>The Pathway</td><td>All three phase lead paragraphs; all four “What supports the pathway?” items; “Explore the project tools” CTA.</td></tr>
+      <tr><td>Results &amp; Tools</td><td>All nine outputs, titles and summaries verbatim; unconfirmed extra item correctly hidden pending approval.</td></tr>
+      <tr><td>Ready for Inclusion</td><td>Hero, all five “For companies” bullets, Ambassador Network body and both target sentences.</td></tr>
+      <tr><td>Partners</td><td>Intro, all six partner names, countries and descriptions, “Associated partners” note.</td></tr>
+      <tr><td>News</td><td>Heading, lead and all seven content categories.</td></tr>
+      <tr><td>Contact</td><td>Heading, intro, form-invitation sentence, both suggested CTAs; form fields, required states and privacy messaging intact.</td></tr>
+      <tr><td>Footer (all pages)</td><td>Project facts table (project name, programme, project number, duration, project period, coordinator) and the EU funding disclaimer — verbatim.</td></tr>
+      <tr><td>Assets &amp; technical</td><td>Official logo files, favicon and security script load correctly; <strong>zero third-party requests</strong> on any page (guaranteed by automated tests); correct language attribute; canonical URLs and hreflang; sitemap, robots, RSS feed and accessibility statement in place; mobile menu usable; legal pages present with draft banners as designed.</td></tr>
+    </table>
+  </section>
+
+  <!-- ─────────────────────────── DESIGN ─────────────────────────── -->
+  <section id="design">
+    <h2><span class="num">04</span>Design &amp; style changes made (and why)</h2>
+    <p>Deliberately minimal — only what was needed for the corrected copy or structure to sit well in the existing layout. No redesign, no unrelated visual changes:</p>
+    <ul>
+      <li>Restored full phase headings on The Pathway received a line-width constraint so the longer names wrap cleanly inside the existing two-column layout.</li>
+      <li>The Ambassador Network section inherited the site’s standard anchor scroll offset so browser-back and CTA jumps land with the heading visible below the sticky header.</li>
+      <li>The hero section and the fact cards overlapping the hero were <strong>not touched</strong>, as requested.</li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────── PLACEHOLDERS ─────────────────────────── -->
+  <section id="placeholders">
+    <h2><span class="num">05</span>Open placeholders still to be filled</h2>
+    <p>These are intentional, honest “not yet available” states — never faked — and await owner input:</p>
+    <table>
+      <tr><th style="width:15rem">Item</th><th>Current state</th><th>Needed to complete</th></tr>
+      <tr><td>Newsletter subscription (home + contact)</td><td>Hidden until a provider is configured.</td><td>Newsletter service credentials; the approved sentence and form appear automatically once set up.</td></tr>
+      <tr><td>Partner logos &amp; website links</td><td>Not rendered.</td><td>Official logo files and verified URLs for the six partners.</td></tr>
+      <tr><td>Social media links</td><td>None rendered.</td><td>Official project social profiles.</td></tr>
+      <tr><td>security.txt contact</td><td>Standard reserved placeholder address.</td><td>Official security contact mailbox (also refresh the expiry date, currently past).</td></tr>
+      <tr><td>Downloadable outputs</td><td>All nine outputs shown as “Coming soon”.</td><td>Approved files as outputs are released — download buttons appear per item automatically.</td></tr>
+    </table>
+  </section>
+
+  <!-- ─────────────────────────── CONFIRM ─────────────────────────── -->
+  <section id="confirm">
+    <h2><span class="num">06</span>Ambiguities — please confirm with the client</h2>
+    <div class="callout">
+      <span class="tag">Decision 1 — desktop menu order</span>
+      <p>The PDF’s recommended menu places <strong>Ready for Inclusion fourth</strong> (after Results &amp; Tools). In the desktop header it is rendered as the highlighted pill at the end, following the approved design mockups; the footer and the mobile menu follow the PDF order exactly. The current arrangement is a documented, deliberate compromise — please confirm, or ask for the strict PDF order in the header too.</p>
+    </div>
+    <div class="callout">
+      <span class="tag">Decision 2 — hero second button</span>
+      <p>The PDF’s hero suggests a single CTA (“Discover the project”). The site also shows “I am a company” next to it, which comes from the approved design mockups and strengthens the companies entry point. Kept as is — please confirm.</p>
+    </div>
+    <div class="callout">
+      <span class="tag">Decision 3 — extra home sections</span>
+      <p>The PDF describes a deliberately concise home (promise → why → three ambitions → manifesto → stay connected). The page additionally contains the three-phase pathway teaser, audience cards, “What the project produces” and the network band. These come from the approved home mockups and are consistent with the PDF’s note that detailed content lives on secondary pages — please confirm they should remain.</p>
+    </div>
+    <div class="callout">
+      <span class="tag">Decision 4 — pending-approval micro-copy</span>
+      <p>Two short home-page lines (the pathway teaser subtitles and the statement pull-quote) are mockup-derived translations explicitly flagged in the content for client sign-off. They are rendered as drafted; please review the wording.</p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────── LIMITS ─────────────────────────── -->
+  <section id="limits">
+    <h2><span class="num">07</span>What could not be verified</h2>
+    <ul>
+      <li><strong>Production domain in page metadata.</strong> Canonical/share-preview URLs fall back to a localhost address unless the site’s public URL variable is set in the hosting environment. Please confirm it is configured on the live deployment.</li>
+      <li><strong>security.txt expiry.</strong> The file’s expiry date has already passed; it should be renewed together with the real security contact (see placeholders).</li>
+      <li><strong>Italian, Portuguese, Spanish and Greek drafts.</strong> Intentionally not published yet, so they were not word-diffed; message-level parity across all five languages was verified automatically.</li>
+      <li><strong>Live third-party integrations</strong> (newsletter, consent statistics) — correctly switched off without credentials, so their behaviour with real providers could not be exercised.</li>
+    </ul>
+  </section>
+
+  <!-- ─────────────────────────── CHECKS ─────────────────────────── -->
+  <section id="checks">
+    <h2><span class="num">08</span>Quality gates — all re-run after the fixes</h2>
+    <table>
+      <tr><th style="width:22rem">Check</th><th>Result</th></tr>
+      <tr><td>Type check, linting, 29 unit/integration tests</td><td><span class="pill pass">PASS</span></td></tr>
+      <tr><td>Content, translation-parity, placeholder and structured-data validators</td><td><span class="pill pass">PASS</span></td></tr>
+      <tr><td>Production build (all 8 routes + dynamic pages, static output)</td><td><span class="pill pass">PASS</span></td></tr>
+      <tr><td>Automated verbatim-copy check against all 12 PDF pages</td><td><span class="pill pass">PASS</span> — every approved sentence present</td></tr>
+      <tr><td>Full anchor crawl (every in-page link resolves to a real target)</td><td><span class="pill pass">PASS</span></td></tr>
+      <tr><td>End-to-end browser tests, desktop + mobile (30 tests)</td><td><span class="pill pass">PASS</span> — 2 intentionally skipped (language switch awaits a second published language)</td></tr>
+    </table>
+    <p>All fixes are committed in one reviewable change (<code>0a0251c</code>). Nothing was changed that could slow the site down or add third-party requests.</p>
+  </section>
+
+</main>
+
+<footer class="page">
+  <div class="wrap">
+    <p><strong>INCLUDE — From protected paths to real jobs</strong> · Erasmus+ KA220-VET · 2026-1-IT01-KA220-VET-000465826</p>
+    <p>Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the competent granting authority. Neither the European Union nor the granting authority can be held responsible for them.</p>
+  </div>
+</footer>
+
+</body>
+</html>
