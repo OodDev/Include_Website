@@ -69,10 +69,10 @@ export function MobileNav({ items, pill }: { items: NavItem[]; pill: NavItem }) 
                   <Link
                     href={`/${it.route}`}
                     onClick={() => setOpen(false)}
-                    aria-current={pathname === it.route ? "page" : undefined}
+                    aria-current={pathname === `/${it.route}` ? "page" : undefined}
                     className={cn(
                       "block rounded-input px-4 py-3 text-[1.0625rem] font-bold hover:bg-paper motion-safe",
-                      pathname === it.route && "text-rust",
+                      pathname === `/${it.route}` && "text-rust",
                     )}
                   >
                     {it.label}

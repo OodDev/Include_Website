@@ -19,8 +19,10 @@ export function DesktopNav({ items, pill }: { items: NavItem[]; pill: NavItem })
   const t = useTranslations("header");
   const tCommon = useTranslations("common");
   const pathname = usePathname();
+  // Route keys arrive without a leading slash (Header passes "the-pathway");
+  // usePathname() returns "/the-pathway" — normalise before comparing.
   const isCurrent = (route: string) =>
-    pathname === route || pathname.startsWith(`${route}/`);
+    pathname === `/${route}` || pathname.startsWith(`/${route}/`);
 
   return (
     <nav aria-label={t("nav")} className="hidden md:block">
