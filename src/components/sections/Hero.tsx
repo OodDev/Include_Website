@@ -30,6 +30,14 @@ export async function Hero({
         style={{ background: "linear-gradient(135deg, var(--color-petrol) 0%, var(--color-petrol-deep) 100%)" }}
       >
         <SuperE tone="hero" className="right-[-12vw] top-[-16vw] h-[54vw] w-[40vw] min-w-[386px]" />
+        {/* Rust person-dot as an independent hero gesture — mockup variation 3
+            `.edot` (right 6vw / top 4vw / 9vw, min 70px). The official
+            supergraphic "e" is dotless (D20); the dot lives beside it, and
+            the copy column stacks above both. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute right-[6vw] top-[4vw] aspect-square w-[9vw] min-w-[70px] rounded-full bg-rust"
+        />
         <Container className="relative pb-[110px] pt-[100px]">
           <p className="u-kick flex items-center gap-3.5 text-white">
             <span aria-hidden="true" className="h-0.5 w-11 shrink-0 bg-white/70" />
