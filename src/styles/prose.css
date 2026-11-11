@@ -6,11 +6,11 @@
   margin-block-start: 1.25em;
 }
 .prose-include h2 {
-  @apply text-h2 font-bold;
+  @apply text-h2 font-semibold;
   margin-block-start: 2em;
 }
 .prose-include h3 {
-  @apply text-h3 font-bold;
+  @apply text-h3 font-semibold;
   margin-block-start: 1.6em;
 }
 .prose-include ul {
@@ -24,7 +24,7 @@
   @apply text-petrol-deep underline underline-offset-4;
 }
 .prose-include a:hover {
-  @apply text-burgundy;
+  @apply text-rust;
 }
 .prose-include strong {
   @apply font-bold;

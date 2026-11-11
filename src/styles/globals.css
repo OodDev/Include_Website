@@ -39,6 +39,14 @@
     @apply text-[0.875rem] font-extrabold uppercase;
     letter-spacing: var(--tracking-label);
   }
+
+  /* Section kicker of the petrolio direction (D17): small, wide-tracked,
+   * petrol-deep on light grounds / white at opacity on petrol grounds.
+   * Pair with text-white/70 (or petrol-deep) at the call site. */
+  .u-kick {
+    @apply text-[0.72rem] font-bold uppercase text-petrol-deep;
+    letter-spacing: 0.24em;
+  }
 }
 
 /* Motion guardrails (§8) ------------------------------------------------- */
