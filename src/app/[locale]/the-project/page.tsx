@@ -58,7 +58,7 @@ export default async function TheProjectPage({ params }: { params: Promise<{ loc
       />
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
       <Container className="pb-12 md:pb-16">
-        <h1 className="text-h1 font-extrabold tracking-tight max-w-[18ch]">{fm.hero.title}</h1>
+        <h1 className="text-h1 font-semibold tracking-tight max-w-[18ch]">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
         </div>
@@ -72,7 +72,7 @@ export default async function TheProjectPage({ params }: { params: Promise<{ loc
       </Section>
       <Section>
         <Container className="max-w-[76ch]">
-          <h2 className="text-h2 font-bold">{fm.approach.title}</h2>
+          <h2 className="text-h2 font-semibold">{fm.approach.title}</h2>
           <div className="mt-6 flex flex-col gap-5">
             {fm.approach.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
@@ -82,7 +82,7 @@ export default async function TheProjectPage({ params }: { params: Promise<{ loc
       </Section>
       <Section tone="paper">
         <Container>
-          <h2 className="text-h2 font-bold">{fm.audiences.title}</h2>
+          <h2 className="text-h2 font-semibold">{fm.audiences.title}</h2>
           <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {fm.audiences.items.map((item, i) => (
               <li key={i} className="flex gap-4 rounded-card-lg border border-slate/10 bg-white p-6">
@@ -99,7 +99,7 @@ export default async function TheProjectPage({ params }: { params: Promise<{ loc
       {fm.keyFacts && (
         <Section>
           <Container>
-            <h2 className="text-h2 font-bold">{tFacts("project")}</h2>
+            <h2 className="text-h2 font-semibold">{tFacts("project")}</h2>
             <KeyFacts
               className="mt-8"
               facts={[

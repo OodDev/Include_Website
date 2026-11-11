@@ -85,7 +85,7 @@ export default async function NewsCategoryPage({
         ]}
       />
       <Container className="pb-12 md:pb-16">
-        <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{title}</h1>
+        <h1 className="max-w-[20ch] text-h1 font-semibold tracking-tight">{title}</h1>
       </Container>
       <Section>
         <Container>
@@ -106,7 +106,7 @@ export default async function NewsCategoryPage({
                       {p.date}
                       {p.country ? ` · ${p.country}` : ""}
                     </p>
-                    <h2 className="mt-2 text-[1.125rem] font-bold leading-snug">{p.title}</h2>
+                    <h2 className="mt-2 text-[1.125rem] font-semibold leading-snug">{p.title}</h2>
                     <p className="mt-3 text-[0.9375rem]">{p.excerpt}</p>
                     <Link
                       href={`/news/${p.slug}`}

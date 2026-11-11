@@ -49,7 +49,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
 
       <Container className="pb-12 md:pb-16">
-        <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
+        <h1 className="max-w-[20ch] text-h1 font-semibold tracking-tight">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
         </div>
@@ -91,7 +91,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
                     <p className="text-[0.8125rem] text-slate/60">
                       {p.date} · {tN(`categories.${p.category}`)}
                     </p>
-                    <h2 className="mt-2 text-[1.125rem] font-bold leading-snug">{p.title}</h2>
+                    <h2 className="mt-2 text-[1.125rem] font-semibold leading-snug">{p.title}</h2>
                     <p className="mt-3 text-[0.9375rem]">{p.excerpt}</p>
                     <a
                       href={`/news/${p.slug}`}

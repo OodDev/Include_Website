@@ -6,6 +6,7 @@ import { BreadcrumbSection } from "@/components/layout/Breadcrumbs";
 import { Container, Section, Card } from "@/components/ui/LayoutPrimitives";
 import { Icon } from "@/components/brand/Icon";
 import { ButtonLink } from "@/components/ui/Button";
+import { SuperE } from "@/components/brand/SuperE";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { webPageSchema, breadcrumbSchema, JsonLd } from "@/lib/seo/schemaorg";
 import type { IconId } from "@/components/brand/Icon";
@@ -51,9 +52,9 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
       {/* Hero with chips as in-page anchors; all 3 phases present in static HTML (§6.4) */}
       <Container className="grid gap-10 pb-14 md:grid-cols-[1fr_1fr]">
         <div>
-          <h1 className="max-w-[16ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
+          <h1 className="max-w-[16ch] text-h1 font-semibold tracking-tight">{fm.hero.title}</h1>
           {fm.hero.pull && (
-            <p className="mt-6 max-w-[26ch] text-[1.5rem] font-extrabold leading-tight">{fm.hero.pull}</p>
+            <p className="mt-6 max-w-[26ch] text-[1.5rem] font-semibold leading-tight">{fm.hero.pull}</p>
           )}
         </div>
         <p className="max-w-[58ch] pt-2">{fm.hero.lead}</p>
@@ -86,12 +87,12 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
 
       <Section>
         <Container>
-          <h2 className="text-h2 font-bold">What supports the pathway?</h2>
+          <h2 className="text-h2 font-semibold">What supports the pathway?</h2>
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {fm.supports.map((s) => (
               <Card key={s.title}>
                 <Icon name={s.icon as IconId} size={44} />
-                <h3 className="mt-4 font-bold">{s.title}</h3>
+                <h3 className="mt-4 font-semibold">{s.title}</h3>
                 <p className="mt-2 text-[0.9375rem]">{s.body}</p>
               </Card>
             ))}
@@ -99,9 +100,10 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
         </Container>
       </Section>
 
-      <div className="bg-slate text-white">
-        <Container as="section" className="py-16 md:py-20">
-          <h2 className="text-h2 font-bold">{fm.perspectiveShift.title}</h2>
+      <div className="relative overflow-hidden bg-petrol-deep text-white">
+        <SuperE tone="ghost" className="right-[-14%] bottom-[-22%] h-[36rem] w-[36rem]" />
+        <Container as="section" className="relative py-16 md:py-20">
+          <h2 className="text-h2 font-semibold">{fm.perspectiveShift.title}</h2>
           <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {fm.perspectiveShift.pairs.map((pair, i) => (
               <li key={i} className="border-t border-white/20 pt-4 text-[1.0625rem]">
@@ -117,7 +119,7 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
         <Container className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
           <ButtonLink href={fm.cta.exploreTools}>Explore the project tools</ButtonLink>
           <Card className="bg-rust text-white md:max-w-md">
-            <h2 className="text-[1.25rem] font-bold">{fm.cta.companyCard.title}</h2>
+            <h2 className="text-[1.25rem] font-semibold">{fm.cta.companyCard.title}</h2>
             <p className="mt-2 max-w-[40ch] opacity-90">{fm.cta.companyCard.body}</p>
             <ButtonLink href={fm.cta.companyCard.route} variant="outlineLight" className="mt-4">
               Ready for Inclusion
@@ -134,8 +136,8 @@ function PhaseBlock({ phase }: { phase: PhaseFM }) {
   return (
     <article id={phase.key} className="scroll-mt-28 grid gap-8 lg:grid-cols-[0.9fr_1.4fr]">
       <div>
-        {phase.label && <p className="u-label text-slate/60">{phase.label}</p>}
-        <h2 className="mt-2 text-h2 font-extrabold">{phase.fullName.replace(/ (Gym|preparation|in SMEs)$/, "")}</h2>
+        {phase.label && <p className="u-label text-petrol-deep">{phase.label}</p>}
+        <h2 className="mt-2 text-h2 font-semibold">{phase.fullName.replace(/ (Gym|preparation|in SMEs)$/, "")}</h2>
         <p className="mt-3 max-w-[58ch] text-[1rem]">{phase.lead}</p>
         <Icon name={phase.icon as IconId} size={96} className="mt-8 hidden md:block" />
       </div>
@@ -143,7 +145,7 @@ function PhaseBlock({ phase }: { phase: PhaseFM }) {
         {infoCards.map((c, i) => (
           <Card key={i} className="bg-white">
             {c.icon && <Icon name={c.icon as IconId} size={36} />}
-            <h3 className="mt-3 font-bold">{c.title}</h3>
+            <h3 className="mt-3 font-semibold">{c.title}</h3>
             <p className="mt-2 text-[0.9375rem]">{c.body}</p>
           </Card>
         ))}

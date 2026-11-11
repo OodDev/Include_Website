@@ -92,7 +92,7 @@ export function ConsentDialog({
               writeConsent(state);
               onOpenChange(false);
             }}
-            className="mt-6 min-h-11 w-full rounded-pill bg-slate px-5 font-bold text-white hover:bg-burgundy"
+            className="mt-6 min-h-11 w-full rounded-pill bg-petrol-deep px-5 font-semibold text-white hover:bg-slate"
           >
             {labels.saveLabel}
           </button>

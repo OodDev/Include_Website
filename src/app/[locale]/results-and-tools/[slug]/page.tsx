@@ -103,7 +103,7 @@ export default async function ResourceDetailPage({
       />
       <Container>
         <div className="flex items-start justify-between gap-6">
-          <h1 id="resource-title" className="max-w-[20ch] text-h1 font-extrabold tracking-tight">
+          <h1 id="resource-title" className="max-w-[20ch] text-h1 font-semibold tracking-tight">
             {title}
           </h1>
           <Icon name={resource.icon as IconId} size={56} className="shrink-0" aria-hidden="true" />

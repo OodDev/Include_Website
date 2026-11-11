@@ -4,18 +4,21 @@ import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils/cn";
 
 export const buttonVariants = cva(
-  // Pills per §5.3; uniform transition ≈150–200ms colour/transform (§8)
-  "inline-flex items-center justify-center gap-2 rounded-pill px-6 font-bold motion-safe " +
+  // Pills per §5.3; semibold is the petrolio-direction button weight (D17);
+  // uniform transition ≈150–200ms colour/transform (§8)
+  "inline-flex items-center justify-center gap-2 rounded-pill px-6 font-semibold motion-safe " +
     "transition-colors duration-150 focus-visible:outline-offset-4 " +
     "disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        primary: "bg-slate text-white hover:bg-burgundy",
+        primary: "bg-petrol-deep text-white hover:bg-slate",
         accent: "bg-rust text-white hover:bg-burgundy",
-        outline: "border-2 border-slate text-slate bg-white hover:bg-paper",
-        outlineLight: "border-2 border-white text-white bg-transparent hover:bg-white/10",
-        ghost: "text-petrol-deep hover:text-burgundy underline-offset-4 hover:underline",
+        outline: "border-2 border-petrol-deep text-petrol-deep bg-white hover:bg-paper",
+        outlineLight: "border-2 border-white/70 text-white bg-transparent hover:bg-white/10",
+        /* White pill on the immersive petrol hero (mockup variation 3 v3-btn) */
+        inverse: "bg-white text-petrol-deep hover:bg-mist",
+        ghost: "text-petrol-deep hover:text-rust underline-offset-4 hover:underline",
       },
       size: {
         sm: "min-h-9 px-4 text-[0.9375rem]",

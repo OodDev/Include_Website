@@ -83,7 +83,7 @@ export function MobileNav({ items, pill }: { items: NavItem[]; pill: NavItem }) 
                 <Link
                   href={pill.route}
                   onClick={() => setOpen(false)}
-                  className="block rounded-pill bg-rust px-5 py-3 text-center font-bold text-white hover:bg-burgundy motion-safe"
+                  className="block rounded-pill bg-petrol-deep px-5 py-3 text-center font-semibold text-white hover:bg-slate motion-safe"
                 >
                   {pill.label}
                 </Link>

@@ -9,7 +9,7 @@ export default function LocaleError({ reset }: { error: unknown; reset: () => vo
 
   return (
     <div className="mx-auto grid max-w-[60ch] content-center gap-6 px-6 py-28 text-center">
-      <h1 className="text-h1 font-extrabold tracking-tight">{t("500title")}</h1>
+      <h1 className="text-h1 font-semibold tracking-tight">{t("500title")}</h1>
       <p className="text-[1.0625rem]">{t("500text")}</p>
       <div className="flex justify-center gap-6 text-[0.9375rem] font-bold">
         <button

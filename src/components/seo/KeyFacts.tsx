@@ -15,8 +15,8 @@ export function KeyFacts({
     <dl className={`grid grid-cols-1 gap-x-10 gap-y-4 sm:grid-cols-2 lg:grid-cols-3 ${className ?? ""}`}>
       {facts.map((f, i) => (
         // "Target" appears multiple times by design (§2.3 #9) — index keeps keys unique.
-        <div key={`${f.term}-${i}`} className="rounded-card bg-white p-5">
-          <dt className="u-label text-slate/60" style={{ fontSize: "0.6875rem" }}>
+        <div key={`${f.term}-${i}`} className="rounded-card border border-slate/15 bg-white p-5">
+          <dt className="u-label text-petrol-deep" style={{ fontSize: "0.6875rem" }}>
             {f.term}
           </dt>
           <dd className="mt-2 font-semibold">{f.value}</dd>

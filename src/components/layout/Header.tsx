@@ -40,7 +40,7 @@ export async function Header() {
       className="sticky top-0 z-30 border-b border-transparent bg-white/95 backdrop-blur-sm
         [html[data-scrolled='true']_&]:border-slate/10 motion-safe"
     >
-      <Container className="flex items-center justify-between gap-4 pt-7 pb-4 flex-wrap">
+      <Container className="flex items-center justify-between gap-4 pt-6 pb-4 flex-wrap">
         <Logo href="/" />
         <nav aria-label={t("nav")} className="hidden md:block">
           <ul className="flex items-center gap-5">
@@ -61,7 +61,7 @@ export async function Header() {
               <li key={it.route}>
                 <Link
                   href={`/${it.route}`}
-                  className="text-[0.9375rem] font-bold decoration-2 underline-offset-4 hover:underline"
+                  className="text-[0.9375rem] font-semibold hover:text-petrol-deep motion-safe"
                   aria-current={undefined}
                 >
                   {it.label}
@@ -71,7 +71,7 @@ export async function Header() {
             <li>
               <Link
                 href="/ready-for-inclusion"
-                className="rounded-pill bg-rust px-4 py-2 text-white text-[0.9375rem] font-bold hover:bg-burgundy motion-safe"
+                className="rounded-pill bg-petrol-deep px-4 py-2 text-white text-[0.9375rem] font-semibold hover:bg-slate motion-safe"
               >
                 {t("pill")}
               </Link>
@@ -80,7 +80,7 @@ export async function Header() {
         </nav>
         {/* Language switcher renders only when >1 locale is published (§2.3 #2) */}
         {publishedLocales.length > 1 && (
-          <span className="u-label text-slate/60">{current.toUpperCase()}</span>
+          <span className="u-label text-petrol-deep">{current.toUpperCase()}</span>
         )}
         <MobileNav
           items={items}

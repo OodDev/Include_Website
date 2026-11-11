@@ -42,7 +42,7 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
       {/* Hero with ReadyLabel (§6.6) */}
       <Container className="grid gap-10 pb-16 lg:grid-cols-[1.4fr_1fr] lg:items-center">
         <div>
-          <h1 className="max-w-[16ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
+          <h1 className="max-w-[16ch] text-h1 font-semibold tracking-tight">{fm.hero.title}</h1>
           <div className="mt-8">
             <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
           </div>
@@ -55,7 +55,7 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
 
       <Section tone="paper">
         <Container>
-          <h2 className="text-h2 font-bold">For companies</h2>
+          <h2 className="text-h2 font-semibold">For companies</h2>
           <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {fm.forCompanies.map((item, i) => (
               <li key={i} className="flex gap-4 rounded-card-lg border border-slate/10 bg-white p-6">
@@ -69,7 +69,7 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
 
       <Section>
         <Container>
-          <h2 className="text-h2 font-bold">{fm.ambassadorNetwork.title}</h2>
+          <h2 className="text-h2 font-semibold">{fm.ambassadorNetwork.title}</h2>
           <p className="mt-6 max-w-[68ch]">{fm.ambassadorNetwork.body}</p>
           {/* Targets labelled as project aims (§2.3 #9) — never achievements */}
           <KeyFacts
@@ -90,7 +90,7 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
       <Section tone="paper">
         <Container>
           <Card className="bg-rust text-white md:max-w-3xl">
-            <h2 className="text-[1.375rem] font-bold">{fm.cta.label}</h2>
+            <h2 className="text-[1.375rem] font-semibold">{fm.cta.label}</h2>
             <ButtonLink href="/contact?type=company" variant="outlineLight" className="mt-6">
               {fm.cta.label}
             </ButtonLink>

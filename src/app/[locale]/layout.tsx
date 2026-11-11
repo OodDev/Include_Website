@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Manrope } from "next/font/google";
+import { Outfit, Manrope } from "next/font/google";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -11,7 +11,15 @@ import { SkipLink } from "@/components/layout/SkipLink";
 import { organizationSchema, websiteSchema, JsonLd } from "@/lib/seo/schemaorg";
 import "@/styles/globals.css";
 
-// Manrope — self-hosted at build via next/font (no runtime Google request, §3)
+// Outfit — site typeface of the "petrolio immersive" direction (D17).
+// Manrope stays loaded ONLY for the footer logo's tagline, which reproduces
+// the owner SVG artwork set in Manrope-ExtraBold (LogoFooter).
+// Both are self-hosted at build via next/font (no runtime Google request, §3).
+const outfit = Outfit({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-outfit",
+});
 const manrope = Manrope({
   subsets: ["latin", "latin-ext"],
   display: "swap",
@@ -38,7 +46,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={manrope.variable}
+      className={`${outfit.variable} ${manrope.variable}`}
       suppressHydrationWarning
       data-scroll-behavior="smooth"
     >

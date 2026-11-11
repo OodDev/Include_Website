@@ -53,14 +53,14 @@ export function ConsentBanner() {
             <button
               type="button"
               onClick={() => decide(false)}
-              className="min-h-9 rounded-pill border border-slate bg-white px-3.5 text-[0.8125rem] font-bold text-slate hover:bg-slate hover:text-white"
+              className="min-h-9 rounded-pill border-2 border-petrol-deep bg-white px-3.5 text-[0.8125rem] font-semibold text-petrol-deep hover:bg-paper"
             >
               {t("rejectAll")}
             </button>
             <button
               type="button"
               onClick={() => decide(true)}
-              className="min-h-9 rounded-pill border border-slate bg-white px-3.5 text-[0.8125rem] font-bold text-slate hover:bg-slate hover:text-white"
+              className="min-h-9 rounded-pill border-2 border-petrol-deep bg-petrol-deep px-3.5 text-[0.8125rem] font-semibold text-white hover:bg-slate"
             >
               {t("acceptAll")}
             </button>
@@ -68,7 +68,7 @@ export function ConsentBanner() {
               type="button"
               onClick={() => setDialogOpen(true)}
               aria-haspopup="dialog"
-              className="min-h-9 rounded-pill border border-slate bg-white px-3.5 text-[0.8125rem] font-bold text-slate hover:bg-slate hover:text-white"
+              className="min-h-9 rounded-pill bg-transparent px-3.5 text-[0.8125rem] font-semibold text-petrol-deep underline-offset-4 hover:underline"
             >
               {t("settingsTitle")}
             </button>

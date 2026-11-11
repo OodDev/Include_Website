@@ -55,7 +55,7 @@ export default async function ContactPage({
       />
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
       <Container className="pb-12 md:pb-16">
-        <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
+        <h1 className="max-w-[20ch] text-h1 font-semibold tracking-tight">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
         </div>
@@ -63,10 +63,11 @@ export default async function ContactPage({
       </Container>
       <Section tone="paper">
         <Container>
-          <h2 className="text-h2 font-bold">
+          <h2 className="text-h2 font-semibold">
             {tMeta("title")}
           </h2>
-          <div className="mt-8">
+          {/* Petrolio-direction form card (D17): mist→white gradient, petrol shadow */}
+          <div className="mt-8 max-w-[56rem] rounded-card-lg border border-slate/10 bg-gradient-to-br from-mist to-white p-6 shadow-[0_12px_30px_rgba(8,118,124,0.12)] md:p-8">
             <ContactForm operational={operational} {...(defaultAudience ? { defaultAudience } : {})} />
           </div>
         </Container>

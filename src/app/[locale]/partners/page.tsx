@@ -32,7 +32,7 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
       <JsonLd data={breadcrumbSchema([{ name: tMeta("title"), route: "/" }, { name: fm.hero.title, route: "/partners" }], locale)} />
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
       <Container className="pb-12 md:pb-16">
-        <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
+        <h1 className="max-w-[20ch] text-h1 font-semibold tracking-tight">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
         </div>
@@ -43,8 +43,8 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
             {partners.map((p) => (
               <li key={p.slug}>
                 <Card className="h-full">
-                  <p className="u-label text-slate/60">{p.country}</p>
-                  <h2 className="mt-2 text-[1.125rem] font-bold leading-snug">{p.name}</h2>
+                  <p className="u-label text-petrol-deep">{p.country}</p>
+                  <h2 className="mt-2 text-[1.125rem] font-semibold leading-snug">{p.name}</h2>
                   <p className="mt-3 text-[0.9375rem]">{localisedField(locale, p, "description")}</p>
                   {/* Verified external links only (rel noopener, §12) — not rendered until owner verifies URL */}
                   {p.verifiedUrl ? (
@@ -60,7 +60,7 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
       </Section>
       <Section>
         <Container className="max-w-[70ch]">
-          <h2 className="text-h2 font-bold">Associated partners</h2>
+          <h2 className="text-h2 font-semibold">Associated partners</h2>
           {/* Neutral neutral architecture copy; names hidden until partners.yaml carries type:associated entries (§6.7) */}
           <p className="mt-6">{fm.associatedNote}</p>
           {associated.length > 0 && (

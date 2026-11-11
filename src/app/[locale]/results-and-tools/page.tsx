@@ -41,7 +41,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ locale
       <JsonLd data={breadcrumbSchema([{ name: tMeta("title"), route: "/" }, { name: fm.hero.title, route: "/results-and-tools" }], locale)} />
       <BreadcrumbSection items={[{ label: fm.hero.title }]} />
       <Container className="pb-12 md:pb-16">
-        <h1 className="max-w-[20ch] text-h1 font-extrabold tracking-tight">{fm.hero.title}</h1>
+        <h1 className="max-w-[20ch] text-h1 font-semibold tracking-tight">{fm.hero.title}</h1>
         <div className="mt-8">
           <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
         </div>
@@ -57,7 +57,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ locale
                       <Icon name={r.icon} size={44} />
                       <StatusChip status={r.status}>{tStatus(r.status)}</StatusChip>
                     </div>
-                    <h2 className="mt-4 text-[1.125rem] font-bold leading-snug">
+                    <h2 className="mt-4 text-[1.125rem] font-semibold leading-snug">
                       {localisedField(locale, r, "title")}
                     </h2>
                     <p className="mt-3 text-[0.9375rem]">{localisedField(locale, r, "summary")}</p>

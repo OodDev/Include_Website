@@ -90,7 +90,7 @@ export default async function NewsPostPage({
           {fm.date} · {tN(`categories.${fm.category}`)}
           {fm.country ? ` · ${fm.country}` : ""}
         </p>
-        <h1 className="mt-2 text-h1 font-extrabold tracking-tight">{fm.title}</h1>
+        <h1 className="mt-2 text-h1 font-semibold tracking-tight">{fm.title}</h1>
         <p className="mt-6 text-[1.125rem] leading-relaxed">{fm.excerpt}</p>
       </Container>
       {fm.category === "pilot-stories" && (

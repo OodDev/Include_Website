@@ -40,10 +40,10 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ l
   return (
     <div className="mx-auto max-w-6xl px-5 py-10 text-slate">
       <p className="text-caption tracking-label uppercase text-rust">dev only — noindex, hidden in production</p>
-      <h1 className="mt-2 text-h2 font-bold">INCLUDE design system</h1>
+      <h1 className="mt-2 text-h2 font-semibold">INCLUDE design system</h1>
 
       <section aria-labelledby="ds-colors" className="mt-10">
-        <h2 id="ds-colors" className="text-h3 font-bold">Colors</h2>
+        <h2 id="ds-colors" className="text-h3 font-semibold">Colors</h2>
         <ul className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-5">
           {colors.map(([name, cls]) => (
             <li key={name} className="rounded-card-lg border border-slate/15 p-2">
@@ -55,18 +55,18 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ l
       </section>
 
       <section aria-labelledby="ds-type" className="mt-10">
-        <h2 id="ds-type" className="text-h3 font-bold">Typography (Manrope)</h2>
+        <h2 id="ds-type" className="text-h3 font-semibold">Typography (Outfit)</h2>
         <div className="mt-4 flex flex-col gap-2">
-          <p className="text-h1 font-bold">Heading 1 (clamp)</p>
-          <p className="text-h2 font-bold">Heading 2 (clamp)</p>
-          <p className="text-h3 font-bold">Heading 3 (clamp)</p>
-          <p className="text-body">Body 18px — Manrope</p>
+          <p className="text-h1 font-semibold">Heading 1 (clamp)</p>
+          <p className="text-h2 font-semibold">Heading 2 (clamp)</p>
+          <p className="text-h3 font-semibold">Heading 3 (clamp)</p>
+          <p className="text-body">Body 18px — Outfit</p>
           <p className="text-caption font-caption">Caption 14px / brand labels</p>
         </div>
       </section>
 
       <section aria-labelledby="ds-brand" className="mt-10">
-        <h2 id="ds-brand" className="text-h3 font-bold">Brand components</h2>
+        <h2 id="ds-brand" className="text-h3 font-semibold">Brand components</h2>
         <div className="mt-4 flex flex-wrap items-center gap-8 rounded-card-lg border border-slate/15 bg-paper p-6">
           <LogoMark />
           <SuperE />
@@ -80,7 +80,7 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ l
       </section>
 
       <section aria-labelledby="ds-icons" className="mt-10">
-        <h2 id="ds-icons" className="text-h3 font-bold">Icons (24px grid)</h2>
+        <h2 id="ds-icons" className="text-h3 font-semibold">Icons (24px grid)</h2>
         <ul className="mt-4 flex flex-wrap gap-4">
           {iconIds.map((name) => (
             <li key={name} className="flex flex-col items-center gap-1 rounded border border-slate/15 p-3">
@@ -92,14 +92,14 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ l
       </section>
 
       <section aria-labelledby="ds-actions" className="mt-10">
-        <h2 id="ds-actions" className="text-h3 font-bold">Buttons & inputs</h2>
+        <h2 id="ds-actions" className="text-h3 font-semibold">Buttons & inputs</h2>
         <div className="mt-4 flex flex-wrap items-center gap-4">
-          <button type="button" className="min-h-11 rounded-pill bg-slate px-5 font-bold text-white hover:bg-burgundy">
+          <button type="button" className="min-h-11 rounded-pill bg-petrol-deep px-5 font-semibold text-white hover:bg-slate">
             Primary
           </button>
           <button
             type="button"
-            className="min-h-11 rounded-pill border border-slate bg-white px-5 font-bold text-slate hover:bg-slate hover:text-white"
+            className="min-h-11 rounded-pill border-2 border-petrol-deep bg-white px-5 font-semibold text-petrol-deep hover:bg-paper"
           >
             Secondary
           </button>

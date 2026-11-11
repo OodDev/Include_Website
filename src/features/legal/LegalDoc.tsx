@@ -72,7 +72,7 @@ export async function LegalDoc({ locale, slug }: { locale: AppLocale; slug: Lega
             {t("lastUpdated", { date: new Date(doc.meta.updated) })}
           </p>
         )}
-        <h1 className="mt-3 text-h1 font-extrabold tracking-tight">{tMeta("title")}</h1>
+        <h1 className="mt-3 text-h1 font-semibold tracking-tight">{tMeta("title")}</h1>
         <div className="mt-10">
           <Prose body={doc.body} />
         </div>

@@ -157,7 +157,7 @@ export function ContactForm({ operational, defaultAudience }: { operational: boo
 }
 
 const inputCls =
-  "w-full rounded-card border border-slate/20 bg-white px-4 py-3 text-[1rem] outline-none focus-visible:border-petrol-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-petrol-deep/40";
+  "w-full rounded-input border border-slate/20 bg-white px-4 py-3 text-[1rem] outline-none focus-visible:border-petrol-deep focus-visible:outline focus-visible:outline-2 focus-visible:outline-petrol-deep/40";
 const checkboxCls = "mt-0.5 h-[1.125rem] w-[1.125rem] shrink-0 accent-petrol-deep";
 
 /** next-intl's TypedTranslations is internal; a loose callable keeps this readable. */
