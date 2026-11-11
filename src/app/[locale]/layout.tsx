@@ -36,7 +36,12 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className={manrope.variable} suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={manrope.variable}
+      suppressHydrationWarning
+      data-scroll-behavior="smooth"
+    >
       <body>
         <SkipLink />
         <JsonLd data={organizationSchema()} />
