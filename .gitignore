@@ -48,3 +48,4 @@ pnpm-debug.log*
 /Brand kit, graphics, layout, styles, typography, logo, colur palette, mockup/
 /Website Architecture, Structure, Wireframe/
 docs/source/
+.env*

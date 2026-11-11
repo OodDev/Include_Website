@@ -24,6 +24,9 @@ const envSchema = z.object({
 
   ALTCHA_HMAC_KEY: z.string().optional(),
 
+  /** Code-level preview gate password (D17): set on preview deployments only. */
+  PREVIEW_PASSWORD: z.string().min(8).optional(),
+
   ANALYTICS_PROVIDER: z.enum(["none", "plausible", "matomo", "ga4"]).default("none"),
   PLAUSIBLE_DOMAIN: z.string().optional(),
   GA_MEASUREMENT_ID: z.string().optional(),
