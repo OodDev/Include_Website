@@ -7,12 +7,22 @@ Visible working checklist. Nothing below is invented; the site runs without them
 - [ ] **Production domain** and canonical URL (`NEXT_PUBLIC_SITE_URL`); hosting preference + EU region.
 - [ ] **Official vector brand assets** (the supplied PDFs contain no vectors —
   *except* "Include 2 GRAFICA.pdf", whose logo page carries real paths):
-  - [x] polychrome logo (SVG) — extracted as original vector paths from
-    "Include 2 GRAFICA.pdf" p. 1 (multicolour "PROVE COLORE" variant) into
-    `public/brand/include-logo-multicolour.svg`; used by `Logo.tsx` on light
-    backgrounds. 2026-11-09.
-  - [ ] monochrome/negative logo variants (SVG) — **still awaited**; negative
-    contexts (footer) keep the authorised text placeholder.
+  - [x] polychrome logo (SVG) — official owner file "Main_Logo.svg"
+    ("Brand kit, graphics, …" folder), copied verbatim to
+    `public/brand/include-logo.svg`; used by `Logo.tsx` everywhere
+    (header + footer). 2026-11-11. Supersedes the earlier PDF-extracted
+    intermediate `include-logo-multicolour.svg` (removed).
+  - [x] negative logo with tagline (SVG) — official
+    "Main_Logo_with_UnderText.svg", whitened (fills → #ffffff, geometry and
+    text positions verbatim) and inlined as a server component
+    (`LogoFooter.tsx`) for the footer. 2026-11-11. Inlined rather than `<img>`
+    because the tagline is live `<text>` in Manrope and an `<img>` SVG cannot
+    use the page web font. If the owner supplies an official outlined
+    negative file, it can go back to a plain `<img>`.
+  - [x] white wordmark-only variant — derived from the official
+    "Main_Logo.svg" (fills set to `#ffffff`) as
+    `public/brand/include-logo-white.svg`; available via
+    `Logo variant="negative"`. 2026-11-11.
   - [ ] "e" short mark (SVG) → favicon/app icon set
   - [ ] 24 official icons (exploration 03)
   - [ ] Ready for Inclusion label (variants)

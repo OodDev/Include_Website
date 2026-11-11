@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/lib/i18n";
-import { Logo } from "@/components/brand/Logo";
+import { LogoFooter } from "@/components/brand/LogoFooter";
 import { Container } from "@/components/ui/LayoutPrimitives";
 import { siteConfig } from "@/config/site";
 import { CookieSettingsButton } from "@/features/consent/CookieSettingsButton";
@@ -40,7 +40,7 @@ export async function Footer() {
       <Container as="div" className="py-14 md:py-16">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="flex flex-col gap-6">
-            <Logo variant="negative" href="/" />
+            <LogoFooter href="/" />
             {/* Co-brand row: INCLUDE | Erasmus+/EU emblem | partners — official
                 files awaited (docs/owner-inputs.md); slot intentionally absent
                 rather than imitated (§2.4). Order and rules per §5.8. */}
