@@ -43,7 +43,7 @@ export async function Hero({
             <span aria-hidden="true" className="h-0.5 w-11 shrink-0 bg-white/70" />
             {hero.eyebrow}
           </p>
-          <h1 className="mt-5 max-w-[19ch] text-h1 font-semibold leading-[1.04] tracking-[-0.01em]">
+          <h1 className="mt-5 max-w-[19ch] text-h1 font-semibold leading-[1.04] tracking-[-0.01em] text-rust">
             {hero.title}
           </h1>
           <p className="mt-5 max-w-[48ch] text-[1.13rem] leading-[1.7] font-light">{hero.lead}</p>
