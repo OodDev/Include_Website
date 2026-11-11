@@ -8,8 +8,15 @@ export function SuperE({
   tone = "white",
   className = "",
 }: {
-  /** Ground tone the graphic sits on ("white" → mist fill; "slate" → tone-on-tone). */
-  tone?: "white" | "slate" | "petrol";
+  /**
+   * Ground tone the graphic sits on:
+   * "white" → mist fill (light grounds),
+   * "slate"/"petrol" → translucent white (dark grounds),
+   * "hero" → petrol-deep tone-on-tone on the petrol hero gradient,
+   * "ghost" → petrol at 55% on petrol-deep bands (variation 3, D17),
+   * "paper" → petrol-deep watermark at 8% on white grounds (D18).
+   */
+  tone?: "white" | "slate" | "petrol" | "hero" | "ghost" | "paper";
   className?: string;
 }) {
   const fill =
@@ -17,9 +24,17 @@ export function SuperE({
       ? "rgba(255, 255, 255, 0.12)"
       : tone === "petrol"
         ? "rgba(255, 255, 255, 0.14)"
-        : "var(--color-mist)";
+        : tone === "hero" || tone === "paper"
+          ? "var(--color-petrol-deep)"
+          : tone === "ghost"
+            ? "var(--color-petrol)"
+            : "var(--color-mist)";
   const dotFill =
     tone === "white" ? "var(--color-white)" : "var(--color-rust)";
+  const glyphOpacity =
+    tone === "ghost" ? 0.55 : tone === "hero" ? 0.9 : tone === "paper" ? 0.08 : 1;
+  /* The band ghost is the bare letterform (no person-dot) per the mockup. */
+  const showDot = tone !== "ghost" && tone !== "paper";
 
   return (
     <svg
@@ -27,7 +42,7 @@ export function SuperE({
       aria-hidden="true"
       focusable="false"
       className={`super-e-parallax motion-safe pointer-events-none select-none ${className}`}
-      style={{ position: "absolute", overflow: "visible" }}
+      style={{ position: "absolute", overflow: "visible", opacity: glyphOpacity }}
     >
       {/* Neutral placeholder for the cropped supergraphic e — TODO(brand-asset) */}
       <text
@@ -35,13 +50,13 @@ export function SuperE({
         y="78"
         textAnchor="middle"
         fontSize="100"
-        fontWeight="800"
-        fontFamily="var(--font-manrope, Manrope), system-ui, sans-serif"
+        fontWeight="600"
+        fontFamily="var(--font-sans, Outfit), system-ui, sans-serif"
         fill={fill}
       >
         e
       </text>
-      <circle cx="72" cy="42" r="9" fill={dotFill} />
+      <circle cx="72" cy="42" r="9" fill={dotFill} style={{ visibility: showDot ? "visible" : "hidden" }} />
     </svg>
   );
 }

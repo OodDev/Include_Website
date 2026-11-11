@@ -46,7 +46,7 @@ export function LogoMark({
         textAnchor="middle"
         fontSize="46"
         fontWeight="800"
-        fontFamily="var(--font-manrope, Manrope), system-ui, sans-serif"
+        fontFamily="var(--font-sans, Outfit), system-ui, sans-serif"
         fill={glyphFill}
       >
         e

@@ -71,7 +71,7 @@ function ReadyLabelInner({
           textAnchor="middle"
           fontSize="46"
           fontWeight="800"
-          fontFamily="var(--font-manrope, Manrope), system-ui, sans-serif"
+          fontFamily="var(--font-sans, Outfit), system-ui, sans-serif"
           fill={tone === "white" ? "var(--color-white)" : "var(--color-slate)"}
         >
           e

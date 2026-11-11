@@ -41,7 +41,12 @@ export const iconIds = [
 
 export type IconId = (typeof iconIds)[number];
 
-const SKY = "var(--color-sky)";
+/** Icon structure colour is a custom property so the tone can be set per
+ * instance without re-declaring the path data. Default: petrol — the
+ * petrolio-direction structure colour (mockup variation 3); "sky" preserves
+ * the original exploration-03 look; "white" is for dark grounds. */
+const STRUCTURE = "var(--icon-structure, var(--color-petrol))";
+const SKY = STRUCTURE; // legacy name kept so path data stays untouched
 const RUST = "var(--color-rust)";
 
 /** Each icon draws in a 48×48 viewBox. `sky` = structure, `rust` = the person. */
@@ -322,18 +327,30 @@ const paths: Record<IconId, React.ReactNode> = {
   ),
 };
 
+export type IconTone = "petrol" | "sky" | "white";
+
+const structureVar: Record<IconTone, string> = {
+  petrol: "var(--color-petrol)",
+  sky: "var(--color-sky)",
+  white: "var(--color-white)",
+};
+
 export function Icon({
   name,
   size = 48,
   label,
+  tone = "petrol",
   className = "",
 }: {
   name: IconId;
   size?: number;
   /** Accessible name — required ONLY when the icon is the sole content. */
   label?: string;
+  /** Structure colour ground the icon sits on (person-dot is always rust). */
+  tone?: IconTone;
   className?: string;
 }) {
+  const style = { "--icon-structure": structureVar[tone] } as React.CSSProperties;
   if (label === undefined) {
     return (
       <svg
@@ -342,6 +359,7 @@ export function Icon({
         viewBox="0 0 48 48"
         aria-hidden="true"
         focusable="false"
+        style={style}
         className={className}
       >
         {paths[name]}
@@ -356,6 +374,7 @@ export function Icon({
       role="img"
       aria-label={label}
       focusable="false"
+      style={style}
       className={className}
     >
       <title>{label}</title>

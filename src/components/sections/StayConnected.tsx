@@ -12,7 +12,7 @@ export async function StayConnected() {
     <Section tone="paper">
       <Container className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:items-start">
         <div>
-          <h2 className="text-h2 font-bold">{tHome("ctaContact")}</h2>
+          <h2 className="text-h2 font-semibold">{tHome("ctaContact")}</h2>
           <div className="mt-8 flex flex-wrap gap-4">
             <ButtonLink href="/contact">{tContact("ctaTeam")}</ButtonLink>
           </div>
