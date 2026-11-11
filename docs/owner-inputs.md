@@ -23,9 +23,21 @@ Visible working checklist. Nothing below is invented; the site runs without them
     "Main_Logo.svg" (fills set to `#ffffff`) as
     `public/brand/include-logo-white.svg`; available via
     `Logo variant="negative"`. 2026-11-11.
-  - [ ] "e" short mark (SVG) → favicon/app icon set
-  - [ ] 24 official icons (exploration 03)
-  - [ ] Ready for Inclusion label (variants)
+  - [x] "e" short mark (SVG) → favicon/app icon set — received with the
+    designer vector package ("INCLUDE-SVGs_logos_and_icons/e", 2026-11-11).
+    Geometry inlined verbatim via `src/components/brand/eMark.ts`
+    (LogoMark, SuperE) and composed into the petrol-square favicon
+    (`src/app/icon.svg`, white "e" + rust eye as the package files show).
+  - [x] 24 official icons (exploration 03) — `icone/` in the same package;
+    geometry verbatim in `src/components/brand/Icon.tsx`, structure colour
+    recoloured via the `--icon-structure` custom property (no petrolio
+    variant was supplied; cielo/ardesia/bianco variants mirrored in
+    `assets/brand/icone/`). "home" remains our drawn wayfinding glyph —
+    still to confirm with the owner.
+  - [x] Ready for Inclusion label (variants) — 6 official badge files
+    (targa, orizzontale, verticale, fascia web) served from
+    `public/brand/` and rendered by `ReadyLabel.tsx` (text is outlined in
+    the files, so no web-font dependency).
   - [ ] Official Erasmus+/EU emblem files (Commission-supplied)
   - [ ] Partner logos (6 partners) + verified partner website URLs
 - [ ] **Coordinator public contact details**: official email for contact form recipient(s) (`CONTACT_TO_EMAIL` / optional `CONTACT_ROUTING`), postal address if wanted, security.txt contact.

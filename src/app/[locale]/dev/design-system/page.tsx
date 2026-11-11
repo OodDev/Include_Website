@@ -69,7 +69,9 @@ export default async function DesignSystemPage({ params }: { params: Promise<{ l
         <h2 id="ds-brand" className="text-h3 font-semibold">Brand components</h2>
         <div className="mt-4 flex flex-wrap items-center gap-8 rounded-card-lg border border-slate/15 bg-paper p-6">
           <LogoMark />
-          <SuperE />
+          <div className="relative h-36 w-28 overflow-hidden rounded-card-lg">
+            <SuperE tone="white" className="right-0 top-[-30%] h-[160%] w-[120%]" />
+          </div>
           <ReadyLabel />
           <div className="flex items-center gap-4">
             {(["protected-context", "pre-corporate", "labour-market"] as const).map((name) => (

@@ -15,7 +15,7 @@ export async function StatementBand({
   const t = await getTranslations("home");
   return (
     <div className="relative overflow-hidden bg-white text-slate">
-      <SuperE tone="paper" className="left-[-18vw] bottom-[-20vw] h-[52vw] min-w-[480px]" />
+      <SuperE tone="paper" className="left-[-18vw] bottom-[-20vw] h-[52vw] w-[38.6vw] min-w-[356px]" />
       <Container as="section" className="relative grid gap-10 py-[90px] md:grid-cols-[1fr_1.2fr]">
         <h2 className="text-h2 font-semibold leading-[1.08] tracking-[-0.01em]">{statement.title}</h2>
         <div>

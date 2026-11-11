@@ -1,12 +1,21 @@
+import { E_ASPECT, E_EYE_PATH, E_LETTER_PATH, E_VIEWBOX } from "./eMark";
+
 /**
- * TODO(brand-asset): The official whole, filled "e" short mark (from the logo's
- * final letter, with the white eye and optional rust person-dot) must be
- * supplied by the owner as SVG (docs/owner-inputs.md). The supplied PDFs are
- * raster-only and the letterform must never be redrawn or auto-traced (§2.4),
- * so this is the sanctioned neutral placeholder: a plain Manrope "e" glyph
- * with the eye rendered as a circle — not an imitation of the letterform.
+ * Official "e" short mark — verbatim geometry from the owner-supplied
+ * vector files (`e/*.svg`, received 2026-11-11, mirrored in
+ * `assets/brand/e/`). Replaces the former neutral Manrope placeholder
+ * (docs/owner-inputs.md). The letter is one evenodd path whose eye is a
+ * hole; `dot` adds the rust person-dot inside it (owner file pair
+ * `e-<tone>.svg` / `e-<tone>-punto-ruggine.svg`).
  */
 type Tone = "slate" | "white" | "sky" | "petrol";
+
+const toneFill: Record<Tone, string> = {
+  slate: "var(--color-slate)",
+  white: "var(--color-white)",
+  sky: "var(--color-sky)",
+  petrol: "var(--color-petrol)",
+};
 
 export function LogoMark({
   size = 48,
@@ -14,49 +23,25 @@ export function LogoMark({
   tone = "slate",
   className = "",
 }: {
-  /** Rendered pixel size (square). Favicons: 24 / 48. */
+  /** Rendered width in px; height follows the official 196:264 aspect. */
   size?: number;
-  /** rust person-dot in the eye; `false` shows the plain (white) eye. */
+  /** rust person-dot in the eye; `false` leaves the eye transparent. */
   dot?: boolean;
   tone?: Tone;
   className?: string;
 }) {
-  const glyphFill =
-    tone === "white"
-      ? "var(--color-white)"
-      : tone === "sky"
-        ? "var(--color-sky)"
-        : tone === "petrol"
-          ? "var(--color-petrol)"
-          : "var(--color-slate)";
-
   return (
     <svg
       width={size}
-      height={size}
-      viewBox="0 0 48 48"
+      height={Math.round(size / E_ASPECT)}
+      viewBox={E_VIEWBOX}
       role="img"
       aria-hidden="true"
       focusable="false"
       className={className}
     >
-      <text
-        x="24"
-        y="36.5"
-        textAnchor="middle"
-        fontSize="46"
-        fontWeight="800"
-        fontFamily="var(--font-sans, Outfit), system-ui, sans-serif"
-        fill={glyphFill}
-      >
-        e
-      </text>
-      <circle
-        cx="24"
-        cy="21"
-        r="4.6"
-        fill={dot ? "var(--color-rust)" : "var(--color-white)"}
-      />
+      <path d={E_LETTER_PATH} fillRule="evenodd" fill={toneFill[tone]} />
+      {dot && <path d={E_EYE_PATH} fill="var(--color-rust)" />}
     </svg>
   );
 }

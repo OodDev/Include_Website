@@ -29,7 +29,7 @@ export async function Hero({
         className="relative overflow-hidden text-white motion-safe"
         style={{ background: "linear-gradient(135deg, var(--color-petrol) 0%, var(--color-petrol-deep) 100%)" }}
       >
-        <SuperE tone="hero" className="right-[-12vw] top-[-16vw] h-[54vw] w-[54vw] min-w-[520px]" />
+        <SuperE tone="hero" className="right-[-12vw] top-[-16vw] h-[54vw] w-[40vw] min-w-[386px]" />
         <Container className="relative pb-[110px] pt-[100px]">
           <p className="u-kick flex items-center gap-3.5 text-white">
             <span aria-hidden="true" className="h-0.5 w-11 shrink-0 bg-white/70" />

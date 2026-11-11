@@ -1,0 +1,13 @@
+INCLUDE – file vettoriali
+
+icone/                 24 icone, griglia 48x48, tratto 7 (stroke non espanso, modificabile)
+  cielo-ruggine/       versione principale
+  ardesia-ruggine/     per fondi chiari a forte contrasto
+  bianco-ruggine/      per fondi scuri
+  include-set-icone-tavola.svg   tavola completa con nomi (testi in tracciati)
+e/                     la e: marchio breve e supergrafica, in 7 colori
+ready-for-inclusion/   badge verticale, targa (ardesia, petrolio), orizzontale e fascia web (testi in tracciati)
+loghi/                 loghi e wordmark (senza payoff) estratti dal file Include_2.pdf, piu' il negativo
+
+Colori: ardesia #465056 · cielo #9FBBC9 · ruggine #C14723 · petrolio #068A92 · nebbia #E2E9ED
+Font: Manrope (Google Fonts, licenza OFL)

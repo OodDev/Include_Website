@@ -1,9 +1,63 @@
 /**
- * Ready for Inclusion label (Brand 04): the "e" with the text stack
- * INCLUDE / READY / FOR / INCLUSION aligned to its tail.
- * TODO(brand-asset): official label SVG awaited; neutral composition now.
+ * Ready for Inclusion label — OFFICIAL badge files from the owner's graphic
+ * designer (`ready-for-inclusion/*.svg`, received 2026-11-11; mirrored in
+ * `assets/brand/ready-for-inclusion/`, served from `/public/brand/`). The
+ * badge text is converted to outlines in the files, so a plain <img> needs
+ * no web font and shows the exact approved artwork. One badge file per
+ * variant; only the rendered height changes.
+ *
+ * Former neutral composition (placeholder "e" + text stack) removed —
+ * docs/owner-inputs.md.
  */
 type ReadyVariant = "slate" | "sky-person" | "plaque-slate" | "plaque-petrol" | "horizontal" | "web-band";
+
+type Badge = {
+  src: string;
+  /** Official viewBox dimensions. */
+  w: number;
+  h: number;
+  /** Rendered heights: [sm, md]. */
+  size: [number, number];
+};
+
+const BADGES: Record<ReadyVariant, Badge> = {
+  "plaque-slate": {
+    src: "/brand/rfi-targa-ardesia.svg",
+    w: 176,
+    h: 303.2,
+    size: [136, 168],
+  },
+  "plaque-petrol": {
+    src: "/brand/rfi-targa-petrolio.svg",
+    w: 176,
+    h: 303.2,
+    size: [136, 168],
+  },
+  slate: {
+    src: "/brand/rfi-verticale-ardesia.svg",
+    w: 120,
+    h: 247.2,
+    size: [104, 128],
+  },
+  "sky-person": {
+    src: "/brand/rfi-verticale-cielo-punto-ruggine.svg",
+    w: 120,
+    h: 247.2,
+    size: [104, 128],
+  },
+  horizontal: {
+    src: "/brand/rfi-orizzontale-ardesia.svg",
+    w: 140.4,
+    h: 88.9,
+    size: [56, 72],
+  },
+  "web-band": {
+    src: "/brand/rfi-orizzontale-fascia-petrolio.svg",
+    w: 176.4,
+    h: 124.9,
+    size: [56, 72],
+  },
+};
 
 export function ReadyLabel({
   variant = "slate",
@@ -14,81 +68,19 @@ export function ReadyLabel({
   size?: "sm" | "md";
   className?: string;
 }) {
-  // Plaques (filled grounds)
-  if (variant === "plaque-slate" || variant === "plaque-petrol") {
-    const bg = variant === "plaque-slate" ? "bg-slate" : "bg-petrol-deep";
-    return (
-      <span
-        className={`inline-flex flex-col items-center rounded-[20px] ${bg} px-6 py-5 ${className}`}
-      >
-        <ReadyLabelInner tone="white" personDot size={size === "sm" ? 44 : 56} />
-      </span>
-    );
-  }
-  if (variant === "horizontal") {
-    return (
-      <span className={`inline-flex items-center gap-3 ${className}`}>
-        <ReadyLabelInner tone="slate" personDot size={size === "sm" ? 32 : 40} horizontal />
-      </span>
-    );
-  }
+  const badge = BADGES[variant];
+  const height = size === "sm" ? badge.size[0] : badge.size[1];
+  const width = Math.round((height * badge.w) / badge.h);
   return (
-    <span className={`inline-flex ${className}`}>
-      <ReadyLabelInner
-        tone={variant === "sky-person" ? "slate" : "slate"}
-        personDot={variant === "sky-person"}
-        size={size === "sm" ? 44 : 56}
-      />
-    </span>
-  );
-}
-
-function ReadyLabelInner({
-  tone,
-  personDot,
-  size,
-  horizontal = false,
-}: {
-  tone: "slate" | "white";
-  personDot: boolean;
-  size: number;
-  horizontal?: boolean;
-}) {
-  const color = tone === "white" ? "text-white" : "text-slate";
-  return (
-    <span className={horizontal ? "flex items-start gap-2" : "flex items-end gap-2"}>
-      {/* TODO(brand-asset): official "e" from the label artwork */}
-      <svg
-        width={size}
-        height={size}
-        viewBox="0 0 48 48"
-        aria-hidden="true"
-        focusable="false"
-      >
-        <text
-          x="24"
-          y="36.5"
-          textAnchor="middle"
-          fontSize="46"
-          fontWeight="800"
-          fontFamily="var(--font-sans, Outfit), system-ui, sans-serif"
-          fill={tone === "white" ? "var(--color-white)" : "var(--color-slate)"}
-        >
-          e
-        </text>
-        <circle
-          cx="24"
-          cy="21"
-          r="4.6"
-          fill={personDot ? "var(--color-rust)" : "var(--color-white)"}
-        />
-      </svg>
-      <span className={`${color} u-label flex flex-col ${horizontal ? "mt-1" : "mb-2"} leading-[1.15]`} style={{ fontSize: "0.625rem" }}>
-        <span>INCLUDE</span>
-        <span aria-hidden={horizontal ? undefined : undefined}>READY</span>
-        <span>FOR</span>
-        <span>INCLUSION</span>
-      </span>
-    </span>
+    /* eslint-disable-next-line @next/next/no-img-element -- owner SVG asset in /public; next/image would need dangerouslyAllowSVG for zero benefit. */
+    <img
+      src={badge.src}
+      alt="Ready for Inclusion"
+      width={width}
+      height={height}
+      loading="lazy"
+      decoding="async"
+      className={`inline-block h-auto ${className}`}
+    />
   );
 }

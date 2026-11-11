@@ -101,7 +101,7 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
       </Section>
 
       <div className="relative overflow-hidden bg-petrol-deep text-white">
-        <SuperE tone="ghost" className="right-[-14%] bottom-[-22%] h-[36rem] w-[36rem]" />
+        <SuperE tone="ghost" className="right-[-14%] bottom-[-22%] h-[36rem] w-[26.7rem]" />
         <Container as="section" className="relative py-16 md:py-20">
           <h2 className="text-h2 font-semibold">{fm.perspectiveShift.title}</h2>
           <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

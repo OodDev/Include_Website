@@ -1,14 +1,26 @@
 /**
- * Canonical icon set (exploration 03, 24 icons, 4 families — §5.6).
+ * OFFICIAL icon set (exploration 03, 24 icons, 4 families — §5.6).
  *
- * TODO(brand-asset): faithful recreations on a 48-unit grid pending the
- * official SVG files from the owner (allowed by INSTRUCTIONS §2.4.2 and logged
- * as decisions.md D01). Rules: solid stroke matching the logo letter weight,
- * rounded terminals; structure in SKY; the person is always ONE RUST DOT.
- * On slate grounds the structure stays sky. Legible at 24 px.
+ * Geometry is verbatim from the owner-supplied vector files
+ * (Brand kit INCLUDE-SVGs_logos_and_icons/icone, received 2026-11-11;
+ * mirrored in `assets/brand/icone/`). Designer rules, confirmed by the
+ * files themselves: 48×48 grid, stroke 7 (not expanded, rounded terminals),
+ * structure + accents in one tone, the person is always ONE RUST DOT.
+ *
+ * Colour fidelity: the files bake the structure colour per variant
+ * (cielo/ardesia/bianco — no petrolio variant was supplied). To keep the
+ * D17 petrolio art direction working, the geometry is rendered with the
+ * structure colour as a custom property (`--icon-structure`, set by the
+ * `tone` prop) and rust left as the Brand-01 token — no path was redrawn.
+ * On slate grounds the structure stays per tone choice; legible at 24 px.
+ *
+ * "home" is the ONE exception: wayfinding glyph not in the owner sheet,
+ * drawn in the set's own system (48 grid, stroke 7, rust dot).
+ * TODO(brand-asset): confirm with the owner; replace with an official
+ * glyph if one is supplied.
  */
 export const iconIds = [
-  "home", // wayfinding (navbar); not in the owner sheet — drawn in the set's own system style, flagged below
+  "home", // wayfinding (navbar); not in the owner sheet — drawn in the set's own system, flagged below
   // Pathway
   "protected-context",
   "pre-corporate",
@@ -43,24 +55,23 @@ export type IconId = (typeof iconIds)[number];
 
 /** Icon structure colour is a custom property so the tone can be set per
  * instance without re-declaring the path data. Default: petrol — the
- * petrolio-direction structure colour (mockup variation 3); "sky" preserves
- * the original exploration-03 look; "white" is for dark grounds. */
+ * petrolio-direction structure colour (mockup variation 3, D17); "sky"
+ * preserves the original exploration-03 look; "white" is for dark grounds;
+ * "slate" matches the designer's ardesia variant. */
 const STRUCTURE = "var(--icon-structure, var(--color-petrol))";
-const SKY = STRUCTURE; // legacy name kept so path data stays untouched
 const RUST = "var(--color-rust)";
 
-/** Each icon draws in a 48×48 viewBox. `sky` = structure, `rust` = the person. */
+/** Each icon draws in a 48×48 viewBox (official files: stroke 7). */
 const paths: Record<IconId, React.ReactNode> = {
-  /* Wayfinding — done in set style (sky structure, rust dot, 48-unit grid) but
-     NOT part of the owner's exploration sheet. TODO(brand-asset): confirm
-     with the owner; replace with an official glyph if one is supplied. */
+  /* Wayfinding — done in set style (structure + rust dot, 48-unit grid, stroke 7)
+     but NOT part of the owner's sheet. TODO(brand-asset): confirm. */
   home: (
     <>
       <path
         d="M10 21.5V35a4 4 0 0 0 4 4h20a4 4 0 0 0 4-4V21.5M6 25 24 9l18 16"
         fill="none"
-        stroke={SKY}
-        strokeWidth="6"
+        stroke={STRUCTURE}
+        strokeWidth="7"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -70,269 +81,185 @@ const paths: Record<IconId, React.ReactNode> = {
 
   /* ── Pathway ─────────────────────────────────────────────────────────── */
   "protected-context": (
-    <>
-      <rect x="8" y="8" width="32" height="32" rx="11" fill="none" stroke={SKY} strokeWidth="6" />
-      <circle cx="24" cy="24" r="4.5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="9.5" y="9.5" width="29" height="29" rx="9" />
+      <circle fill={RUST} stroke="none" cx="24" cy="24" r="5" />
+    </g>
   ),
   "pre-corporate": (
-    <>
-      <path
-        d="M40 15 a11 11 0 0 0 -9 -4 h-7 a11 11 0 0 0 -11 11 v4 a11 11 0 0 0 11 11 h7 a11 11 0 0 0 9 -4"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <circle cx="24" cy="24" r="3.6" fill={RUST} />
-      <circle cx="33" cy="19" r="2.4" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M37 9.5H19a9.5 9.5 0 0 0-9.5 9.5v10a9.5 9.5 0 0 0 9.5 9.5h18" />
+      <circle fill={RUST} stroke="none" cx="21" cy="24" r="5" />
+      <circle fill={RUST} stroke="none" cx="31" cy="24" r="2.3" />
+      <circle fill={RUST} stroke="none" cx="38.5" cy="24" r="2.3" />
+    </g>
   ),
   "labour-market": (
-    <>
-      <circle cx="24" cy="24" r="5.5" fill={SKY} />
-      <circle cx="24" cy="10" r="3.4" fill={RUST} />
-      <circle cx="37" cy="16" r="3.4" fill={RUST} />
-      <circle cx="11" cy="18" r="3.4" fill={RUST} />
-      <circle cx="35" cy="35" r="3.4" fill={RUST} />
-      <circle cx="15" cy="34" r="2.4" fill={SKY} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <circle fill={STRUCTURE} stroke="none" cx="25" cy="27" r="6" />
+      <circle fill={RUST} stroke="none" cx="11" cy="11" r="3.6" />
+      <circle fill={RUST} stroke="none" cx="31" cy="10" r="2.6" />
+      <circle fill={RUST} stroke="none" cx="40" cy="31" r="3.2" />
+      <circle fill={RUST} stroke="none" cx="13" cy="40" r="3.6" />
+    </g>
   ),
   pathway: (
-    <>
-      <path d="M8 24h18" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="38" cy="24" r="5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 24h20" />
+      <circle fill={RUST} stroke="none" cx="38" cy="24" r="5.5" />
+    </g>
   ),
   threshold: (
-    <>
-      <path
-        d="M12 40 V21 a12 12 0 0 1 24 0 V40"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <path d="M12 40 h24" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="24" cy="26" r="4.2" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M13.5 41V9.5h21V41" />
+      <circle fill={RUST} stroke="none" cx="24" cy="29" r="5" />
+    </g>
   ),
   connection: (
-    <>
-      <path d="M8 24 h12" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="26" cy="24" r="4" fill={SKY} />
-      <path d="M30 24 h6" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="41" cy="24" r="5.4" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M15 24h18" />
+      <circle fill={STRUCTURE} stroke="none" cx="11" cy="24" r="6.5" />
+      <circle fill={RUST} stroke="none" cx="37" cy="24" r="6.5" />
+    </g>
   ),
   /* ── People & companies ──────────────────────────────────────────────── */
   person: (
-    <>
-      <circle cx="24" cy="14" r="5.5" fill={RUST} />
-      <path
-        d="M13 40 a11 11 0 0 1 22 0"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12.5 39.5V38a11.5 11.5 0 0 1 23 0v1.5" />
+      <circle fill={RUST} stroke="none" cx="24" cy="13" r="5.5" />
+    </g>
   ),
   skills: (
-    <>
-      <path
-        d="M10 40 V36 M18 36 V28 M26 28 V20"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <path d="M34 20 V10" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="34" cy="10" r="4.5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7 39.5h9.5v-8h9v-8h13.5" />
+      <circle fill={RUST} stroke="none" cx="35" cy="12.5" r="5.5" />
+    </g>
   ),
   training: (
-    <>
-      <path
-        d="M24 14 c-3 -3.4 -8.4 -5 -14 -5 V38 c5.6 0 11 1.6 14 5 c3 -3.4 8.4 -5 14 -5 V9 c-5.6 0 -11 1.6 -14 5 Z"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="5"
-        strokeLinejoin="round"
-      />
-      <circle cx="24" cy="9" r="4.5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M24 19c-4.5-3-9.5-3.5-14.5-2.5v21c5-1 10-.5 14.5 2.5 4.5-3 9.5-3.5 14.5-2.5v-21c-5-1-10-.5-14.5 2.5z" />
+      <circle fill={RUST} stroke="none" cx="24" cy="8.5" r="4.5" />
+    </g>
   ),
   autonomy: (
-    <>
-      <path
-        d="M24 42 V26 M24 26 L15 12 M24 26 L33 12"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <circle cx="36" cy="10" r="4.5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M24 41.5V29L13.5 17M24 29l6-7" />
+      <circle fill={RUST} stroke="none" cx="36" cy="15" r="5.5" />
+    </g>
   ),
   company: (
-    <>
-      <path
-        d="M14 40 V12 h9 V40 M23 20 h11 V40"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <path d="M8 40 h32" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="28.5" cy="30" r="4" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M11.5 41V9.5H30V41M6.5 41h35M30 22h7.5V41" />
+      <circle fill={RUST} stroke="none" cx="20.75" cy="31" r="4.5" />
+    </g>
   ),
   "ready-for-inclusion": (
-    <>
-      {/* neutral placeholder glyph — TODO(brand-asset): official label mark */}
-      <circle cx="24" cy="22" r="15" fill="none" stroke={SKY} strokeWidth="6" />
-      <path
-        d="M39 22 a15 15 0 0 1 -15 15 V50"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <circle cx="24" cy="22" r="5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      {/* Official "e" mark scaled into the icon cell (as in the owner file). */}
+      <g transform="translate(10 4.5) scale(0.143)">
+        <path fill={STRUCTURE} stroke="none" fillRule="evenodd" d="M132.7 189.3C129.2 188.1 129.1 183.2 132.5 181.9C166.8 169.1 192 137.7 194.2 99.7C197.1 48 156.2 3.4 103 0.4C49.7 -2.6 4 37 1.1 88.7C0.9 90.9 0.9 93.1 0.9 95.3C-0.1 139.8 13.1 177 40.2 205.8C81.5 249.6 143.3 259.3 170.2 262.1C180.3 263.1 183.6 255.4 183.6 251.7L183.5 210.4C183.5 203.9 178.6 198.4 172.1 197.8C162.5 196.7 148 194.4 132.7 189.3ZM99.3 64.5C117.2 65.5 131 79.7 130.1 96.1C129.1 112.4 113.8 124.9 95.9 123.9C79.2 122.9 66 110.5 65.2 95.5C65.2 94.3 65.2 93.1 65.3 91.8L65.2 91.8C66.4 75.7 81.6 63.5 99.3 64.5Z" />
+        <path fill={RUST} stroke="none" d="M99.3 64.5C117.2 65.5 131 79.7 130.1 96.1C129.1 112.4 113.8 124.9 95.9 123.9C79.2 122.9 66 110.5 65.2 95.5C65.2 94.3 65.2 93.1 65.3 91.8L65.2 91.8C66.4 75.7 81.6 63.5 99.3 64.5Z" />
+      </g>
+    </g>
   ),
   /* ── Tools ───────────────────────────────────────────────────────────── */
   "european-protocol": (
-    <>
-      <rect x="11" y="7" width="26" height="34" rx="8" fill="none" stroke={SKY} strokeWidth="6" />
-      <circle cx="24" cy="34" r="3.6" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="12.5" y="7.5" width="23" height="33" rx="2.5" />
+      <circle fill={RUST} stroke="none" cx="27" cy="31" r="4.5" />
+    </g>
   ),
   "micro-credentials": (
-    <>
-      <rect x="9" y="9" width="12" height="12" rx="3.5" fill={SKY} />
-      <rect x="27" y="9" width="12" height="12" rx="3.5" fill={SKY} />
-      <rect x="9" y="27" width="12" height="12" rx="3.5" fill={SKY} />
-      <rect x="27" y="27" width="12" height="12" rx="3.5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <rect fill={STRUCTURE} stroke="none" x="8" y="8" width="14.5" height="14.5" rx="4" />
+      <rect fill={STRUCTURE} stroke="none" x="25.5" y="8" width="14.5" height="14.5" rx="4" />
+      <rect fill={STRUCTURE} stroke="none" x="8" y="25.5" width="14.5" height="14.5" rx="4" />
+      <rect fill={RUST} stroke="none" x="25.5" y="25.5" width="14.5" height="14.5" rx="4" />
+    </g>
   ),
   "technical-passport": (
-    <>
-      <rect x="11" y="7" width="26" height="34" rx="8" fill="none" stroke={SKY} strokeWidth="6" />
-      <circle cx="24" cy="19" r="4.5" fill={RUST} />
-      <path d="M18 30 h12" fill="none" stroke={SKY} strokeWidth="5" strokeLinecap="round" />
-      <path d="M18 36 h8" fill="none" stroke={SKY} strokeWidth="5" strokeLinecap="round" />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="11.5" y="7.5" width="25" height="33" rx="6" />
+      <circle fill={RUST} stroke="none" cx="24" cy="19.5" r="5" />
+      <path d="M20 30.5h8" />
+    </g>
   ),
   "white-paper": (
-    <>
-      <path
-        d="M12 7 h17 l7 7 v27 H12 Z"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinejoin="round"
-      />
-      <path d="M20 25 h10" fill="none" stroke={SKY} strokeWidth="5" strokeLinecap="round" />
-      <circle cx="20" cy="32" r="3" fill={RUST} />
-      <path d="M27 32 h3" fill="none" stroke={SKY} strokeWidth="4.5" strokeLinecap="round" />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M11.5 7.5h16l9 9v24h-25z" />
+      <path stroke={RUST} d="M19 29h10" />
+    </g>
   ),
   toolkit: (
-    <>
-      <path
-        d="M8 20 a5 5 0 0 1 5 -5 h22 a5 5 0 0 1 5 5 v14 a5 5 0 0 1 -5 5 H13 a5 5 0 0 1 -5 -5 Z"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-      />
-      <circle cx="24" cy="26" r="4.5" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="7.5" y="17.5" width="33" height="22" rx="5" />
+      <path d="M18 17.5V15a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2.5" />
+      <circle fill={RUST} stroke="none" cx="24" cy="28.5" r="4.5" />
+    </g>
   ),
   "policy-institutions": (
-    <>
-      <path d="M8 17 L24 7 L40 17" fill="none" stroke={SKY} strokeWidth="6" strokeLinejoin="round" />
-      <path d="M13 21 V34 M24 21 V34 M35 21 V34" fill="none" stroke={SKY} strokeWidth="5.5" strokeLinecap="round" />
-      <path d="M9 40 h30" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="24" cy="27" r="3.6" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M7.5 18L24 9l16.5 9z" fill={STRUCTURE} />
+      <path d="M12.5 25v9M35.5 25v9M7.5 41h33" />
+      <path stroke={RUST} d="M24 25v9" />
+    </g>
   ),
   /* ── Values & storytelling ───────────────────────────────────────────── */
   recognition: (
-    <>
-      <circle cx="24" cy="18" r="11" fill="none" stroke={SKY} strokeWidth="6" />
-      <circle cx="24" cy="18" r="4.2" fill={RUST} />
-      <path
-        d="M18 27 L15 40 L24 36 L33 40 L30 27"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="5.5"
-        strokeLinejoin="round"
-        strokeLinecap="round"
-      />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path fill={STRUCTURE} stroke="none" d="M16.5 25h15v17l-7.5-4.5-7.5 4.5z" />
+      <circle cx="24" cy="18" r="9.5" fill="none" />
+      <circle fill={RUST} stroke="none" cx="24" cy="18" r="4" />
+    </g>
   ),
   participation: (
-    <>
-      <circle cx="35" cy="26" r="7" fill={RUST} />
-      <circle cx="17" cy="18" r="4" fill={SKY} />
-      <circle cx="19" cy="33" r="4" fill={SKY} />
-      <circle cx="28" cy="12" r="3.4" fill={SKY} />
-      <circle cx="10" cy="27" r="2.6" fill={SKY} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <circle fill={STRUCTURE} stroke="none" cx="31.5" cy="11" r="3" />
+      <circle fill={STRUCTURE} stroke="none" cx="16.5" cy="11" r="3" />
+      <circle fill={STRUCTURE} stroke="none" cx="9" cy="24" r="3" />
+      <circle fill={STRUCTURE} stroke="none" cx="16.5" cy="37" r="3" />
+      <circle fill={STRUCTURE} stroke="none" cx="31.5" cy="37" r="3" />
+      <circle fill={RUST} stroke="none" cx="39" cy="24" r="5" />
+    </g>
   ),
   reciprocity: (
-    <>
-      <path d="M8 17 h26" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="40" cy="17" r="4.8" fill={RUST} />
-      <path
-        d="M40 31 a5 5 0 0 0 -5 -5 h-14"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="6"
-        strokeLinecap="round"
-      />
-      <circle cx="12" cy="26" r="4.8" fill={SKY} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path stroke={RUST} d="M14 16h26" />
+      <circle fill={RUST} stroke="none" cx="13" cy="16" r="6.5" />
+      <path d="M8 32h26" />
+      <circle fill={STRUCTURE} stroke="none" cx="35" cy="32" r="6.5" />
+    </g>
   ),
   stories: (
-    <>
-      <path
-        d="M9 12 h30 a4 4 0 0 1 4 4 v14 a4 4 0 0 1 -4 4 H24 L15 42 v-8 h-6 a4 4 0 0 1 -4 -4 V16 a4 4 0 0 1 4 -4 Z"
-        fill="none"
-        stroke={SKY}
-        strokeWidth="5.5"
-        strokeLinejoin="round"
-      />
-      <circle cx="18" cy="23" r="2.6" fill={SKY} />
-      <circle cx="26" cy="23" r="2.6" fill={RUST} />
-      <circle cx="34" cy="23" r="2.6" fill={SKY} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12.5 9.5h23a5.5 5.5 0 0 1 5.5 5.5v13a5.5 5.5 0 0 1-5.5 5.5H22.5l-8 6.5v-6.5h-2A5.5 5.5 0 0 1 7 28V15a5.5 5.5 0 0 1 5.5-5.5z" />
+      <circle fill={RUST} stroke="none" cx="17.5" cy="21.5" r="3.2" />
+      <circle fill={RUST} stroke="none" cx="25" cy="21.5" r="2" />
+      <circle fill={RUST} stroke="none" cx="31" cy="21.5" r="2" />
+    </g>
   ),
   "data-impact": (
-    <>
-      <path d="M10 40 V31" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <path d="M21 40 V25" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <path d="M32 40 V18" fill="none" stroke={SKY} strokeWidth="6" strokeLinecap="round" />
-      <circle cx="36" cy="10" r="4.8" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M9.5 40v-7M19.5 40V27M29.5 40V21" />
+      <circle fill={RUST} stroke="none" cx="39" cy="12" r="5.5" />
+    </g>
   ),
   events: (
-    <>
-      <rect x="8" y="11" width="32" height="29" rx="7" fill="none" stroke={SKY} strokeWidth="6" />
-      <path d="M16 7 v7 M32 7 v7" fill="none" stroke={SKY} strokeWidth="5.5" strokeLinecap="round" />
-      <circle cx="24" cy="27" r="4.4" fill={RUST} />
-    </>
+    <g fill="none" stroke={STRUCTURE} strokeWidth="7" strokeLinecap="round" strokeLinejoin="round">
+      <rect x="8.5" y="12.5" width="31" height="27" rx="6" />
+      <path d="M17 7.5v6M31 7.5v6" />
+      <circle fill={RUST} stroke="none" cx="24" cy="27" r="5" />
+    </g>
   ),
 };
 
-export type IconTone = "petrol" | "sky" | "white";
+export type IconTone = "petrol" | "sky" | "white" | "slate";
 
 const structureVar: Record<IconTone, string> = {
   petrol: "var(--color-petrol)",
   sky: "var(--color-sky)",
   white: "var(--color-white)",
+  slate: "var(--color-slate)",
 };
 
 export function Icon({
