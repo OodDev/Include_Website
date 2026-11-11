@@ -12,7 +12,7 @@ import { KeyFacts } from "@/components/seo/KeyFacts";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { webPageSchema, breadcrumbSchema, JsonLd } from "@/lib/seo/schemaorg";
 import { AnswerBlock } from "@/components/seo/KeyFacts";
-import { siteConfig, features } from "@/config/site";
+import { features } from "@/config/site";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -26,7 +26,8 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
   const page = await loadPage(locale as "en", "ready-for-inclusion");
   if (!page) notFound();
   const fm = page.frontmatter as {
-    hero: { title: string; lead: string; sub: string };
+    hero: { title: string; lead: string };
+    sub?: string;
     forCompanies: string[];
     ambassadorNetwork: { title: string; body: string; targets: string[] };
     cta: { label: string; route: string };
@@ -46,7 +47,7 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
           <div className="mt-8">
             <AnswerBlock question={tMeta("title")} answer={fm.hero.lead} />
           </div>
-          <p className="mt-6 max-w-[62ch]">{fm.hero.sub}</p>
+          {fm.sub && <p className="mt-6 max-w-[62ch]">{fm.sub}</p>}
         </div>
         <div className="justify-self-start lg:justify-self-end">
           <ReadyLabel variant="plaque-slate" />
@@ -67,20 +68,18 @@ export default async function ReadyForInclusionPage({ params }: { params: Promis
         </Container>
       </Section>
 
-      <Section>
+      <Section id="ambassador-network">
         <Container>
           <h2 className="text-h2 font-semibold">{fm.ambassadorNetwork.title}</h2>
           <p className="mt-6 max-w-[68ch]">{fm.ambassadorNetwork.body}</p>
-          {/* Targets labelled as project aims (§2.3 #9) — never achievements */}
+          {/* Targets labelled as project aims (§2.3 #9) — never achievements;
+              sentences verbatim from the approved architecture text */}
           <KeyFacts
             className="mt-8 max-w-3xl"
-            facts={[
-              {
-                term: "Target",
-                value: siteConfig.targets.companiesPerCountry + " companies per partner country",
-              },
-              { term: "Target", value: siteConfig.targets.smesReached + " SMEs reached" },
-            ]}
+            facts={fm.ambassadorNetwork.targets.map((target) => ({
+              term: "Target",
+              value: target,
+            }))}
           />
           {/* Network directory / label kit: hidden until data/approval (§6.6 ◇) */}
           {features.networkCounters ? null : null}

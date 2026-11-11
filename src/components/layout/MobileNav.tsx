@@ -67,7 +67,7 @@ export function MobileNav({ items, pill }: { items: NavItem[]; pill: NavItem }) 
               {items.map((it) => (
                 <li key={it.route}>
                   <Link
-                    href={it.route}
+                    href={`/${it.route}`}
                     onClick={() => setOpen(false)}
                     aria-current={pathname === it.route ? "page" : undefined}
                     className={cn(
@@ -81,7 +81,7 @@ export function MobileNav({ items, pill }: { items: NavItem[]; pill: NavItem }) 
               ))}
               <li className="mt-3">
                 <Link
-                  href={pill.route}
+                  href={`/${pill.route}`}
                   onClick={() => setOpen(false)}
                   className="block rounded-pill bg-petrol-deep px-5 py-3 text-center font-semibold text-white hover:bg-slate motion-safe"
                 >

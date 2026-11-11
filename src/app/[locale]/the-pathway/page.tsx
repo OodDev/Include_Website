@@ -137,7 +137,9 @@ function PhaseBlock({ phase }: { phase: PhaseFM }) {
     <article id={phase.key} className="scroll-mt-28 grid gap-8 lg:grid-cols-[0.9fr_1.4fr]">
       <div>
         {phase.label && <p className="u-label text-petrol-deep">{phase.label}</p>}
-        <h2 className="mt-2 text-h2 font-semibold">{phase.fullName.replace(/ (Gym|preparation|in SMEs)$/, "")}</h2>
+        {/* Full names from the architecture text: Protected Gym / Pre-corporate
+            preparation / Work-based learning in SMEs — never truncated. */}
+        <h2 className="mt-2 max-w-[18ch] text-h2 font-semibold">{phase.fullName}</h2>
         <p className="mt-3 max-w-[58ch] text-[1rem]">{phase.lead}</p>
         <Icon name={phase.icon as IconId} size={96} className="mt-8 hidden md:block" />
       </div>

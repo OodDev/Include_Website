@@ -63,6 +63,7 @@ export default async function NewsCategoryPage({
 
   const posts = (await listNews(locale as AppLocale)).filter((p) => p.category === category);
   const tN = await getTranslations("news");
+  const tReadMore = await getTranslations("common");
   const tNav = await getTranslations("header");
   const newsTitle = tNav("navItems.news");
   const title = tN(`categories.${category}`);
@@ -112,7 +113,7 @@ export default async function NewsCategoryPage({
                       href={`/news/${p.slug}`}
                       className="mt-4 inline-block text-[0.875rem] font-bold text-petrol-deep underline-offset-4 hover:underline"
                     >
-                      {tN("backToNews")}
+                      {tReadMore("readMore")}
                     </Link>
                   </article>
                 </li>

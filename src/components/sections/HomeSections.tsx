@@ -67,6 +67,7 @@ export async function AudienceCards({
 export async function FeaturedResources({ locale }: { locale: string }) {
   const t = await getTranslations("statusLabels");
   const tHome = await getTranslations("home");
+  const tResults = await getTranslations("results");
   const all = (await listResources()).filter((r) => !r.needsClientApproval || features.protocolResource);
   const featured = all.filter((r) => r.featured).slice(0, 4);
   if (featured.length === 0) return null;
@@ -89,8 +90,10 @@ export async function FeaturedResources({ locale }: { locale: string }) {
           ))}
         </div>
         <div className="mt-8">
+          {/* CTA per the architecture's Results & Tools note — the repository
+              is the destination, so this is not the hero's "Discover the project". */}
           <ButtonLink href="/results-and-tools" variant="outline">
-            {tHome("ctaPrimary")}
+            {tResults("downloadCta")}
           </ButtonLink>
         </div>
       </Container>

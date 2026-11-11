@@ -14,6 +14,7 @@ export async function Footer() {
   ]);
 
   const menu = [
+    { route: "home" },
     { route: "the-project" },
     { route: "the-pathway" },
     { route: "results-and-tools" },
@@ -21,8 +22,7 @@ export async function Footer() {
     { route: "partners" },
     { route: "news" },
     { route: "contact" },
-    { route: "glossary" },
-  ].filter((m) => !(m.route === "glossary") && m.route) as { route: string }[];
+  ];
 
   const legal = ["privacy-policy", "cookie-policy", "accessibility", "legal-notice"] as const;
 
@@ -54,12 +54,10 @@ export async function Footer() {
               {menu.map((m) => (
                 <li key={m.route}>
                   <Link
-                    href={`/${m.route}`}
+                    href={m.route === "home" ? "/" : `/${m.route}`}
                     className="text-[0.9375rem] text-white/85 underline-offset-4 hover:underline"
                   >
-                    {m.route === "glossary"
-                      ? tFooter("sectionNav")
-                      : tNav(`navItems.${m.route}`)}
+                    {tNav(`navItems.${m.route}`)}
                   </Link>
                 </li>
               ))}

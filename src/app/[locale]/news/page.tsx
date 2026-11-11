@@ -4,6 +4,7 @@ import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { loadPage } from "@/lib/content/pages";
 import { listNews } from "@/lib/content/loader";
+import { Link } from "@/lib/i18n";
 import { BreadcrumbSection } from "@/components/layout/Breadcrumbs";
 import { Container, Section } from "@/components/ui/LayoutPrimitives";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -22,6 +23,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
   const page = await loadPage(locale as "en", "news");
   if (!page) notFound();
   const tN = await getTranslations("news");
+  const tReadMore = await getTranslations("common");
   const tBread = await getTranslations("breadcrumbs");
   const tMeta = await getTranslations("metadata.news");
   const posts = await listNews(locale as "en");
@@ -93,12 +95,12 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
                     </p>
                     <h2 className="mt-2 text-[1.125rem] font-semibold leading-snug">{p.title}</h2>
                     <p className="mt-3 text-[0.9375rem]">{p.excerpt}</p>
-                    <a
+                    <Link
                       href={`/news/${p.slug}`}
                       className="mt-4 inline-block text-[0.875rem] font-bold text-petrol-deep underline-offset-4 hover:underline"
                     >
-                      {tN("backToNews")}
-                    </a>
+                      {tReadMore("readMore")}
+                    </Link>
                   </article>
                 </li>
               ))}
