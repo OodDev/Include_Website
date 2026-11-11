@@ -21,6 +21,9 @@
 .env.*
 !.env.example
 
+# Local design exploration (kept out of the repo by owner decision, 2026-11-11)
+/mockups
+
 # OS / editor
 .DS_Store
 Thumbs.db
