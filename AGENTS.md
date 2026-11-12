@@ -8,7 +8,8 @@ Guidance for AI coding agents working on **INCLUDE — Erasmus+ website**
 
 A multilingual, static-first Next.js marketing website for a European
 Erasmus+ Cooperation Partnership (coordinator: Bene Futuro srl, 6 partners,
-4 countries). 8 core routes + 4 legal pages + flagged glossary; 5 locales
+4 countries). 9 core routes (plus dynamic `news` and `results-and-tools`
+subpages) + 4 legal pages (incl. accessibility); 5 locales
 (en published; it draft; pt/es/el message-ready). No CMS, no database —
 content is MDX/YAML in `content/`. Contact via Server Action → mail adapter;
 ALTCHA proof-of-work anti-spam; consent manager; GDPR-by-design.
@@ -29,6 +30,8 @@ pnpm check:placeholders      # fails on mockup stand-ins ([Foto…], lorem, TODO
 pnpm check:schema            # JSON-LD type allowlist/forbidden types
 pnpm check:launch            # RELEASE GATE ONLY — fails while legal drafts unapproved
 pnpm gen:llms                # snapshot llms.txt routes to dist/ (server must be running)
+pnpm format                  # prettier --write .
+pnpm analyze                 # production build with bundle analysis (ANALYZE=true)
 ```
 
 After `pnpm build`, the standalone output needs a manual `cp -R public .next/standalone/`
@@ -42,32 +45,43 @@ PDFs — held **locally only** (repo root + `docs/source/` copies), deliberately
 **never committed or pushed** (see `.gitignore` `*.pdf` rule, `.githooks/pre-push`,
 and the CI guard in `.github/workflows/ci.yml`). After a fresh clone, restore
 them manually if needed and activate the hook with `git config core.hooksPath .githooks`.
-They are the only authorities; never invent design, structure or copy beyond them.
+They are the foundational authorities; never invent design, structure or copy
+beyond them. Later owner instructions and delivered assets (variation-3 art
+direction, official SVG package) are recorded as decisions D17–D20 and are
+equally binding where they supersede the PDFs.
 
 | Asset | PDF | Used for |
 | --- | --- | --- |
 | Website architecture, nav, page texts | `Website Architecture, Structure, Wireframe/WEBSITE_ARCHITECTURE_WIRFRAME_Website_Pages_Navbar_Texts.pdf` | authority for **sitemap, navigation, URL naming, page copy** (mockup nav naming loses on conflict — decisions.md D14) |
-| Brand foundations: colour palette, typography, rules | `Brand kit…/Brand 01 – Fondamenti.pdf` | hex values in `src/styles/tokens.css` + `src/config/brand.ts` (Manrope-only typography per `docs/design-plan.md`), accessibility text rules, pill/card radii |
+| Brand foundations: colour palette, typography, rules | `Brand kit…/Brand 01 – Fondamenti.pdf` | hex values in `src/styles/tokens.css` + `src/config/brand.ts` (Outfit typography since D17 — Manrope survives only in the footer logo SVG tagline, which is owner artwork; `docs/design-plan.md` still says Manrope-only and D17 supersedes it), accessibility text rules, pill/card radii |
 | Print & events layout | `Brand kit…/Brand 02 – Stampa ed eventi.pdf` | print-language grounding (bands, labels) |
 | Digital & social | `Brand kit…/Brand 03 – Digitale e social.pdf` | digital layout idioms, OG/social rules |
 | Ready for Inclusion & co-branding | `Brand kit…/Brand 04 – Ready for Inclusion e co-branding.pdf` | `ReadyLabel`, EU-funding visibility, partner/EU emblem placement rules |
 | Mockup: Home | `Brand kit…/Sito 02 – Home.pdf` | home layout, micro-copy (flagged `needsClientApproval` where reused) |
 | Mockup: inner page "Il modello" | `Brand kit…/Sito 03 – Pagina interna Il modello.pdf` | pathway page layout |
 | "e" supergraphic brief | `Brand kit…/La e – marchio breve e supergrafica.pdf` | `SuperE` background component |
-| Icon set (exploration 03) | `Brand kit…/Set di icone – esplorazione 03, stile logo.pdf` | all 24 icons in `src/components/brand/Icon.tsx` |
+| Icon set (exploration 03) | `Brand kit…/Set di icone – esplorazione 03, stile logo.pdf` | 24 icons in `src/components/brand/Icon.tsx` — now the **official designer SVGs inlined verbatim** (D20), structure tone via `--icon-structure` (default petrol); exception: the navbar `home` icon remains our drawn glyph (not in the owner sheet, `TODO(brand-asset)`) |
 
 The PDFs are **raster exports only** (verified: no vector data). Consequences,
-per the spec's own fallback rule (decisions.md D01):
+per the spec's own fallback rule (decisions.md D01), updated by D17/D20:
 
-- Logo, "e" mark, Ready for Inclusion label, EU emblem and partner logos are
-  **neutral text/graphic placeholders** marked `TODO(brand-asset)` — official
-  SVGs must be downloaded from the owner before launch; do **not** imitate
-  letterforms or fake logos.
-- The 24 icons were **faithfully recreated** on a 48-unit grid (6-unit strokes,
-  sky `#9FBBC9` structure, rust `#C14723` person-dot) — permitted recreations,
-  to be replaced by official files when supplied.
+- Design fidelity is now anchored to home **variation 3 "petrolio
+  immersive"** (owner instruction 2026-11-11, D17/D18): Outfit typeface,
+  petrol-deep as leading colour, petrol structure icons, body copy on petrol
+  grounds always full white (WCAG 2.2 AA gate). Colour set remains
+  Brand-01-only. Visual reference: the owner-approved screenshots in
+  `mockups/` (D17's original `mockups/home-variants.html` is no longer in
+  the repo; do not recreate design from memory — check the screenshots).
+- **Official vector brand assets are integrated** (designer package, D20):
+  24 icons inlined verbatim in `Icon.tsx`, official "e" letterform in
+  `src/components/brand/eMark.ts` driving `LogoMark` and the favicon, official
+  wordmark, `ReadyLabel` badges from `public/brand/`. Tracked provenance
+  copies in `assets/brand/`. Remaining placeholders: EU emblem and partner
+  logos (slot intentionally absent until the owner delivers official files —
+  `docs/owner-inputs.md`), and the navbar `home` icon (drawn glyph,
+  `TODO(brand-asset)`); do **not** imitate letterforms or fake logos.
 
-The derived interpretation of these sources — recorded decisions D01–D16,
+The derived interpretation of these sources — recorded decisions D01–D20,
 owner-input checklist, content analysis — lives in
 [`docs/decisions.md`](docs/decisions.md), [`docs/owner-inputs.md`](docs/owner-inputs.md)
 and [`docs/design-plan.md`](docs/design-plan.md). Execution documentation
@@ -105,7 +119,9 @@ report) is in `docs/`.
   draft locales are served on English physical path segments via the custom
   proxy in `src/proxy.ts` (beware: next-intl's localised-pathname rewrites
   redirect-loop in standalone builds). Localised pathnames switch on only
-  when a locale is published.
+  when a locale is published. The same proxy hosts the optional **preview
+  gate** (D19): when `PREVIEW_PASSWORD` is set (preview deployments only),
+  every page request requires it before any content is served.
 - **Layer boundaries.** `src/components` (presentational) →
   `src/features` (contact/newsletter/consent/legal: UI + action + schema) →
   `src/lib` (pure logic, loaders, mail/security/seo adapters) →
@@ -136,9 +152,9 @@ report) is in `docs/`.
 ## Testing instructions
 
 - Unit/integration (Vitest, jsdom): content schemas, loaders, consent logic,
-  ALTCHA verification, metadata, brand↔tokens parity (`tests/unit`),
-  `tests/integration` for real repo content.
-- E2E (Playwright): 8 routes × EN (IT where published), third-party-request
+  ALTCHA verification, metadata, preview gate, brand↔tokens parity
+  (`tests/unit`), `tests/integration` for real repo content.
+- E2E (Playwright): core routes × EN (IT where published), third-party-request
   guard, consent flows, 404, contact notOperational state; desktop + mobile
   projects configured in `playwright.config.ts`.
 - Before finishing any change run: `pnpm typecheck && pnpm lint && pnpm test`
@@ -149,6 +165,10 @@ report) is in `docs/`.
 - Validate all inputs with Zod (`src/env.ts`, `src/lib/contact/submit.ts`);
   honeypot returns the same generic response as success; rate limit per IP;
   ALTCHA server verification is timing-safe with HMAC-signed expiring salts.
+- Preview gate (D19): `PREVIEW_PASSWORD` is set **only on preview
+  deployments, never production**; the gate validates it via SHA-256 digest
+  with constant-shape comparison, sets an httpOnly cookie, and never logs
+  submitted values.
 - CSP starts Report-Only (ADR 0002) — when enabling new external origins,
   write an ADR first. Security contact in `/.well-known/security.txt/route.ts`
   must stay owner-supplied.
