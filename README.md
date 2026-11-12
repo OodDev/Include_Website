@@ -2,7 +2,21 @@
 
 > **From protected paths to real jobs** — multilingual marketing website for the INCLUDE Erasmus+ Cooperation Partnership (KA220-VET), coordinated by Bene Futuro srl with 6 partners across 4 countries.
 
+<div align="center">
+
 [![CI](https://github.com/OodDev/Include_Website/actions/workflows/ci.yml/badge.svg)](https://github.com/OodDev/Include_Website/actions/workflows/ci.yml)
+
+![Next.js 16](https://img.shields.io/badge/Next.js%2016-000000?style=flat&logo=nextdotjs&logoColor=white)
+![React 19](https://img.shields.io/badge/React%2019-61DAFB?style=flat&logo=react&logoColor=black)
+![TypeScript 5.9](https://img.shields.io/badge/TypeScript%205.9-3178C6?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS v4](https://img.shields.io/badge/Tailwind%20CSS%20v4-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
+![Zod](https://img.shields.io/badge/Zod-3B82F6?style=flat&logo=zod&logoColor=white)
+![Node.js 26](https://img.shields.io/badge/Node.js%2026-5FA04E?style=flat&logo=nodedotjs&logoColor=white)
+![pnpm 12](https://img.shields.io/badge/pnpm%2012-F69220?style=flat&logo=pnpm&logoColor=white)
+![Vitest](https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=flat&logo=playwright&logoColor=white)
+
+</div>
 
 Static-first, GDPR-by-design Next.js site: no CMS, no database — all content lives as MDX/YAML in [`content/`](content/). Contact is handled by a Server Action with ALTCHA proof-of-work anti-spam; no analytics and no third-party requests before user consent.
 
