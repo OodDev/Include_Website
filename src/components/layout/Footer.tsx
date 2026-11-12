@@ -68,11 +68,11 @@ export async function Footer() {
         <div className="mt-12 border-t border-white/15 pt-8">
           <dl className="grid grid-cols-1 gap-x-10 gap-y-3 sm:grid-cols-2 lg:grid-cols-3">
             {facts.map((f) => (
-              <div key={f.label} className="flex flex-col sm:flex-row sm:gap-3">
+              <div key={f.label} className="flex flex-col sm:flex-row sm:items-baseline sm:gap-3">
                 <dt className="u-label text-white/70 pb-1 sm:pb-0" style={{ fontSize: "0.6875rem" }}>
                   {f.label}
                 </dt>
-                <dd className="text-[0.875rem]">{f.value}</dd>
+                <dd className="text-[0.875rem] leading-6">{f.value}</dd>
               </div>
             ))}
           </dl>

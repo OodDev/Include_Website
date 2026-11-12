@@ -13,14 +13,14 @@ export async function HomeFactsStrip() {
     { value: t("partners"), icon: "participation" as const },
   ];
   return (
-    <dl className="grid grid-cols-2 gap-[18px] md:grid-cols-4">
+    <dl className="grid grid-cols-2 gap-8 md:grid-cols-4">
       {facts.map((f) => (
         <div
           key={f.value}
-          className="rounded-[18px] bg-white p-[26px_28px] shadow-[0_18px_40px_rgba(8,118,124,0.18)]"
+          className="flex flex-col items-center justify-center rounded-[18px] bg-white px-6 py-8 text-center shadow-[0_18px_40px_rgba(8,118,124,0.18)]"
         >
-          <Icon name={f.icon} size={34} />
-          <dt className="mt-2.5 text-[1.7rem] leading-[1.15] font-semibold tracking-[-0.01em] text-slate">
+          <Icon name={f.icon} size={28} />
+          <dt className="mt-2.5 text-[1.25rem] leading-[1.15] font-semibold tracking-[-0.01em] text-slate">
             {f.value}
           </dt>
         </div>

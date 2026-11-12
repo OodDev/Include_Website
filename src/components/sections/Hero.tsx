@@ -38,7 +38,7 @@ export async function Hero({
           aria-hidden="true"
           className="pointer-events-none absolute right-[6vw] top-[4vw] aspect-square w-[9vw] min-w-[70px] rounded-full bg-rust"
         />
-        <Container className="relative pb-[110px] pt-[100px]">
+        <Container className="relative pb-[150px] pt-[100px]">
           <p className="u-kick flex items-center gap-3.5 text-white">
             <span aria-hidden="true" className="h-0.5 w-11 shrink-0 bg-white/70" />
             {hero.eyebrow}
@@ -59,8 +59,9 @@ export async function Hero({
         </Container>
       </div>
       {/* Fact cards straddle the hero/section seam like the mockup's stats row
-          (margin-top −64px, petrol-cast shadow). They must live OUTSIDE the
-          hero's overflow-hidden wrapper to cross the edge. */}
+          (pulled up ~half the card height so the seam passes through the middle,
+          petrol-cast shadow). They must live OUTSIDE the hero's overflow-hidden
+          wrapper to cross the edge. */}
       <Container className="relative z-10 -mt-16">
         <HomeFactsStrip />
       </Container>
