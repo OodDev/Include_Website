@@ -59,7 +59,7 @@ export function DesktopNav({ items, pill }: { items: NavItem[]; pill: NavItem })
         <li>
           <Link
             href={`/${pill.route}`}
-            className="rounded-pill bg-petrol-deep px-4 py-2 text-white text-[0.9375rem] font-semibold hover:bg-slate motion-safe"
+            className="rounded-pill bg-rust px-4 py-2 text-white text-[0.9375rem] font-semibold hover:bg-petrol-deep motion-safe"
           >
             {pill.label}
           </Link>
