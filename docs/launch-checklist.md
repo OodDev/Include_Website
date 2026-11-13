@@ -10,6 +10,10 @@ release.
 - [ ] Contact mailbox addresses per audience (CONTACT_ROUTING map)
 - [ ] Newsletter provider decision (or stay non-operational)
 - [ ] Analytics decision: none / cookieless EU / GA4-consent (default none)
+- [ ] **Visitor counting set up** — decision from the analytics item above
+      must include a way to COUNT website visitors (even a minimal
+      privacy-friendly counter). Currently the site ships with NO analytics
+      by design; implement + verify only when going officially online.
 - [ ] Production origin (`NEXT_PUBLIC_SITE_URL`) + DNS control
 - [ ] Approved consent/banner wording sign-off (legally reviewed)
 - [ ] Associated partners: names/logos if they should be published
