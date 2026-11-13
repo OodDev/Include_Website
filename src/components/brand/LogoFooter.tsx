@@ -3,17 +3,30 @@ import { getTranslations } from "next-intl/server";
 
 /**
  * Footer logo: official "Main_Logo_with_UnderText.svg" (wordmark + tagline
- * "FROM PROTECTED PATHS TO REAL JOBS"), converted to a white (negative)
- * variant — fills set to #ffffff, all geometry and text positions verbatim.
+ * "FROM PROTECTED PATHS TO REAL JOBS"), converted to fill variants —
+ * negative (#ffffff) and slate (#465056, "Version 3" white-footer art
+ * direction); all geometry and text positions verbatim.
  *
  * The tagline is live <text> set in Manrope-ExtraBold, so this SVG is INLINED
  * (server component, no client JS) instead of loaded via <img>: an <img> SVG
  * cannot use the page's web font and the tagline would fall back to a system
  * font. Class names are prefixed `fl-` (footer logo) because SVG <style> is
- * document-global.
+ * document-global — only one variant may render per page (footer-only use).
  */
-export async function LogoFooter({ href }: { href: string }) {
+const LOGO_FILLS = {
+  negative: "#ffffff",
+  slate: "#465056",
+} as const;
+
+export async function LogoFooter({
+  href,
+  variant = "negative",
+}: {
+  href: string;
+  variant?: keyof typeof LOGO_FILLS;
+}) {
   const t = await getTranslations("common");
+  const fill = LOGO_FILLS[variant];
   return (
     <Link href={href} aria-label={t("toHome")} className="inline-block w-40">
       <svg
@@ -24,7 +37,7 @@ export async function LogoFooter({ href }: { href: string }) {
         className="block h-auto w-full"
       >
         <style>{`
-          .fl-1,.fl-2,.fl-4,.fl-5,.fl-6,.fl-7,.fl-8 { fill: #ffffff; }
+          .fl-1,.fl-2,.fl-4,.fl-5,.fl-6,.fl-7,.fl-8 { fill: ${fill}; }
           .fl-2 {
             font-family: var(--font-manrope), Manrope, system-ui, sans-serif;
             font-size: 22.29px;

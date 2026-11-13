@@ -38,7 +38,12 @@ Visible working checklist. Nothing below is invented; the site runs without them
     (targa, orizzontale, verticale, fascia web) served from
     `public/brand/` and rendered by `ReadyLabel.tsx` (text is outlined in
     the files, so no web-font dependency).
-  - [ ] Official Erasmus+/EU emblem files (Commission-supplied)
+  - [x] Official Erasmus+/EU emblem file — owner-delivered transparent
+    "Co-funded by the European Union" horizontal lockup
+    (`Brand kit…/Partners and EU logos and images/co-funded-by-eu.png`,
+    2026-11-13). Served from `public/brand/co-funded-by-eu.png`
+    (transparent margins trimmed; geometry untouched), provenance copy in
+    `assets/brand/eu-emblem/`. Integrated into the footer per D21.
   - [ ] Partner logos (6 partners) + verified partner website URLs
 - [ ] **Coordinator public contact details**: official email for contact form recipient(s) (`CONTACT_TO_EMAIL` / optional `CONTACT_ROUTING`), postal address if wanted, security.txt contact.
 - [ ] **Email delivery provider** decision + credentials (Brevo recommended / SMTP), DPA signed.
