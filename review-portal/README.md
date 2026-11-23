@@ -65,11 +65,16 @@ the browser), use **Importa** with an earlier ZIP — merge or replace.
 
 ## Deploy (separate Vercel project)
 
-- Root directory: `review-portal`
+- **Root directory: `review-portal` — this MUST be set in the Vercel project
+  settings** (Settings → General → Root Directory). The git repo root is the
+  main INCLUDE site, so if the portal project's Root Directory is left blank,
+  every git-triggered build compiles the *main site* instead of this app.
 - Framework: Next.js
-- Env: `PREVIEW_PASSWORD`, `NEXT_PUBLIC_LIVE_SITE_URL`
+- Env: `PREVIEW_PASSWORD`, `NEXT_PUBLIC_LIVE_SITE_URL` (production + preview)
 - The app is `noindex`, no analytics, no third-party requests; CSP is
   Report-Only like the main site.
+- Share the **production** URL (`include-review-portal.vercel.app`) with the
+  client. Preview URLs on the team domain sit behind Vercel SSO.
 
 ## Checks
 
