@@ -3,7 +3,7 @@ import nextConfig from "eslint-config-next";
 
 const config = [
   {
-    ignores: [".git/**", "node_modules/**", ".next/**", "out/**", "public/vendor/**", "docs/**", "content/**", "messages/**", "mockups/**"],
+    ignores: [".git/**", "node_modules/**", ".next/**", "out/**", "public/vendor/**", "docs/**", "content/**", "messages/**", "mockups/**", "review-portal/**"],
   },
   ...nextConfig,
   {

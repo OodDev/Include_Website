@@ -1,0 +1,89 @@
+{
+  "locale": "en",
+  "pages": [
+    {
+      "slug": "home",
+      "path": "/",
+      "label": "Home",
+      "note": "Hero, riquadri statistiche, fasce e inviti all'azione",
+      "group": "pagine"
+    },
+    {
+      "slug": "the-project",
+      "path": "/the-project",
+      "label": "Il progetto",
+      "note": "Obiettivi, partenariato, risultati attesi",
+      "group": "pagine"
+    },
+    {
+      "slug": "the-pathway",
+      "path": "/the-pathway",
+      "label": "Il percorso",
+      "note": "Le fasi del percorso e il modello",
+      "group": "pagine"
+    },
+    {
+      "slug": "ready-for-inclusion",
+      "path": "/ready-for-inclusion",
+      "label": "Ready for Inclusion",
+      "note": "Il programma e la fascia dedicata",
+      "group": "pagine"
+    },
+    {
+      "slug": "partners",
+      "path": "/partners",
+      "label": "Partner",
+      "note": "Schede dei sei partner",
+      "group": "pagine"
+    },
+    {
+      "slug": "results-and-tools",
+      "path": "/results-and-tools",
+      "label": "Risultati e strumenti",
+      "note": "Materiali e schede dei risultati",
+      "group": "pagine"
+    },
+    {
+      "slug": "news",
+      "path": "/news",
+      "label": "Notizie",
+      "note": "Elenco delle notizie",
+      "group": "pagine"
+    },
+    {
+      "slug": "contact",
+      "path": "/contact",
+      "label": "Contatti",
+      "note": "Modulo di contatto e recapiti",
+      "group": "pagine"
+    },
+    {
+      "slug": "privacy-policy",
+      "path": "/privacy-policy",
+      "label": "Privacy policy",
+      "note": "Informativa privacy",
+      "group": "legali"
+    },
+    {
+      "slug": "cookie-policy",
+      "path": "/cookie-policy",
+      "label": "Cookie policy",
+      "note": "Informativa cookie",
+      "group": "legali"
+    },
+    {
+      "slug": "legal-notice",
+      "path": "/legal-notice",
+      "label": "Note legali",
+      "note": "Note legali",
+      "group": "legali"
+    },
+    {
+      "slug": "accessibility",
+      "path": "/accessibility",
+      "label": "Accessibilità",
+      "note": "Dichiarazione di accessibilità",
+      "group": "legali"
+    }
+  ]
+}

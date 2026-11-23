@@ -136,16 +136,22 @@ src/
   styles/            # Tailwind v4 @theme tokens
 content/             # MDX pages + YAML data (source of truth for copy)
 messages/            # per-locale UI strings
-docs/                # decisions (D01–D20), owner inputs, runbooks, SEO, ROPA
+review-portal/       # separate client change-request app (own package.json)
+docs/                # decisions (D01–D22), owner inputs, runbooks, SEO, ROPA
 ```
 
 Layer boundaries: `components` → `features` → `lib` → `config`; tests import through the `@/` alias.
+
+`review-portal/` is a standalone, password-gated companion site where the
+client marks changes on snapshots of the live pages and exports a ZIP for the
+team. It has its own dependencies, build and README — see
+[`review-portal/README.md`](review-portal/README.md).
 
 ## Documentation
 
 - [`INSTRUCTIONS.md`](INSTRUCTIONS.md) — full project specification
 - [`AGENTS.md`](AGENTS.md) — guidance for AI coding agents working on this repo
-- [`docs/decisions.md`](docs/decisions.md) — recorded design/architecture decisions (D01–D20)
+- [`docs/decisions.md`](docs/decisions.md) — recorded design/architecture decisions (D01–D22)
 - [`docs/owner-inputs.md`](docs/owner-inputs.md) — checklist of gated owner-supplied data
 - [`docs/`](docs/) — execution docs: architecture, SEO, privacy/ROPA, runbook, launch checklist
 

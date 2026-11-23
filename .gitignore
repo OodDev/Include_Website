@@ -29,6 +29,11 @@
 /CHANGE_REQUESTS_ORIGINAL.*
 /screenshot_tests/
 
+# Client review portal — separate app with its own dependencies/build
+/review-portal/node_modules
+/review-portal/.next
+/review-portal/.vercel
+
 # OS / editor
 .DS_Store
 Thumbs.db

@@ -1,0 +1,1843 @@
+{
+  "generatedAt": "2026-11-23T07:12:22.027Z",
+  "base": "https://include-website-six.vercel.app",
+  "locale": "en",
+  "pages": {
+    "/": {
+      "desktop": {
+        "file": "/captures/home-desktop.jpg",
+        "thumb": "/captures/home-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 5737,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.015788412933588982
+            }
+          },
+          {
+            "id": "from-protected-paths-to-real-jobs-1",
+            "label": "From protected paths to real jobs",
+            "rect": {
+              "x": 0,
+              "y": 0.015788412933588982,
+              "w": 1,
+              "h": 0.12340400034861426
+            }
+          },
+          {
+            "id": "erasmus-ka220-vet24-months4-european-cou-2",
+            "label": "Riquadri in evidenza",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.12803675701586195,
+              "w": 0.8444444444444444,
+              "h": 0.021788391145197837
+            }
+          },
+          {
+            "id": "why-companies-3",
+            "label": "Why companies?",
+            "rect": {
+              "x": 0,
+              "y": 0.1498251481610598,
+              "w": 1,
+              "h": 0.12507081227122188
+            }
+          },
+          {
+            "id": "what-do-we-plan-to-achieve-4",
+            "label": "What do we plan to achieve?",
+            "rect": {
+              "x": 0,
+              "y": 0.2748959604322817,
+              "w": 1,
+              "h": 0.14142572337458603
+            }
+          },
+          {
+            "id": "the-pathway-in-three-phases-5",
+            "label": "The pathway in three phases",
+            "rect": {
+              "x": 0,
+              "y": 0.4163216838068677,
+              "w": 1,
+              "h": 0.09022028063447796
+            }
+          },
+          {
+            "id": "preparing-people-for-work-while-preparin-6",
+            "label": "Preparing people for work while preparing workplaces for inclusion.",
+            "rect": {
+              "x": 0,
+              "y": 0.5065419644413457,
+              "w": 1,
+              "h": 0.05376830224856197
+            }
+          },
+          {
+            "id": "where-do-you-want-to-start-7",
+            "label": "Where do you want to start?",
+            "rect": {
+              "x": 0,
+              "y": 0.5603102666899076,
+              "w": 1,
+              "h": 0.10084484486665504
+            }
+          },
+          {
+            "id": "what-the-project-produces-8",
+            "label": "What the project produces",
+            "rect": {
+              "x": 0,
+              "y": 0.6611551115565627,
+              "w": 1,
+              "h": 0.09016308610772181
+            }
+          },
+          {
+            "id": "a-network-of-companies-ready-for-inclusi-9",
+            "label": "A network of companies ready for inclusion",
+            "rect": {
+              "x": 0,
+              "y": 0.7513181976642844,
+              "w": 1,
+              "h": 0.06835835366916507
+            }
+          },
+          {
+            "id": "want-to-know-more-get-in-touch-10",
+            "label": "Want to know more? Get in touch",
+            "rect": {
+              "x": 0,
+              "y": 0.8196765513334495,
+              "w": 1,
+              "h": 0.05521995380861077
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-11",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.8748965051420603,
+              "w": 1,
+              "h": 0.12505447097786299
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/home-mobile.jpg",
+        "thumb": "/captures/home-mobile-thumb.jpg",
+        "width": 390,
+        "height": 9356,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.007695596408721676,
+              "w": 1,
+              "h": 0.00968128740914921
+            }
+          },
+          {
+            "id": "from-protected-paths-to-real-jobs-1",
+            "label": "From protected paths to real jobs",
+            "rect": {
+              "x": 0,
+              "y": 0.00968128740914921,
+              "w": 1,
+              "h": 0.09227033454467722
+            }
+          },
+          {
+            "id": "erasmus-ka220-vet24-months4-european-cou-2",
+            "label": "Riquadri in evidenza",
+            "rect": {
+              "x": 0,
+              "y": 0.09511109181274048,
+              "w": 1,
+              "h": 0.035057716973065416
+            }
+          },
+          {
+            "id": "why-companies-3",
+            "label": "Why companies?",
+            "rect": {
+              "x": 0,
+              "y": 0.1301688087858059,
+              "w": 1,
+              "h": 0.11116863510047029
+            }
+          },
+          {
+            "id": "what-do-we-plan-to-achieve-4",
+            "label": "What do we plan to achieve?",
+            "rect": {
+              "x": 0,
+              "y": 0.24133744388627618,
+              "w": 1,
+              "h": 0.18889950299273195
+            }
+          },
+          {
+            "id": "the-pathway-in-three-phases-5",
+            "label": "The pathway in three phases",
+            "rect": {
+              "x": 0,
+              "y": 0.4302369468790081,
+              "w": 1,
+              "h": 0.10579441000427534
+            }
+          },
+          {
+            "id": "preparing-people-for-work-while-preparin-6",
+            "label": "Preparing people for work while preparing workplaces for inclusion.",
+            "rect": {
+              "x": 0,
+              "y": 0.5360313568832834,
+              "w": 1,
+              "h": 0.025334678281316803
+            }
+          },
+          {
+            "id": "where-do-you-want-to-start-7",
+            "label": "Where do you want to start?",
+            "rect": {
+              "x": 0,
+              "y": 0.5613660351646003,
+              "w": 1,
+              "h": 0.13021390017101325
+            }
+          },
+          {
+            "id": "what-the-project-produces-8",
+            "label": "What the project produces",
+            "rect": {
+              "x": 0,
+              "y": 0.6915799353356135,
+              "w": 1,
+              "h": 0.08145007214621633
+            }
+          },
+          {
+            "id": "a-network-of-companies-ready-for-inclusi-9",
+            "label": "A network of companies ready for inclusion",
+            "rect": {
+              "x": 0,
+              "y": 0.7730300074818298,
+              "w": 1,
+              "h": 0.06485477233860625
+            }
+          },
+          {
+            "id": "want-to-know-more-get-in-touch-10",
+            "label": "Want to know more? Get in touch",
+            "rect": {
+              "x": 0,
+              "y": 0.8378847798204361,
+              "w": 1,
+              "h": 0.029075593202223173
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-11",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.8669603730226593,
+              "w": 1,
+              "h": 0.1330362868747328
+            }
+          }
+        ]
+      }
+    },
+    "/the-project": {
+      "desktop": {
+        "file": "/captures/the-project-desktop.jpg",
+        "thumb": "/captures/the-project-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 3302,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.027431291641429437
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.027431291641429437,
+              "w": 1,
+              "h": 0.021028921865536038
+            }
+          },
+          {
+            "id": "from-training-to-employment-closing-the--2",
+            "label": "From training to employment: closing the gap",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.04846021350696548,
+              "w": 0.8444444444444444,
+              "h": 0.12471134918231375
+            }
+          },
+          {
+            "id": "the-project-3",
+            "label": "The Project",
+            "rect": {
+              "x": 0.1,
+              "y": 0.12617826317383404,
+              "w": 0.5903971354166667,
+              "h": 0.02761110690490612
+            }
+          },
+          {
+            "id": "young-adults-with-cognitive-disabilities-4",
+            "label": "Young adults with cognitive disabilities can develop valuable vocational competences, but ",
+            "rect": {
+              "x": 0,
+              "y": 0.17317156268927922,
+              "w": 1,
+              "h": 0.10911000908540279
+            }
+          },
+          {
+            "id": "a-corporate-led-approach-5",
+            "label": "A corporate-led approach",
+            "rect": {
+              "x": 0,
+              "y": 0.282281571774682,
+              "w": 1,
+              "h": 0.13898300272562084
+            }
+          },
+          {
+            "id": "who-is-include-for-6",
+            "label": "Who is INCLUDE for?",
+            "rect": {
+              "x": 0,
+              "y": 0.42126457450030286,
+              "w": 1,
+              "h": 0.19784884161114477
+            }
+          },
+          {
+            "id": "project-7",
+            "label": "Project",
+            "rect": {
+              "x": 0,
+              "y": 0.6191134161114477,
+              "w": 1,
+              "h": 0.1634851983646275
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-8",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.7825986144760751,
+              "w": 1,
+              "h": 0.2172736220472441
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/the-project-mobile.jpg",
+        "thumb": "/captures/the-project-mobile-thumb.jpg",
+        "width": 390,
+        "height": 4950,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.00787878787878788,
+              "w": 1,
+              "h": 0.018298611111111113
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.018298611111111113,
+              "w": 1,
+              "h": 0.014027777777777778
+            }
+          },
+          {
+            "id": "from-training-to-employment-closing-the--2",
+            "label": "From training to employment: closing the gap",
+            "rect": {
+              "x": 0,
+              "y": 0.03232638888888889,
+              "w": 1,
+              "h": 0.08636363636363636
+            }
+          },
+          {
+            "id": "the-project-3",
+            "label": "The Project",
+            "rect": {
+              "x": 0.05128205128205128,
+              "y": 0.06601641414141414,
+              "w": 0.8974358974358975,
+              "h": 0.04297664141414141
+            }
+          },
+          {
+            "id": "young-adults-with-cognitive-disabilities-4",
+            "label": "Young adults with cognitive disabilities can develop valuable vocational competences, but ",
+            "rect": {
+              "x": 0,
+              "y": 0.11869002525252526,
+              "w": 1,
+              "h": 0.1245959595959596
+            }
+          },
+          {
+            "id": "a-corporate-led-approach-5",
+            "label": "A corporate-led approach",
+            "rect": {
+              "x": 0,
+              "y": 0.24328598484848485,
+              "w": 1,
+              "h": 0.1191824494949495
+            }
+          },
+          {
+            "id": "who-is-include-for-6",
+            "label": "Who is INCLUDE for?",
+            "rect": {
+              "x": 0,
+              "y": 0.36246843434343434,
+              "w": 1,
+              "h": 0.24055871212121213
+            }
+          },
+          {
+            "id": "project-7",
+            "label": "Project",
+            "rect": {
+              "x": 0,
+              "y": 0.6030271464646465,
+              "w": 1,
+              "h": 0.1455334595959596
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-8",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.748560606060606,
+              "w": 1,
+              "h": 0.2514520202020202
+            }
+          }
+        ]
+      }
+    },
+    "/the-pathway": {
+      "desktop": {
+        "file": "/captures/the-pathway-desktop.jpg",
+        "thumb": "/captures/the-pathway-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 4433,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.020432692307692308
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.020432692307692308,
+              "w": 1,
+              "h": 0.015663771712158808
+            }
+          },
+          {
+            "id": "a-gradual-pathway-towards-the-workplace-2",
+            "label": "A gradual pathway towards the workplace",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.036096464019851116,
+              "w": 0.8444444444444444,
+              "h": 0.07548499887209564
+            }
+          },
+          {
+            "id": "1-protected-3",
+            "label": "1. Protected",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.11158146289194676,
+              "w": 0.8444444444444444,
+              "h": 0.02880385743288969
+            }
+          },
+          {
+            "id": "protected-gym-4",
+            "label": "Protected Gym",
+            "rect": {
+              "x": 0,
+              "y": 0.14038532032483644,
+              "w": 1,
+              "h": 0.3852075344010828
+            }
+          },
+          {
+            "id": "what-supports-the-pathway-5",
+            "label": "What supports the pathway?",
+            "rect": {
+              "x": 0,
+              "y": 0.5255928547259192,
+              "w": 1,
+              "h": 0.12547583464922174
+            }
+          },
+          {
+            "id": "a-shift-of-perspective-6",
+            "label": "A shift of perspective",
+            "rect": {
+              "x": 0,
+              "y": 0.651068689375141,
+              "w": 1,
+              "h": 0.0936125366568915
+            }
+          },
+          {
+            "id": "are-you-a-company-7",
+            "label": "Are you a company?",
+            "rect": {
+              "x": 0,
+              "y": 0.7446812260320325,
+              "w": 1,
+              "h": 0.09347507331378299
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-8",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.8381562993458155,
+              "w": 1,
+              "h": 0.16184017595307917
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/the-pathway-mobile.jpg",
+        "thumb": "/captures/the-pathway-mobile-thumb.jpg",
+        "width": 390,
+        "height": 7302,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.006025746370857299,
+              "w": 1,
+              "h": 0.012404563818132019
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.012404563818132019,
+              "w": 1,
+              "h": 0.009509380991509176
+            }
+          },
+          {
+            "id": "a-gradual-pathway-towards-the-workplace-2",
+            "label": "A gradual pathway towards the workplace",
+            "rect": {
+              "x": 0,
+              "y": 0.021913944809641196,
+              "w": 1,
+              "h": 0.06042223021090112
+            }
+          },
+          {
+            "id": "1-protected-3",
+            "label": "1. Protected",
+            "rect": {
+              "x": 0,
+              "y": 0.08233617502054232,
+              "w": 1,
+              "h": 0.036026088742810186
+            }
+          },
+          {
+            "id": "protected-gym-4",
+            "label": "Protected Gym",
+            "rect": {
+              "x": 0,
+              "y": 0.1183622637633525,
+              "w": 1,
+              "h": 0.41213879758970146
+            }
+          },
+          {
+            "id": "what-supports-the-pathway-5",
+            "label": "What supports the pathway?",
+            "rect": {
+              "x": 0,
+              "y": 0.530501061353054,
+              "w": 1,
+              "h": 0.16321298959189262
+            }
+          },
+          {
+            "id": "a-shift-of-perspective-6",
+            "label": "A shift of perspective",
+            "rect": {
+              "x": 0,
+              "y": 0.6937140509449465,
+              "w": 1,
+              "h": 0.07906652287044645
+            }
+          },
+          {
+            "id": "are-you-a-company-7",
+            "label": "Are you a company?",
+            "rect": {
+              "x": 0,
+              "y": 0.772780573815393,
+              "w": 1,
+              "h": 0.0567481511914544
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-8",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.8295287250068475,
+              "w": 1,
+              "h": 0.1704584360449192
+            }
+          }
+        ]
+      }
+    },
+    "/ready-for-inclusion": {
+      "desktop": {
+        "file": "/captures/ready-for-inclusion-desktop.jpg",
+        "thumb": "/captures/ready-for-inclusion-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 2928,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.030935151980874317
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.030935151980874317,
+              "w": 1,
+              "h": 0.02371499316939891
+            }
+          },
+          {
+            "id": "companies-can-learn-inclusion-too-2",
+            "label": "Companies can learn inclusion too",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.05465014515027322,
+              "w": 0.8444444444444444,
+              "h": 0.1640625
+            }
+          },
+          {
+            "id": "ready-for-inclusion-3",
+            "label": "Ready for Inclusion",
+            "rect": {
+              "x": 0.1,
+              "y": 0.1167232325819672,
+              "w": 0.45045572916666665,
+              "h": 0.041517247267759565
+            }
+          },
+          {
+            "id": "for-companies-4",
+            "label": "For companies",
+            "rect": {
+              "x": 0,
+              "y": 0.21871264515027322,
+              "w": 1,
+              "h": 0.17914852288251365
+            }
+          },
+          {
+            "id": "the-ready-for-inclusion-ambassador-netwo-5",
+            "label": "The Ready for Inclusion Ambassador Network",
+            "rect": {
+              "x": 0,
+              "y": 0.39786116803278687,
+              "w": 1,
+              "h": 0.23480191256830601
+            }
+          },
+          {
+            "id": "i-am-a-company-i-want-to-know-more-6",
+            "label": "I am a company — I want to know more",
+            "rect": {
+              "x": 0,
+              "y": 0.6326630806010929,
+              "w": 1,
+              "h": 0.12236915129781421
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-7",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.7550322318989071,
+              "w": 1,
+              "h": 0.24502646857923496
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/ready-for-inclusion-mobile.jpg",
+        "thumb": "/captures/ready-for-inclusion-mobile-thumb.jpg",
+        "width": 390,
+        "height": 4236,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.00023607176581680832,
+              "w": 1,
+              "h": 0.02138293791312559
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.02138293791312559,
+              "w": 1,
+              "h": 0.016392233238904628
+            }
+          },
+          {
+            "id": "companies-can-learn-inclusion-too-2",
+            "label": "Companies can learn inclusion too",
+            "rect": {
+              "x": 0,
+              "y": 0.03777517115203022,
+              "w": 1,
+              "h": 0.18409540250236073
+            }
+          },
+          {
+            "id": "ready-for-inclusion-3",
+            "label": "Ready for Inclusion",
+            "rect": {
+              "x": 0.05128205128205128,
+              "y": 0.06653904036827195,
+              "w": 0.8974358974358975,
+              "h": 0.05022057955618508
+            }
+          },
+          {
+            "id": "for-companies-4",
+            "label": "For companies",
+            "rect": {
+              "x": 0,
+              "y": 0.22187057365439095,
+              "w": 1,
+              "h": 0.2048549634088763
+            }
+          },
+          {
+            "id": "the-ready-for-inclusion-ambassador-netwo-5",
+            "label": "The Ready for Inclusion Ambassador Network",
+            "rect": {
+              "x": 0,
+              "y": 0.4267255370632672,
+              "w": 1,
+              "h": 0.19962818696883852
+            }
+          },
+          {
+            "id": "i-am-a-company-i-want-to-know-more-6",
+            "label": "I am a company — I want to know more",
+            "rect": {
+              "x": 0,
+              "y": 0.6263537240321058,
+              "w": 1,
+              "h": 0.07978487960339943
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-7",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.7061386036355052,
+              "w": 1,
+              "h": 0.29383557601510857
+            }
+          }
+        ]
+      }
+    },
+    "/partners": {
+      "desktop": {
+        "file": "/captures/partners-desktop.jpg",
+        "thumb": "/captures/partners-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 2360,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.03838056144067797
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.03838056144067797,
+              "w": 1,
+              "h": 0.029422669491525423
+            }
+          },
+          {
+            "id": "a-european-partnership-connecting-resear-2",
+            "label": "A European partnership connecting research, inclusion and companies",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.06780323093220339,
+              "w": 0.8444444444444444,
+              "h": 0.1873675847457627
+            }
+          },
+          {
+            "id": "partners-3",
+            "label": "Partners",
+            "rect": {
+              "x": 0.1,
+              "y": 0.1765426377118644,
+              "w": 0.5903971354166667,
+              "h": 0.051509533898305086
+            }
+          },
+          {
+            "id": "bene-futuro-srl-4",
+            "label": "Bene Futuro srl",
+            "rect": {
+              "x": 0,
+              "y": 0.2551708156779661,
+              "w": 1,
+              "h": 0.2925582627118644
+            }
+          },
+          {
+            "id": "associated-partners-5",
+            "label": "Associated partners",
+            "rect": {
+              "x": 0,
+              "y": 0.5477290783898305,
+              "w": 1,
+              "h": 0.14824549788135594
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-6",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.6959745762711864,
+              "w": 1,
+              "h": 0.3039989406779661
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/partners-mobile.jpg",
+        "thumb": "/captures/partners-mobile-thumb.jpg",
+        "width": 390,
+        "height": 4024,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.0009940357852882703,
+              "w": 1,
+              "h": 0.02250947440357853
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.02250947440357853,
+              "w": 1,
+              "h": 0.029898732604373757
+            }
+          },
+          {
+            "id": "a-european-partnership-connecting-resear-2",
+            "label": "A European partnership connecting research, inclusion and companies",
+            "rect": {
+              "x": 0,
+              "y": 0.05240820700795228,
+              "w": 1,
+              "h": 0.14366923459244532
+            }
+          },
+          {
+            "id": "partners-3",
+            "label": "Partners",
+            "rect": {
+              "x": 0.05128205128205128,
+              "y": 0.1161779324055666,
+              "w": 0.8974358974358975,
+              "h": 0.06797107977137178
+            }
+          },
+          {
+            "id": "bene-futuro-srl-4",
+            "label": "Bene Futuro srl",
+            "rect": {
+              "x": 0,
+              "y": 0.1960774416003976,
+              "w": 1,
+              "h": 0.39725708250497016
+            }
+          },
+          {
+            "id": "associated-partners-5",
+            "label": "Associated partners",
+            "rect": {
+              "x": 0,
+              "y": 0.5933345241053678,
+              "w": 1,
+              "h": 0.09737279448310139
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-6",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.6907073185884692,
+              "w": 1,
+              "h": 0.3093159791252485
+            }
+          }
+        ]
+      }
+    },
+    "/results-and-tools": {
+      "desktop": {
+        "file": "/captures/results-and-tools-desktop.jpg",
+        "thumb": "/captures/results-and-tools-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 2489,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.03639137203696263
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.03639137203696263,
+              "w": 1,
+              "h": 0.027897750100441945
+            }
+          },
+          {
+            "id": "tools-for-people-companies-and-inclusive-2",
+            "label": "Tools for people, companies and inclusive VET systems",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.06428912213740458,
+              "w": 0.8444444444444444,
+              "h": 0.13536435315387707
+            }
+          },
+          {
+            "id": "results-tools-3",
+            "label": "Results & Tools",
+            "rect": {
+              "x": 0.1,
+              "y": 0.13731041582965045,
+              "w": 0.5903971354166667,
+              "h": 0.03662992165528325
+            }
+          },
+          {
+            "id": "territorial-and-labour-market-intelligen-4",
+            "label": "Territorial and Labour Market Intelligence",
+            "rect": {
+              "x": 0,
+              "y": 0.19965347529128163,
+              "w": 1,
+              "h": 0.5122790277219766
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-5",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.7119325030132584,
+              "w": 1,
+              "h": 0.28824327038971476
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/results-and-tools-mobile.jpg",
+        "thumb": "/captures/results-and-tools-mobile-thumb.jpg",
+        "width": 390,
+        "height": 5004,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.001199040767386091,
+              "w": 1,
+              "h": 0.018101144084732214
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.018101144084732214,
+              "w": 1,
+              "h": 0.019759192645883293
+            }
+          },
+          {
+            "id": "tools-for-people-companies-and-inclusive-2",
+            "label": "Tools for people, companies and inclusive VET systems",
+            "rect": {
+              "x": 0,
+              "y": 0.03786033673061551,
+              "w": 1,
+              "h": 0.08833558153477218
+            }
+          },
+          {
+            "id": "results-tools-3",
+            "label": "Results & Tools",
+            "rect": {
+              "x": 0.05128205128205128,
+              "y": 0.08016399380495604,
+              "w": 0.8974358974358975,
+              "h": 0.03643959832134293
+            }
+          },
+          {
+            "id": "territorial-and-labour-market-intelligen-4",
+            "label": "Territorial and Labour Market Intelligence",
+            "rect": {
+              "x": 0,
+              "y": 0.1261959182653877,
+              "w": 1,
+              "h": 0.6250374700239808
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-5",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.7512333882893685,
+              "w": 1,
+              "h": 0.2487385091926459
+            }
+          }
+        ]
+      }
+    },
+    "/news": {
+      "desktop": {
+        "file": "/captures/news-desktop.jpg",
+        "thumb": "/captures/news-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 1743,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.051966795754446356
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.051966795754446356,
+              "w": 1,
+              "h": 0.03983792312105565
+            }
+          },
+          {
+            "id": "stories-from-the-include-journey-2",
+            "label": "Stories from the INCLUDE journey",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.09180471887550201,
+              "w": 0.8444444444444444,
+              "h": 0.23639199655765922
+            }
+          },
+          {
+            "id": "news-3",
+            "label": "News",
+            "rect": {
+              "x": 0.1,
+              "y": 0.1960789586919105,
+              "w": 0.5903971354166667,
+              "h": 0.03487162937464142
+            }
+          },
+          {
+            "id": "project-newsfrom-the-territoriesvoices-f-4",
+            "label": "Project newsFrom the territoriesVoices from companiesPilot storiesEventsTools & resourcesP",
+            "rect": {
+              "x": 0,
+              "y": 0.3281967154331612,
+              "w": 1,
+              "h": 0.1337313539873781
+            }
+          },
+          {
+            "id": "no-stories-yet-project-news-will-be-publ-5",
+            "label": "No stories yet. Project news will be published here as INCLUDE moves forward.",
+            "rect": {
+              "x": 0,
+              "y": 0.4619280694205393,
+              "w": 1,
+              "h": 0.12624605565117614
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-6",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.5881741250717154,
+              "w": 1,
+              "h": 0.41161072862880094
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/news-mobile.jpg",
+        "thumb": "/captures/news-mobile-thumb.jpg",
+        "width": 390,
+        "height": 2394,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.03783547410192147
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.03783547410192147,
+              "w": 1,
+              "h": 0.029004803675856308
+            }
+          },
+          {
+            "id": "stories-from-the-include-journey-2",
+            "label": "Stories from the INCLUDE journey",
+            "rect": {
+              "x": 0,
+              "y": 0.06684027777777778,
+              "w": 1,
+              "h": 0.19916327276524645
+            }
+          },
+          {
+            "id": "news-3",
+            "label": "News",
+            "rect": {
+              "x": 0.05128205128205128,
+              "y": 0.11773574561403509,
+              "w": 0.8974358974358975,
+              "h": 0.06347248329156224
+            }
+          },
+          {
+            "id": "project-newsfrom-the-territoriesvoices-f-4",
+            "label": "Project newsFrom the territoriesVoices from companiesPilot storiesEventsTools & resourcesP",
+            "rect": {
+              "x": 0,
+              "y": 0.2660035505430242,
+              "w": 1,
+              "h": 0.1371658312447786
+            }
+          },
+          {
+            "id": "no-stories-yet-project-news-will-be-publ-5",
+            "label": "No stories yet. Project news will be published here as INCLUDE moves forward.",
+            "rect": {
+              "x": 0,
+              "y": 0.4031693817878028,
+              "w": 1,
+              "h": 0.07689797410192147
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-6",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.4800673558897243,
+              "w": 1,
+              "h": 0.5199195906432749
+            }
+          }
+        ]
+      }
+    },
+    "/contact": {
+      "desktop": {
+        "file": "/captures/contact-desktop.jpg",
+        "thumb": "/captures/contact-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 2009,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.04508617471378795
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.04508617471378795,
+              "w": 1,
+              "h": 0.03456321553011448
+            }
+          },
+          {
+            "id": "want-to-know-more-get-in-touch-2",
+            "label": "Want to know more? Get in touch",
+            "rect": {
+              "x": 0.07777777777777778,
+              "y": 0.07964939024390244,
+              "w": 0.8444444444444444,
+              "h": 0.18916438526630164
+            }
+          },
+          {
+            "id": "contact-3",
+            "label": "Contact",
+            "rect": {
+              "x": 0.1,
+              "y": 0.17011728471876555,
+              "w": 0.5903971354166667,
+              "h": 0.030254479840716775
+            }
+          },
+          {
+            "id": "contact-2-4",
+            "label": "Contact (2)",
+            "rect": {
+              "x": 0,
+              "y": 0.2688137755102041,
+              "w": 1,
+              "h": 0.21617564708810352
+            }
+          },
+          {
+            "id": "want-to-know-more-get-in-touch-2-5",
+            "label": "Want to know more? Get in touch (2)",
+            "rect": {
+              "x": 0,
+              "y": 0.48498942259830763,
+              "w": 1,
+              "h": 0.15768883773021403
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-6",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.6426782603285216,
+              "w": 1,
+              "h": 0.3571117471378795
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/contact-mobile.jpg",
+        "thumb": "/captures/contact-mobile-thumb.jpg",
+        "width": 390,
+        "height": 2493,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.036332982350581626
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.036332982350581626,
+              "w": 1,
+              "h": 0.0278529883674288
+            }
+          },
+          {
+            "id": "want-to-know-more-get-in-touch-2",
+            "label": "Want to know more? Get in touch",
+            "rect": {
+              "x": 0,
+              "y": 0.06418597071801042,
+              "w": 1,
+              "h": 0.18068090653830726
+            }
+          },
+          {
+            "id": "contact-3",
+            "label": "Contact",
+            "rect": {
+              "x": 0.05128205128205128,
+              "y": 0.11306031889290012,
+              "w": 0.8974358974358975,
+              "h": 0.07314229843561973
+            }
+          },
+          {
+            "id": "contact-2-4",
+            "label": "Contact (2)",
+            "rect": {
+              "x": 0,
+              "y": 0.2448668772563177,
+              "w": 1,
+              "h": 0.14691761933413558
+            }
+          },
+          {
+            "id": "want-to-know-more-get-in-touch-2-5",
+            "label": "Want to know more? Get in touch (2)",
+            "rect": {
+              "x": 0,
+              "y": 0.3917844965904533,
+              "w": 1,
+              "h": 0.10911803048535901
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-6",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.5009025270758123,
+              "w": 1,
+              "h": 0.4992729643000401
+            }
+          }
+        ]
+      }
+    },
+    "/privacy-policy": {
+      "desktop": {
+        "file": "/captures/privacy-policy-desktop.jpg",
+        "thumb": "/captures/privacy-policy-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 2561,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.035368264349863336
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.035368264349863336,
+              "w": 1,
+              "h": 0.027113432253026162
+            }
+          },
+          {
+            "id": "privacy-policy-2",
+            "label": "Privacy Policy",
+            "rect": {
+              "x": 0.1925021701388889,
+              "y": 0.0624816966028895,
+              "w": 0.6149956597222223,
+              "h": 0.6572383834439672
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.7197200800468567,
+              "w": 1,
+              "h": 0.2801395939086294
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/privacy-policy-mobile.jpg",
+        "thumb": "/captures/privacy-policy-mobile-thumb.jpg",
+        "width": 390,
+        "height": 3717,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.0008071025020177562,
+              "w": 1,
+              "h": 0.024368610438525694
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.024368610438525694,
+              "w": 1,
+              "h": 0.018681059994619317
+            }
+          },
+          {
+            "id": "privacy-policy-2",
+            "label": "Privacy Policy",
+            "rect": {
+              "x": 0,
+              "y": 0.04304967043314501,
+              "w": 1,
+              "h": 0.6221583266074792
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.6652079970406242,
+              "w": 1,
+              "h": 0.3348634651600753
+            }
+          }
+        ]
+      }
+    },
+    "/cookie-policy": {
+      "desktop": {
+        "file": "/captures/cookie-policy-desktop.jpg",
+        "thumb": "/captures/cookie-policy-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 1858,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.04875033638320775
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.04875033638320775,
+              "w": 1,
+              "h": 0.0373721743810549
+            }
+          },
+          {
+            "id": "cookie-policy-2",
+            "label": "Cookie Policy",
+            "rect": {
+              "x": 0.1925021701388889,
+              "y": 0.08612251076426265,
+              "w": 0.6149956597222223,
+              "h": 0.5276422900968784
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.613764800861141,
+              "w": 1,
+              "h": 0.3861342841765339
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/cookie-policy-mobile.jpg",
+        "thumb": "/captures/cookie-policy-mobile-thumb.jpg",
+        "width": 390,
+        "height": 2680,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.0337978078358209
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.0337978078358209,
+              "w": 1,
+              "h": 0.025909514925373134
+            }
+          },
+          {
+            "id": "cookie-policy-2",
+            "label": "Cookie Policy",
+            "rect": {
+              "x": 0,
+              "y": 0.05970732276119403,
+              "w": 1,
+              "h": 0.47602611940298506
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.5357334421641791,
+              "w": 1,
+              "h": 0.4644356343283582
+            }
+          }
+        ]
+      }
+    },
+    "/legal-notice": {
+      "desktop": {
+        "file": "/captures/legal-notice-desktop.jpg",
+        "thumb": "/captures/legal-notice-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 1865,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.048567359249329756
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.048567359249329756,
+              "w": 1,
+              "h": 0.037231903485254694
+            }
+          },
+          {
+            "id": "legal-notice-2",
+            "label": "Legal notice",
+            "rect": {
+              "x": 0.1925021701388889,
+              "y": 0.08579926273458445,
+              "w": 0.6149956597222223,
+              "h": 0.5295157506702413
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.6153150134048258,
+              "w": 1,
+              "h": 0.38468498659517425
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/legal-notice-mobile.jpg",
+        "thumb": "/captures/legal-notice-mobile-thumb.jpg",
+        "width": 390,
+        "height": 2658,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.0340775489089541
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.0340775489089541,
+              "w": 1,
+              "h": 0.026123965387509406
+            }
+          },
+          {
+            "id": "legal-notice-2",
+            "label": "Legal notice",
+            "rect": {
+              "x": 0,
+              "y": 0.060201514296463504,
+              "w": 1,
+              "h": 0.47150112866817157
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.5317026429646351,
+              "w": 1,
+              "h": 0.46827972159518433
+            }
+          }
+        ]
+      }
+    },
+    "/accessibility": {
+      "desktop": {
+        "file": "/captures/accessibility-desktop.jpg",
+        "thumb": "/captures/accessibility-desktop-thumb.jpg",
+        "width": 1440,
+        "height": 2136,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 1,
+              "h": 0.042405489232209735
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.042405489232209735,
+              "w": 1,
+              "h": 0.03250819288389513
+            }
+          },
+          {
+            "id": "accessibility-2",
+            "label": "Accessibility",
+            "rect": {
+              "x": 0.1925021701388889,
+              "y": 0.07491368211610487,
+              "w": 0.6149956597222223,
+              "h": 0.5889952013108615
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.6639088834269663,
+              "w": 1,
+              "h": 0.33587897940074907
+            }
+          }
+        ]
+      },
+      "mobile": {
+        "file": "/captures/accessibility-mobile.jpg",
+        "thumb": "/captures/accessibility-mobile-thumb.jpg",
+        "width": 390,
+        "height": 3101,
+        "hotspots": [
+          {
+            "id": "menu-e-intestazione-0",
+            "label": "Menu e intestazione",
+            "rect": {
+              "x": 0,
+              "y": 0.0006449532408900354,
+              "w": 1,
+              "h": 0.029209327636246372
+            }
+          },
+          {
+            "id": "sezione-1",
+            "label": "/",
+            "rect": {
+              "x": 0,
+              "y": 0.029209327636246372,
+              "w": 1,
+              "h": 0.02239197033215092
+            }
+          },
+          {
+            "id": "accessibility-2",
+            "label": "Accessibility",
+            "rect": {
+              "x": 0,
+              "y": 0.05160129796839729,
+              "w": 1,
+              "h": 0.5469253869719445
+            }
+          },
+          {
+            "id": "footer-dati-del-progetto-3",
+            "label": "Footer — dati del progetto",
+            "rect": {
+              "x": 0,
+              "y": 0.5985266849403418,
+              "w": 1,
+              "h": 0.401382618510158
+            }
+          }
+        ]
+      }
+    }
+  }
+}
