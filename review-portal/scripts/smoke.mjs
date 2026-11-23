@@ -68,14 +68,15 @@ async function main() {
   // Step 1 → 2: Home
   console.log("choosing Home");
   await page.getByRole("button", { name: /^Home/ }).first().click();
-  await page.waitForTimeout(400);
+  await page.locator("img[src*='captures']").first().waitFor({ state: "visible", timeout: 20_000 });
+  await page.waitForTimeout(800);
   await shot(page, "2-sections");
 
   // Step 2 → 3: first hotspot
   console.log("clicking hotspot");
   const hotspot = page.locator("button.hotspot").first();
   if ((await hotspot.count()) === 0) throw new Error("No hotspots rendered on Home");
-  await hotspot.click();
+  await hotspot.click({ force: true });
   await page.waitForTimeout(300);
 
   // Fill a text request + real attachment
@@ -132,10 +133,21 @@ async function main() {
   const importer = await browser.newContext({ viewport: { width: 1440, height: 1000 }, locale: "it-IT" });
   const importPage = await importer.newPage();
   await login(importPage);
-  await importPage
-    .locator('input[type="file"][accept*="zip"]')
-    .setInputFiles(zipPath);
-  await importPage.getByRole("button", { name: /Aggiungi alla lista/ }).click();
+  await importPage.waitForLoadState("networkidle");
+  await importPage.getByRole("button", { name: /Importa/ }).waitFor({ timeout: 10_000 });
+  await importPage.waitForTimeout(1500);
+  const zipInput = importPage.locator('input[type="file"][accept*="zip"]');
+  await zipInput.waitFor({ state: "attached", timeout: 10_000 });
+  await zipInput.setInputFiles(zipPath);
+  await importPage.waitForTimeout(3000);
+  await shot(importPage, "6a-import-debug");
+  const mergeBtn = importPage.getByRole("button", { name: /Aggiungi alla lista/ });
+  if ((await mergeBtn.count()) === 0) {
+    const bodyText = await importPage.locator("body").innerText();
+    failures.push("Import modal did not appear. Page text: " + bodyText.slice(0, 300));
+  } else {
+    await mergeBtn.click();
+  }
   await importPage.waitForTimeout(600);
   const importedText = await importPage.locator("#richieste-title").locator("..").innerText();
   if (!/1 blocco/.test(importedText)) failures.push("Import did not restore the request");
