@@ -62,12 +62,15 @@ async function main() {
   page.on("pageerror", (error) => errors.push(error.message));
 
   await login(page);
+  await page.waitForLoadState("networkidle");
+  await page.waitForTimeout(1200); // let React hydrate before interacting
   console.log("logged in");
   await shot(page, "1-start");
 
   // Step 1 → 2: Home
   console.log("choosing Home");
   await page.getByRole("button", { name: /^Home/ }).first().click();
+  await page.locator("h2", { hasText: /Indicate il punto/ }).waitFor({ timeout: 15_000 });
   await page.locator("img[src*='captures']").first().waitFor({ state: "visible", timeout: 20_000 });
   await page.waitForTimeout(800);
   await shot(page, "2-sections");
