@@ -57,7 +57,7 @@ export function ConsentDialog({
             <label className="flex items-start justify-between gap-4 font-bold">
               <span>
                 {labels.necessaryLabel}
-                <span className="block pb-1 font-normal text-slate/70">{labels.necessaryDesc}</span>
+                <span className="block pb-1 font-normal text-slate/85">{labels.necessaryDesc}</span>
               </span>
               <input
                 type="checkbox"

@@ -103,7 +103,7 @@ export default async function NewsCategoryPage({
               {posts.map((p) => (
                 <li key={p.slug}>
                   <article className="h-full rounded-card-lg border border-slate/10 bg-white p-6">
-                    <p className="text-[0.8125rem] text-slate/60">
+                    <p className="text-[0.8125rem] text-slate/85">
                       {p.date}
                       {p.country ? ` · ${p.country}` : ""}
                     </p>

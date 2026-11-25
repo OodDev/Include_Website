@@ -69,7 +69,7 @@ export async function Footer() {
           </div>
 
           <nav aria-label={tFooter("sectionNav")} className="flex flex-col gap-3 lg:justify-self-end">
-            <span className="u-label text-slate/55">{tFooter("sectionNav")}</span>
+            <span className="u-label text-slate/85">{tFooter("sectionNav")}</span>
             <ul className="flex max-w-md flex-wrap gap-x-3 gap-y-2.5">
               {menu.map((m) => (
                 <li key={m.route}>

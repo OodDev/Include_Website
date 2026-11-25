@@ -120,7 +120,7 @@ export default async function PathwayPage({ params }: { params: Promise<{ locale
           <ButtonLink href={fm.cta.exploreTools}>Explore the project tools</ButtonLink>
           <Card className="bg-rust text-white md:max-w-md">
             <h2 className="text-[1.25rem] font-semibold">{fm.cta.companyCard.title}</h2>
-            <p className="mt-2 max-w-[40ch] opacity-90">{fm.cta.companyCard.body}</p>
+            <p className="mt-2 max-w-[40ch]">{fm.cta.companyCard.body}</p>
             <ButtonLink href={fm.cta.companyCard.route} variant="outlineLight" className="mt-4">
               Ready for Inclusion
             </ButtonLink>

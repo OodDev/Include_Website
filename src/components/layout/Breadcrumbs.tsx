@@ -9,7 +9,7 @@ export async function Breadcrumbs({ items }: { items: Crumb[] }) {
   const t = await getTranslations("breadcrumbs");
   return (
     <nav aria-label={t("youAreHere")} className="py-6">
-      <ol className="flex flex-wrap items-center gap-2 text-[0.8125rem] text-slate/70">
+      <ol className="flex flex-wrap items-center gap-2 text-[0.8125rem] text-slate/85">
         <li>
           <Link href="/" className="underline-offset-4 hover:underline">
             {t("home")}

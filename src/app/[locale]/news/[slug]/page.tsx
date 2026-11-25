@@ -86,7 +86,7 @@ export default async function NewsPostPage({
         ]}
       />
       <Container className="pb-12 md:pb-16 max-w-[75ch]">
-        <p className="text-[0.8125rem] text-slate/60">
+        <p className="text-[0.8125rem] text-slate/85">
           {fm.date} · {tN(`categories.${fm.category}`)}
           {fm.country ? ` · ${fm.country}` : ""}
         </p>

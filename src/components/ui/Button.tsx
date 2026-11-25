@@ -15,9 +15,12 @@ export const buttonVariants = cva(
         primary: "bg-petrol-deep text-white hover:bg-slate",
         accent: "bg-rust text-white hover:bg-burgundy",
         outline: "border-2 border-petrol-deep text-petrol-deep bg-white hover:bg-paper",
-        outlineLight: "border-2 border-white/70 text-white bg-transparent hover:bg-white/10",
+        /* Dark grounds: the default petrol focus ring is nearly invisible on
+           petrol/rust, so these variants use the white focus ring (2.4.7). */
+        outlineLight:
+          "border-2 border-white/70 text-white bg-transparent hover:bg-white/10 focus-ring-light",
         /* White pill on the immersive petrol hero (mockup variation 3 v3-btn) */
-        inverse: "bg-white text-petrol-deep hover:bg-mist",
+        inverse: "bg-white text-petrol-deep hover:bg-mist focus-ring-light",
         ghost: "text-petrol-deep hover:text-rust underline-offset-4 hover:underline",
       },
       size: {

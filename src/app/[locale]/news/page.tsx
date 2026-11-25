@@ -90,7 +90,7 @@ export default async function NewsPage({ params }: { params: Promise<{ locale: s
               {posts.map((p) => (
                 <li key={p.slug}>
                   <article className="h-full rounded-card-lg border border-slate/10 bg-white p-6">
-                    <p className="text-[0.8125rem] text-slate/60">
+                    <p className="text-[0.8125rem] text-slate/85">
                       {p.date} · {tN(`categories.${p.category}`)}
                     </p>
                     <h2 className="mt-2 text-[1.125rem] font-semibold leading-snug">{p.title}</h2>

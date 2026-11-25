@@ -108,7 +108,7 @@ export default async function ResourceDetailPage({
           </h1>
           <Icon name={resource.icon as IconId} size={56} className="shrink-0" aria-hidden="true" />
         </div>
-        <p className="mt-6 flex items-center gap-3 text-[0.875rem] text-slate/70">
+        <p className="mt-6 flex items-center gap-3 text-[0.875rem] text-slate/85">
           <StatusChip status={resource.status}>{tStatus(resource.status)}</StatusChip>
           {resource.audience.length > 0 && (
             <span className="font-semibold">{resource.audience.map((a) => tResults(`audiences.${a}`)).join(" · ")}</span>

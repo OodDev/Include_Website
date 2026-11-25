@@ -52,9 +52,10 @@ export function ContactForm({ operational, defaultAudience }: { operational: boo
           autoComplete="name"
           maxLength={120}
           aria-invalid={has(state, "name")}
+          aria-describedby={has(state, "name") ? "cf-name-error" : undefined}
           className={inputCls}
         />
-        <FieldError state={state} field="name" fallback={tForm("errors.name")} />
+        <FieldError id="cf-name-error" state={state} field="name" fallback={tForm("errors.name")} />
       </div>
 
       <div className="grid gap-2 sm:grid-cols-2 sm:gap-5">
@@ -70,9 +71,10 @@ export function ContactForm({ operational, defaultAudience }: { operational: boo
             autoComplete="email"
             maxLength={254}
             aria-invalid={has(state, "email")}
+            aria-describedby={has(state, "email") ? "cf-email-error" : undefined}
             className={inputCls}
           />
-          <FieldError state={state} field="email" fallback={tForm("errors.email")} />
+          <FieldError id="cf-email-error" state={state} field="email" fallback={tForm("errors.email")} />
         </div>
         <div className="grid gap-2">
           <label htmlFor="cf-org" className="text-[0.875rem] font-bold">
@@ -116,16 +118,27 @@ export function ContactForm({ operational, defaultAudience }: { operational: boo
           required
           maxLength={4000}
           aria-invalid={has(state, "message")}
+          aria-describedby={has(state, "message") ? "cf-message-error" : undefined}
           className={inputCls}
         />
-        <p className="text-[0.8125rem] text-slate/60">{tForm("sensitive")}</p>
-        <FieldError state={state} field="message" fallback={tForm("errors.message")} />
+        <p className="text-[0.8125rem] text-slate/85">{tForm("sensitive")}</p>
+        <FieldError id="cf-message-error" state={state} field="message" fallback={tForm("errors.message")} />
       </div>
 
       <label htmlFor="cf-privacy" className="flex gap-3 text-[0.9375rem]">
-        <input id="cf-privacy" name="privacy" type="checkbox" required value="on" className={checkboxCls} />
+        <input
+          id="cf-privacy"
+          name="privacy"
+          type="checkbox"
+          required
+          value="on"
+          aria-invalid={has(state, "privacy")}
+          aria-describedby={has(state, "privacy") ? "cf-privacy-error" : undefined}
+          className={checkboxCls}
+        />
         <span>{tForm("privacy")}</span>
       </label>
+      <FieldError id="cf-privacy-error" state={state} field="privacy" fallback={tForm("errors.privacy")} />
       <label htmlFor="cf-newsletter" className="flex gap-3 text-[0.9375rem]">
         <input id="cf-newsletter" name="newsletter" type="checkbox" value="on" className={checkboxCls} />
         <span>{tForm("newsletter")}</span>
@@ -165,11 +178,21 @@ type T = (key: string) => string;function has(state: ContactResult | null, field
   return (state && !state.ok && (state.fieldErrors ?? []).includes(field)) === true ? true : undefined;
 }
 
-function FieldError({ state, field, fallback }: { state: ContactResult | null; field: string; fallback: string }) {
+function FieldError({
+  id,
+  state,
+  field,
+  fallback,
+}: {
+  id: string;
+  state: ContactResult | null;
+  field: string;
+  fallback: string;
+}) {
   if (!state || state.ok) return null;
   if (!(state.fieldErrors ?? []).includes(field)) return null;
   return (
-    <p className="text-[0.8125rem] font-semibold text-rust">
+    <p id={id} className="text-[0.8125rem] font-semibold text-rust">
       {fallback}
     </p>
   );

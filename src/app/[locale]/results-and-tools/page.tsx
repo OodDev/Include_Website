@@ -62,7 +62,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ locale
                     </h2>
                     <p className="mt-3 text-[0.9375rem]">{localisedField(locale, r, "summary")}</p>
                   </div>
-                  <div className="flex flex-wrap items-center gap-3 text-[0.8125rem] text-slate/70">
+                  <div className="flex flex-wrap items-center gap-3 text-[0.8125rem] text-slate/85">
                     {r.audience.length > 0 && (
                       <span className="font-semibold">
                         {r.audience.map((a) => tResults(`audiences.${a}`)).join(" · ")}
@@ -82,7 +82,7 @@ export default async function ResultsPage({ params }: { params: Promise<{ locale
               </li>
             ))}
           </ul>
-          <p id="technical-passport" className="mt-10 scroll-mt-28 text-[0.9375rem] text-slate/80">
+          <p id="technical-passport" className="mt-10 scroll-mt-28 text-[0.9375rem] text-slate/85">
             {tResults("downloadNote")}{" "}
             <ButtonLink href="#resources" variant="ghost" className="ml-2">
               {tResults("downloadCta")}

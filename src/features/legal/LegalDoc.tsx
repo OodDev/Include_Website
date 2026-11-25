@@ -68,7 +68,7 @@ export async function LegalDoc({ locale, slug }: { locale: AppLocale; slug: Lega
           </p>
         )}
         {typeof doc.meta.updated === "string" && (
-          <p className="text-[0.8125rem] text-slate/60">
+          <p className="text-[0.8125rem] text-slate/85">
             {t("lastUpdated", { date: new Date(doc.meta.updated) })}
           </p>
         )}
